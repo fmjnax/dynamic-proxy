@@ -1,85 +1,80 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Xml.Linq;
 
 namespace TripleTriadOffline
 {
-    public class Game : Microsoft.Xna.Framework.Game
+    public partial class Game : Form
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private Rectangle mainFrame;
+        private GameBoard gameBoard;
 
-        Rectangle mainFrame;
+        private int playerScore = 5;
+        private int opponentScore = 5;
 
-        MouseState oldMouseState;
+        private int plcol = 25;
+        private int plrow = 25;
+        private int ploffset = 50;
+        private int plmove = 25;
 
-        Board gameBoard;
+        private int orcol = 410;
+        private int orrow = 25;
+        private int oroffset = 50;
+        private int ormove = -25;
+
+        private int turn = 1;
+        private int checkMove = 0;
+
+        private string gameResult = "";
 
         Card[] playerCard = new Card[5];
         Card[] opponentCard = new Card[5];
 
         Card selectedCard;
 
-        int plcol = 25;
-        int plrow = 25;
-        int ploffset = 50;
-        int plmove = 25;
-
-        int orcol = 410;
-        int orrow = 25;
-        int oroffset = 50;
-        int ormove = -25;
-
-        int turn = 1;
-        int checkMove = 0;
-
         Slot placedSlot;
-
-        private SpriteFont font;
-        int playerScore = 5;
-        int opponentScore = 5;
-
-        private SpriteFont resultFont;
-        string gameResult = "";
 
         public Game()
         {
-            graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-        }
+            //GraphicsDeviceManager graphics;
+            //SpriteBatch spriteBatch;
 
-        protected override void Initialize()
-        {
-            base.Initialize();
-        }
+            Rectangle mainFrame;
 
-        protected override void LoadContent()
-        {
+            //MouseState oldMouseState;
+
+            GameBoard gameBoard;
+
+
+            //private SpriteFont font;
+
+
+            //private SpriteFont resultFont;
+
             int x = 0;
 
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            //spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferHeight = 500;
-            graphics.PreferredBackBufferWidth = 500;
-            graphics.ApplyChanges();
+            //graphics.IsFullScreen = false;
+            //graphics.PreferredBackBufferHeight = 500;
+            //graphics.PreferredBackBufferWidth = 500;
+            //graphics.ApplyChanges();
 
-            mainFrame = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+            mainFrame = new Rectangle(0, 0, 500, 500);
 
-            gameBoard = new Board();
+            gameBoard = new GameBoard();
 
-            gameBoard.Texture = Content.Load<Texture2D>("gameBoard");
+            //gameBoard.Texture = Content.Load<Texture2D>("gameBoard");
 
-            font = Content.Load<SpriteFont>("scoreFont");
-            resultFont = Content.Load<SpriteFont>("scoreFont");
+            //font = Content.Load<SpriteFont>("scoreFont");
+            //resultFont = Content.Load<SpriteFont>("scoreFont");
 
             List<string> playerCardList = new List<string>();
             playerCardList.Add("1");
@@ -103,7 +98,7 @@ namespace TripleTriadOffline
             while (x < 5)
             {
                 playerCard[x].position.X = plcol;
-                playerCard[x].position.Y = plrow + ploffset * (x+1);
+                playerCard[x].position.Y = plrow + ploffset * (x + 1);
 
                 opponentCard[x].position.X = orcol;
                 opponentCard[x].position.Y = orrow + oroffset * (x + 1);
@@ -113,7 +108,14 @@ namespace TripleTriadOffline
                 x++;
             };
 
-            this.IsMouseVisible = true;
+            gameBoard.Show();
+
+            //this.IsMouseVisible = true;
+        }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void LoadPlayingHand(List<string> cardList, Card[] card, string color, bool open)
@@ -143,11 +145,11 @@ namespace TripleTriadOffline
                     card[x] = new Card();
                     if (open == true)
                     {
-                        card[x].Texture = Content.Load<Texture2D>("deck/" + color + "/" + r.FileName);
+                        //card[x].Texture = Content.Load<Texture2D>("deck/" + color + "/" + r.FileName);
                     }
                     else
                     {
-                        card[x].Texture = Content.Load<Texture2D>("cardBack");
+                       // card[x].Texture = Content.Load<Texture2D>("cardBack");
                     }
                     card[x].currentColor = color;
                     card[x].id = Int32.Parse(r.ID);
@@ -162,10 +164,11 @@ namespace TripleTriadOffline
             }
         }
 
-        protected override void UnloadContent()
-        {
-        }
+        //protected override void UnloadContent()
+        //{
+        //}
 
+            /*
         protected override void Update(GameTime gameTime)
         {
             var mouseState = Mouse.GetState();
@@ -183,7 +186,7 @@ namespace TripleTriadOffline
             
             base.Update(gameTime);
         }
-
+        */
         private void EndGame()
         {
             int x = 0;
@@ -235,7 +238,7 @@ namespace TripleTriadOffline
                         {
                             PlayCard(selectedCard, gameBoard.slot[slotLoop]);
                             //reload the texture, in case "closed" rule
-                            selectedCard.Texture = Content.Load<Texture2D>("deck/" + selectedCard.currentColor + "/" + selectedCard.fileName);
+                            //selectedCard.Texture = Content.Load<Texture2D>("deck/" + selectedCard.currentColor + "/" + selectedCard.fileName);
                             break;
                         }
                         slotLoop++;
@@ -253,6 +256,7 @@ namespace TripleTriadOffline
             }
         }
 
+        /*
         private void PlayerTurn(MouseState mouseState, Point mousePosition)
         {
             int x = 0;
@@ -286,6 +290,7 @@ namespace TripleTriadOffline
 
             oldMouseState = mouseState;
         }
+        */
 
         private void UpdateScore()
         {
@@ -337,12 +342,12 @@ namespace TripleTriadOffline
                 //check slots 1 and 3
                 if (gameBoard.slot[1].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[1].cardSlotted.left)
                 {
-                    gameBoard.slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[1].cardSlotted.fileName);
+                    //gameBoard.slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[1].cardSlotted.fileName);
                     gameBoard.slot[1].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[3].isOccupied == true && placedSlot.cardSlotted.bottom > gameBoard.slot[3].cardSlotted.top)
                 {
-                    gameBoard.slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[3].cardSlotted.fileName);
+                    //gameBoard.slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[3].cardSlotted.fileName);
                     gameBoard.slot[3].cardSlotted.currentColor = color;
                 }
             }
@@ -351,17 +356,17 @@ namespace TripleTriadOffline
                 //check slots 0, 2, and 4
                 if (gameBoard.slot[0].isOccupied == true && placedSlot.cardSlotted.left > gameBoard.slot[0].cardSlotted.right)
                 {
-                    gameBoard.slot[0].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[0].cardSlotted.fileName);
+                    //gameBoard.slot[0].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[0].cardSlotted.fileName);
                     gameBoard.slot[0].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[2].isOccupied == true && placedSlot.cardSlotted.bottom > gameBoard.slot[2].cardSlotted.top)
                 {
-                    gameBoard.slot[2].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[2].cardSlotted.fileName);
+                    //gameBoard.slot[2].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[2].cardSlotted.fileName);
                     gameBoard.slot[2].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[4].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[4].cardSlotted.left)
                 {
-                    gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
+                    //gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
                     gameBoard.slot[4].cardSlotted.currentColor = color;
                 }
             }
@@ -370,12 +375,12 @@ namespace TripleTriadOffline
                 //check slots 1 and 5
                 if (gameBoard.slot[1].isOccupied == true && placedSlot.cardSlotted.left > gameBoard.slot[1].cardSlotted.right)
                 {
-                    gameBoard.slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[1].cardSlotted.fileName);
+                    //gameBoard.slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[1].cardSlotted.fileName);
                     gameBoard.slot[1].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[5].isOccupied == true && placedSlot.cardSlotted.bottom > gameBoard.slot[5].cardSlotted.top)
                 {
-                    gameBoard.slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[5].cardSlotted.fileName);
+                    //gameBoard.slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[5].cardSlotted.fileName);
                     gameBoard.slot[5].cardSlotted.currentColor = color;
                 }
             }
@@ -384,17 +389,17 @@ namespace TripleTriadOffline
                 //check slots 0, 4, and 6
                 if (gameBoard.slot[0].isOccupied == true && placedSlot.cardSlotted.top > gameBoard.slot[0].cardSlotted.bottom)
                 {
-                    gameBoard.slot[0].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[0].cardSlotted.fileName);
+                    //gameBoard.slot[0].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[0].cardSlotted.fileName);
                     gameBoard.slot[0].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[4].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[4].cardSlotted.left)
                 {
-                    gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
+                    //gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
                     gameBoard.slot[4].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[6].isOccupied == true && placedSlot.cardSlotted.bottom > gameBoard.slot[6].cardSlotted.top)
                 {
-                    gameBoard.slot[6].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[6].cardSlotted.fileName);
+                    //gameBoard.slot[6].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[6].cardSlotted.fileName);
                     gameBoard.slot[6].cardSlotted.currentColor = color;
                 }
             }
@@ -403,22 +408,22 @@ namespace TripleTriadOffline
                 //check slots 1, 3, 5, and 7
                 if (gameBoard.slot[1].isOccupied == true && placedSlot.cardSlotted.top > gameBoard.slot[1].cardSlotted.bottom)
                 {
-                    gameBoard.slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[1].cardSlotted.fileName);
+                   // gameBoard.slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[1].cardSlotted.fileName);
                     gameBoard.slot[1].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[3].isOccupied == true && placedSlot.cardSlotted.left > gameBoard.slot[3].cardSlotted.right)
                 {
-                    gameBoard.slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[3].cardSlotted.fileName);
+                    //gameBoard.slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[3].cardSlotted.fileName);
                     gameBoard.slot[3].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[5].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[5].cardSlotted.left)
                 {
-                    gameBoard.slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[5].cardSlotted.fileName);
+                    //gameBoard.slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[5].cardSlotted.fileName);
                     gameBoard.slot[5].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[7].isOccupied == true && placedSlot.cardSlotted.bottom > gameBoard.slot[7].cardSlotted.top)
                 {
-                    gameBoard.slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[7].cardSlotted.fileName);
+                    //gameBoard.slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[7].cardSlotted.fileName);
                     gameBoard.slot[7].cardSlotted.currentColor = color;
                 }
             }
@@ -427,17 +432,17 @@ namespace TripleTriadOffline
                 //check slots 2, 4, and 8
                 if (gameBoard.slot[2].isOccupied == true && placedSlot.cardSlotted.top > gameBoard.slot[2].cardSlotted.bottom)
                 {
-                    gameBoard.slot[2].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[2].cardSlotted.fileName);
+                    //gameBoard.slot[2].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[2].cardSlotted.fileName);
                     gameBoard.slot[2].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[4].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[4].cardSlotted.left)
                 {
-                    gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
+                    //gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
                     gameBoard.slot[4].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[8].isOccupied == true && placedSlot.cardSlotted.bottom > gameBoard.slot[8].cardSlotted.top)
                 {
-                    gameBoard.slot[8].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[8].cardSlotted.fileName);
+                    //gameBoard.slot[8].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[8].cardSlotted.fileName);
                     gameBoard.slot[8].cardSlotted.currentColor = color;
                 }
             }
@@ -446,12 +451,12 @@ namespace TripleTriadOffline
                 //check slots 3 and 7
                 if (gameBoard.slot[3].isOccupied == true && placedSlot.cardSlotted.top > gameBoard.slot[3].cardSlotted.bottom)
                 {
-                    gameBoard.slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[3].cardSlotted.fileName);
+                    //gameBoard.slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[3].cardSlotted.fileName);
                     gameBoard.slot[3].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[7].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[7].cardSlotted.left)
                 {
-                    gameBoard.slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[7].cardSlotted.fileName);
+                    //gameBoard.slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[7].cardSlotted.fileName);
                     gameBoard.slot[7].cardSlotted.currentColor = color;
                 }
             }
@@ -460,17 +465,17 @@ namespace TripleTriadOffline
                 //check slots 4, 6, and 8
                 if (gameBoard.slot[4].isOccupied == true && placedSlot.cardSlotted.top > gameBoard.slot[4].cardSlotted.bottom)
                 {
-                    gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
+                    //gameBoard.slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[4].cardSlotted.fileName);
                     gameBoard.slot[4].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[6].isOccupied == true && placedSlot.cardSlotted.right > gameBoard.slot[6].cardSlotted.left)
                 {
-                    gameBoard.slot[6].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[6].cardSlotted.fileName);
+                    //gameBoard.slot[6].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[6].cardSlotted.fileName);
                     gameBoard.slot[6].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[8].isOccupied == true && placedSlot.cardSlotted.left > gameBoard.slot[8].cardSlotted.right)
                 {
-                    gameBoard.slot[8].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[8].cardSlotted.fileName);
+                    //gameBoard.slot[8].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[8].cardSlotted.fileName);
                     gameBoard.slot[8].cardSlotted.currentColor = color;
                 }
             }
@@ -479,12 +484,12 @@ namespace TripleTriadOffline
                 //check slots 5 and 7
                 if (gameBoard.slot[5].isOccupied == true && placedSlot.cardSlotted.top > gameBoard.slot[5].cardSlotted.bottom)
                 {
-                    gameBoard.slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[5].cardSlotted.fileName);
+                    //gameBoard.slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[5].cardSlotted.fileName);
                     gameBoard.slot[5].cardSlotted.currentColor = color;
                 }
                 if (gameBoard.slot[7].isOccupied == true && placedSlot.cardSlotted.left > gameBoard.slot[7].cardSlotted.right)
                 {
-                    gameBoard.slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[7].cardSlotted.fileName);
+                    //gameBoard.slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + gameBoard.slot[7].cardSlotted.fileName);
                     gameBoard.slot[7].cardSlotted.currentColor = color;
                 }
             }
@@ -511,7 +516,7 @@ namespace TripleTriadOffline
                 move = ormove;
                 turnCard = opponentCard;
             }
-
+            /*
             if (card.Position.X == col && card.isUsed == false)
             {
                 while (x < 5)
@@ -522,14 +527,15 @@ namespace TripleTriadOffline
                 card.position.X += move;
                 selectedCard = card;
             }
+            */
         }
         
         private void PlayCard(Card card, Slot slot)
         {
             if (slot.isOccupied == false && card.isUsed == false)
             {
-                card.position.X = slot.rect.X;
-                card.position.Y = slot.rect.Y;
+                //card.position.X = slot.rect.X;
+                //card.position.Y = slot.rect.Y;
                 slot.isOccupied = true;
                 card.isUsed = true;
                 placedSlot = slot;
@@ -553,12 +559,13 @@ namespace TripleTriadOffline
 
             while (x<5)
             {
-                playerCard[x].rect = new Rectangle((int)playerCard[x].position.X, (int)playerCard[x].position.Y, playerCard[x].texture.Width, playerCard[x].texture.Height);
-                opponentCard[x].rect = new Rectangle((int)opponentCard[x].position.X, (int)opponentCard[x].position.Y, opponentCard[x].texture.Width, opponentCard[x].texture.Height);
+                //playerCard[x].rect = new Rectangle((int)playerCard[x].position.X, (int)playerCard[x].position.Y, playerCard[x].texture.Width, playerCard[x].texture.Height);
+                //opponentCard[x].rect = new Rectangle((int)opponentCard[x].position.X, (int)opponentCard[x].position.Y, opponentCard[x].texture.Width, opponentCard[x].texture.Height);
                 x++;
             }
         }
 
+        /*
         protected override void Draw(GameTime gameTime)
         {
             int x = 0;
@@ -591,5 +598,6 @@ namespace TripleTriadOffline
 
             base.Draw(gameTime);
         }
+        */
     }
 }

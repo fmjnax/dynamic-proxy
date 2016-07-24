@@ -1,22 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
+using System.Drawing;
 
 namespace TripleTriadOffline
 {
     class Board
     {
-        public Texture2D texture;
+        //public Texture2D texture;
         public Rectangle rect;
-        public Vector2 position;
-        Vector2 center;
+        //public Vector2 position;
+       // Vector2 center;
 
         public Slot[] slot = new Slot[9];
 
@@ -33,11 +27,11 @@ namespace TripleTriadOffline
             slot[8] = new Slot("BR",new Rectangle(286, 250, 65, 65));
         }
 
-        public Texture2D Texture
-        {
-            get { return texture; }
-            set { texture = value; }
-        }
+        //public Texture2D Texture
+        //{
+        //    get { return texture; }
+        //    set { texture = value; }
+        //}
 
         public Rectangle Rect
         {
@@ -45,16 +39,16 @@ namespace TripleTriadOffline
             set { rect = value; }
         }
 
-        public Vector2 Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
+        //public Vector2 Position
+        //{
+        //    get { return position; }
+        //    set { position = value; }
+        //}
 
-        public Vector2 Center
-        {
-            get { return center; }
-            set { center = value; }
-        }
+        //public Vector2 Center
+        //{
+        //    get { return center; }
+        //    set { center = value; }
+        //}
     }
 }
