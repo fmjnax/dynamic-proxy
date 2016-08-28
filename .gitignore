@@ -243,3 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+Program_BACKUP_8604.cs
+Program_BASE_8604.cs
+Program_LOCAL_8604.cs
+Program_REMOTE_8604.cs
