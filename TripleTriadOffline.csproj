@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>TripleTriadOffline.Program</StartupObject>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,32 +46,63 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="MathHelper.cs" />
-    <Compile Include="Matrix.cs" />
-    <Compile Include="Quaternion.cs" />
-    <Compile Include="Vector2.cs" />
-    <Compile Include="Game.cs">
+    <Compile Include="Classes\Board.cs" />
+    <Compile Include="Classes\Card.cs" />
+    <Compile Include="Classes\Game.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameBoard.cs">
+    <Compile Include="Classes\MathHelper.cs" />
+    <Compile Include="Classes\Matrix.cs" />
+    <Compile Include="Classes\Quaternion.cs" />
+    <Compile Include="Classes\Slot.cs" />
+    <Compile Include="Classes\Vector2.cs" />
+    <Compile Include="Classes\Vector3.cs" />
+    <Compile Include="Forms\Challenge.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameBoard.Designer.cs">
+    <Compile Include="Forms\Challenge.designer.cs">
+      <DependentUpon>Challenge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameBoard.designer.cs">
       <DependentUpon>GameBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lobby.designer.cs">
+      <DependentUpon>Lobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectCards.designer.cs">
+      <DependentUpon>SelectCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash.designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectCards.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SelectCards.Designer.cs">
-      <DependentUpon>SelectCards.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Slot.cs" />
-    <Compile Include="Vector3.cs" />
-    <EmbeddedResource Include="GameBoard.resx">
+    <EmbeddedResource Include="Forms\Challenge.resx">
+      <DependentUpon>Challenge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameBoard.resx">
       <DependentUpon>GameBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lobby.resx">
+      <DependentUpon>Lobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectCards.resx">
+      <DependentUpon>SelectCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,9 +113,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SelectCards.resx">
-      <DependentUpon>SelectCards.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,9 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="deck.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
