@@ -3,6 +3,18 @@
   <cards>
     <card id="1">
       <id>1</id>
+      <displayName>1st Ray</displayName>
+      <fileName>1st Ray</fileName>
+      <left>1</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="2">
+      <id>2</id>
       <displayName>Abadon</displayName>
       <fileName>Abadon</fileName>
       <left>5</left>
@@ -13,8 +25,8 @@
       <native>1</native>
     </card>
 
-    <card id="2">
-      <id>2</id>
+    <card id="3">
+      <id>3</id>
       <displayName>Abyss Worm</displayName>
       <fileName>Abyss Worm</fileName>
       <left>5</left>
@@ -25,8 +37,164 @@
       <native>1</native>
     </card>
 
-    <card id="3">
-      <id>3</id>
+    <card id="4">
+      <id>4</id>
+      <displayName>Adamantoise</displayName>
+      <fileName>Adamantoise</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="5">
+      <id>5</id>
+      <displayName>Adel</displayName>
+      <fileName>Adel</fileName>
+      <left>9</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="6">
+      <id>6</id>
+      <displayName>Adramelk</displayName>
+      <fileName>Adramelk</fileName>
+      <left>9</left>
+      <top>3</top>
+      <right>2</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="7">
+      <id>7</id>
+      <displayName>Aeris the FlowerGirl</displayName>
+      <fileName>Aeris the FlowerGirl</fileName>
+      <left>1</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="8">
+      <id>8</id>
+      <displayName>Aeris</displayName>
+      <fileName>Aeris</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="9">
+      <id>9</id>
+      <displayName>Aero</displayName>
+      <fileName>Aero</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="10">
+      <id>10</id>
+      <displayName>Agrias</displayName>
+      <fileName>Agrias</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="11">
+      <id>11</id>
+      <displayName>Ahriman</displayName>
+      <fileName>Ahriman</fileName>
+      <left>7</left>
+      <top>1</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="12">
+      <id>12</id>
+      <displayName>Air Buster</displayName>
+      <fileName>Air Buster</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="13">
+      <id>13</id>
+      <displayName>Air Force</displayName>
+      <fileName>Air Force</fileName>
+      <left>2</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="14">
+      <id>14</id>
+      <displayName>Airship</displayName>
+      <fileName>Airship</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="15">
+      <id>15</id>
+      <displayName>Alazlam</displayName>
+      <fileName>Alazlam</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="16">
+      <id>16</id>
+      <displayName>Alexander Tycoon</displayName>
+      <fileName>Alexander Tycoon</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="17">
+      <id>17</id>
       <displayName>Alexander</displayName>
       <fileName>Alexander</fileName>
       <left>2</left>
@@ -37,8 +205,68 @@
       <native>1</native>
     </card>
 
-    <card id="4">
-      <id>4</id>
+    <card id="18">
+      <id>18</id>
+      <displayName>Algus</displayName>
+      <fileName>Algus</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="19">
+      <id>19</id>
+      <displayName>Alma</displayName>
+      <fileName>Alma</fileName>
+      <left>10</left>
+      <top>1</top>
+      <right>6</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="20">
+      <id>20</id>
+      <displayName>Alte Roit</displayName>
+      <fileName>Alte Roit</fileName>
+      <left>3</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="21">
+      <id>21</id>
+      <displayName>Altima</displayName>
+      <fileName>Altima</fileName>
+      <left>3</left>
+      <top>10</top>
+      <right>4</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="22">
+      <id>22</id>
+      <displayName>Amarant</displayName>
+      <fileName>Amarant</fileName>
+      <left>10</left>
+      <top>8</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="23">
+      <id>23</id>
       <displayName>Anacondaur</displayName>
       <fileName>Anacondaur</fileName>
       <left>5</left>
@@ -49,8 +277,224 @@
       <native>1</native>
     </card>
 
-    <card id="5">
-      <id>5</id>
+    <card id="24">
+      <id>24</id>
+      <displayName>Angelo</displayName>
+      <fileName>Angelo</fileName>
+      <left>3</left>
+      <top>9</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="25">
+      <id>25</id>
+      <displayName>Anima</displayName>
+      <fileName>Anima</fileName>
+      <left>10</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="26">
+      <id>26</id>
+      <displayName>Anna</displayName>
+      <fileName>Anna</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="27">
+      <id>27</id>
+      <displayName>Antlion</displayName>
+      <fileName>Antlion</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="28">
+      <id>28</id>
+      <displayName>Aquarius</displayName>
+      <fileName>Aquarius</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="29">
+      <id>29</id>
+      <displayName>Archeoavis</displayName>
+      <fileName>Archeoavis</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>2</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="30">
+      <id>30</id>
+      <displayName>Archeotoad</displayName>
+      <fileName>Archeotoad</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="31">
+      <id>31</id>
+      <displayName>Aries</displayName>
+      <fileName>Aries</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="32">
+      <id>32</id>
+      <displayName>Ark</displayName>
+      <fileName>Ark</fileName>
+      <left>4</left>
+      <top>10</top>
+      <right>9</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="33">
+      <id>33</id>
+      <displayName>Armadodo</displayName>
+      <fileName>Armadodo</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="34">
+      <id>34</id>
+      <displayName>Artemecion</displayName>
+      <fileName>Artemecion</fileName>
+      <left>9</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="35">
+      <id>35</id>
+      <displayName>Asura</displayName>
+      <fileName>Asura</fileName>
+      <left>9</left>
+      <top>4</top>
+      <right>10</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="36">
+      <id>36</id>
+      <displayName>Atma Weapon</displayName>
+      <fileName>Atma Weapon</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="37">
+      <id>37</id>
+      <displayName>Atomos</displayName>
+      <fileName>Atomos</fileName>
+      <left>10</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="38">
+      <id>38</id>
+      <displayName>Auron</displayName>
+      <fileName>Auron</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>10</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="39">
+      <id>39</id>
+      <displayName>Azulmagia</displayName>
+      <fileName>Azulmagia</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="40">
+      <id>40</id>
+      <displayName>B-Day Suit</displayName>
+      <fileName>B-Day Suit</fileName>
+      <left>1</left>
+      <top>1</top>
+      <right>1</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="41">
+      <id>41</id>
+      <displayName>Bahamut Zero</displayName>
+      <fileName>Bahamut Zero</fileName>
+      <left>2</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="42">
+      <id>42</id>
       <displayName>Bahamut</displayName>
       <fileName>Bahamut</fileName>
       <left>6</left>
@@ -61,8 +505,176 @@
       <native>1</native>
     </card>
 
-    <card id="6">
-      <id>6</id>
+    <card id="43">
+      <id>43</id>
+      <displayName>Baigan</displayName>
+      <fileName>Baigan</fileName>
+      <left>2</left>
+      <top>5</top>
+      <right>1</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="44">
+      <id>44</id>
+      <displayName>Baku</displayName>
+      <fileName>Baku</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>1</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="45">
+      <id>45</id>
+      <displayName>Balbanes</displayName>
+      <fileName>Balbanes</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="46">
+      <id>46</id>
+      <displayName>Balk</displayName>
+      <fileName>Balk</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>1</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="47">
+      <id>47</id>
+      <displayName>Balmafula</displayName>
+      <fileName>Balmafula</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="48">
+      <id>48</id>
+      <displayName>Balnab-Z</displayName>
+      <fileName>Balnab-Z</fileName>
+      <left>1</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="49">
+      <id>49</id>
+      <displayName>Balnab</displayName>
+      <fileName>Balnab</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="50">
+      <id>50</id>
+      <displayName>Banon</displayName>
+      <fileName>Banon</fileName>
+      <left>5</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="51">
+      <id>51</id>
+      <displayName>Barbatos</displayName>
+      <fileName>Barbatos</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="52">
+      <id>52</id>
+      <displayName>Barinten</displayName>
+      <fileName>Barinten</fileName>
+      <left>8</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="53">
+      <id>53</id>
+      <displayName>Barret</displayName>
+      <fileName>Barret</fileName>
+      <left>10</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="54">
+      <id>54</id>
+      <displayName>Bartz</displayName>
+      <fileName>Bartz</fileName>
+      <left>9</left>
+      <top>10</top>
+      <right>8</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="55">
+      <id>55</id>
+      <displayName>Bashura</displayName>
+      <fileName>Bashura</fileName>
+      <left>3</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="56">
+      <id>56</id>
+      <displayName>Beatrix</displayName>
+      <fileName>Beatrix</fileName>
+      <left>2</left>
+      <top>9</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="57">
+      <id>57</id>
       <displayName>Behemoth</displayName>
       <fileName>Behemoth</fileName>
       <left>7</left>
@@ -73,8 +685,8 @@
       <native>1</native>
     </card>
 
-    <card id="7">
-      <id>7</id>
+    <card id="58">
+      <id>58</id>
       <displayName>Belhelmel</displayName>
       <fileName>Belhelmel</fileName>
       <left>3</left>
@@ -85,8 +697,116 @@
       <native>1</native>
     </card>
 
-    <card id="8">
-      <id>8</id>
+    <card id="59">
+      <id>59</id>
+      <displayName>Beowulf</displayName>
+      <fileName>Beowulf</fileName>
+      <left>10</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="60">
+      <id>60</id>
+      <displayName>Besrodio</displayName>
+      <fileName>Besrodio</fileName>
+      <left>4</left>
+      <top>8</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="61">
+      <id>61</id>
+      <displayName>BGH251F2</displayName>
+      <fileName>BGH251F2</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="62">
+      <id>62</id>
+      <displayName>Biblos</displayName>
+      <fileName>Biblos</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="63">
+      <id>63</id>
+      <displayName>Big Chocobo</displayName>
+      <fileName>Big Chocobo</fileName>
+      <left>2</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="64">
+      <id>64</id>
+      <displayName>Big Whale</displayName>
+      <fileName>Big Whale</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="65">
+      <id>65</id>
+      <displayName>Bio</displayName>
+      <fileName>Bio</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="66">
+      <id>66</id>
+      <displayName>Biran Ronso</displayName>
+      <fileName>Biran Ronso</fileName>
+      <left>2</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="67">
+      <id>67</id>
+      <displayName>Bismark</displayName>
+      <fileName>Bismark</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="68">
+      <id>68</id>
       <displayName>Bite Bug</displayName>
       <fileName>Bite Bug</fileName>
       <left>5</left>
@@ -97,8 +817,80 @@
       <native>1</native>
     </card>
 
-    <card id="9">
-      <id>9</id>
+    <card id="69">
+      <id>69</id>
+      <displayName>Black Chocobo</displayName>
+      <fileName>Black Chocobo</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="70">
+      <id>70</id>
+      <displayName>Black Materia</displayName>
+      <fileName>Black Materia</fileName>
+      <left>9</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="71">
+      <id>71</id>
+      <displayName>Black Waltz No. 1</displayName>
+      <fileName>Black Waltz No. 1</fileName>
+      <left>3</left>
+      <top>2</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="72">
+      <id>72</id>
+      <displayName>Black Waltz No. 2</displayName>
+      <fileName>Black Waltz No. 2</fileName>
+      <left>1</left>
+      <top>8</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="73">
+      <id>73</id>
+      <displayName>Black Waltz No. 3</displayName>
+      <fileName>Black Waltz No. 3</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="74">
+      <id>74</id>
+      <displayName>Blank</displayName>
+      <fileName>Blank</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="75">
+      <id>75</id>
       <displayName>Blitz</displayName>
       <fileName>Blitz</fileName>
       <left>7</left>
@@ -109,8 +901,56 @@
       <native>1</native>
     </card>
 
-    <card id="10">
-      <id>10</id>
+    <card id="76">
+      <id>76</id>
+      <displayName>Blitzball</displayName>
+      <fileName>Blitzball</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="77">
+      <id>77</id>
+      <displayName>Blizzaga</displayName>
+      <fileName>Blizzaga</fileName>
+      <left>7</left>
+      <top>1</top>
+      <right>8</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="78">
+      <id>78</id>
+      <displayName>Blizzara</displayName>
+      <fileName>Blizzara</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="79">
+      <id>79</id>
+      <displayName>Blizzard</displayName>
+      <fileName>Blizzard</fileName>
+      <left>1</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="80">
+      <id>80</id>
       <displayName>Blobra</displayName>
       <fileName>Blobra</fileName>
       <left>5</left>
@@ -121,8 +961,8 @@
       <native>1</native>
     </card>
 
-    <card id="11">
-      <id>11</id>
+    <card id="81">
+      <id>81</id>
       <displayName>Blood Soul</displayName>
       <fileName>Blood Soul</fileName>
       <left>1</left>
@@ -133,8 +973,32 @@
       <native>1</native>
     </card>
 
-    <card id="12">
-      <id>12</id>
+    <card id="82">
+      <id>82</id>
+      <displayName>Bloody Angel</displayName>
+      <fileName>Bloody Angel</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="83">
+      <id>83</id>
+      <displayName>Blue Chocobo</displayName>
+      <fileName>Blue Chocobo</fileName>
+      <left>1</left>
+      <top>4</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="84">
+      <id>84</id>
       <displayName>Blue Dragon</displayName>
       <fileName>Blue Dragon</fileName>
       <left>3</left>
@@ -145,8 +1009,152 @@
       <native>1</native>
     </card>
 
-    <card id="13">
-      <id>13</id>
+    <card id="85">
+      <id>85</id>
+      <displayName>Blue Narciss</displayName>
+      <fileName>Blue Narciss</fileName>
+      <left>9</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="86">
+      <id>86</id>
+      <displayName>Boko</displayName>
+      <fileName>Boko</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="87">
+      <id>87</id>
+      <displayName>Bolmna</displayName>
+      <fileName>Bolmna</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="88">
+      <id>88</id>
+      <displayName>Bomb</displayName>
+      <fileName>Bomb</fileName>
+      <left>3</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="89">
+      <id>89</id>
+      <displayName>Borras</displayName>
+      <fileName>Borras</fileName>
+      <left>2</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="90">
+      <id>90</id>
+      <displayName>Brahne</displayName>
+      <fileName>Brahne</fileName>
+      <left>9</left>
+      <top>4</top>
+      <right>9</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="91">
+      <id>91</id>
+      <displayName>Braska</displayName>
+      <fileName>Braska</fileName>
+      <left>3</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="92">
+      <id>92</id>
+      <displayName>Breath</displayName>
+      <fileName>Breath</fileName>
+      <left>7</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="93">
+      <id>93</id>
+      <displayName>Brina</displayName>
+      <fileName>Brina</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="94">
+      <id>94</id>
+      <displayName>Brother</displayName>
+      <fileName>Brother</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="95">
+      <id>95</id>
+      <displayName>Buel</displayName>
+      <fileName>Buel</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="96">
+      <id>96</id>
+      <displayName>Bugenhagen</displayName>
+      <fileName>Bugenhagen</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="97">
+      <id>97</id>
       <displayName>Cactuar</displayName>
       <fileName>Cactuar</fileName>
       <left>3</left>
@@ -157,8 +1165,92 @@
       <native>1</native>
     </card>
 
-    <card id="14">
-      <id>14</id>
+    <card id="98">
+      <id>98</id>
+      <displayName>Cagnazzo</displayName>
+      <fileName>Cagnazzo</fileName>
+      <left>4</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="99">
+      <id>99</id>
+      <displayName>Cait Sith</displayName>
+      <fileName>Cait Sith</fileName>
+      <left>3</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="100">
+      <id>100</id>
+      <displayName>Cal</displayName>
+      <fileName>Cal</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="101">
+      <id>101</id>
+      <displayName>Calbrina</displayName>
+      <fileName>Calbrina</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="102">
+      <id>102</id>
+      <displayName>Cancer</displayName>
+      <fileName>Cancer</fileName>
+      <left>5</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="103">
+      <id>103</id>
+      <displayName>Capricorn</displayName>
+      <fileName>Capricorn</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="104">
+      <id>104</id>
+      <displayName>Captain</displayName>
+      <fileName>Captain</fileName>
+      <left>4</left>
+      <top>4</top>
+      <right>3</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="105">
+      <id>105</id>
       <displayName>Carbuncle</displayName>
       <fileName>Carbuncle</fileName>
       <left>4</left>
@@ -169,8 +1261,152 @@
       <native>1</native>
     </card>
 
-    <card id="15">
-      <id>15</id>
+    <card id="106">
+      <id>106</id>
+      <displayName>Carob Nut</displayName>
+      <fileName>Carob Nut</fileName>
+      <left>1</left>
+      <top>1</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="107">
+      <id>107</id>
+      <displayName>Carve Spider</displayName>
+      <fileName>Carve Spider</fileName>
+      <left>1</left>
+      <top>3</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="108">
+      <id>108</id>
+      <displayName>Catastrophe</displayName>
+      <fileName>Catastrophe</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="109">
+      <id>109</id>
+      <displayName>Caterchipillar</displayName>
+      <fileName>Caterchipillar</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="110">
+      <id>110</id>
+      <displayName>Catoblepas</displayName>
+      <fileName>Catoblepas</fileName>
+      <left>7</left>
+      <top>1</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="111">
+      <id>111</id>
+      <displayName>Cecil</displayName>
+      <fileName>Cecil</fileName>
+      <left>6</left>
+      <top>9</top>
+      <right>10</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="112">
+      <id>112</id>
+      <displayName>Celes</displayName>
+      <fileName>Celes</fileName>
+      <left>10</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="113">
+      <id>113</id>
+      <displayName>Celia</displayName>
+      <fileName>Celia</fileName>
+      <left>5</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="114">
+      <id>114</id>
+      <displayName>Cerberus</displayName>
+      <fileName>Cerberus</fileName>
+      <left>10</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="115">
+      <id>115</id>
+      <displayName>Chadarnook</displayName>
+      <fileName>Chadarnook</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="116">
+      <id>116</id>
+      <displayName>Chappu</displayName>
+      <fileName>Chappu</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="117">
+      <id>117</id>
+      <displayName>Chaser</displayName>
+      <fileName>Chaser</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>4</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="118">
+      <id>118</id>
       <displayName>Chicobo</displayName>
       <fileName>Chicobo</fileName>
       <left>4</left>
@@ -181,8 +1417,68 @@
       <native>1</native>
     </card>
 
-    <card id="16">
-      <id>16</id>
+    <card id="119">
+      <id>119</id>
+      <displayName>Chimera Brain</displayName>
+      <fileName>Chimera Brain</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="120">
+      <id>120</id>
+      <displayName>Chimera</displayName>
+      <fileName>Chimera</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="121">
+      <id>121</id>
+      <displayName>Choco-Mog</displayName>
+      <fileName>Choco-Mog</fileName>
+      <left>2</left>
+      <top>9</top>
+      <right>5</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="122">
+      <id>122</id>
+      <displayName>Chocobo Eater</displayName>
+      <fileName>Chocobo Eater</fileName>
+      <left>6</left>
+      <top>1</top>
+      <right>9</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="123">
+      <id>123</id>
+      <displayName>Chocobo</displayName>
+      <fileName>Chocobo</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="124">
+      <id>124</id>
       <displayName>Chubby Chocobo</displayName>
       <fileName>Chubby Chocobo</fileName>
       <left>9</left>
@@ -193,8 +1489,152 @@
       <native>1</native>
     </card>
 
-    <card id="17">
-      <id>17</id>
+    <card id="125">
+      <id>125</id>
+      <displayName>Chupon</displayName>
+      <fileName>Chupon</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>3</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="126">
+      <id>126</id>
+      <displayName>Cid Chere</displayName>
+      <fileName>Cid Chere</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="127">
+      <id>127</id>
+      <displayName>Cid Highwind</displayName>
+      <fileName>Cid Highwind</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="128">
+      <id>128</id>
+      <displayName>Cid of Baron</displayName>
+      <fileName>Cid of Baron</fileName>
+      <left>10</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="129">
+      <id>129</id>
+      <displayName>Cid Previa</displayName>
+      <fileName>Cid Previa</fileName>
+      <left>10</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="130">
+      <id>130</id>
+      <displayName>Cid</displayName>
+      <fileName>Cid</fileName>
+      <left>5</left>
+      <top>4</top>
+      <right>9</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="131">
+      <id>131</id>
+      <displayName>Cindy</displayName>
+      <fileName>Cindy</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="132">
+      <id>132</id>
+      <displayName>Cinna</displayName>
+      <fileName>Cinna</fileName>
+      <left>2</left>
+      <top>1</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="133">
+      <id>133</id>
+      <displayName>Clops</displayName>
+      <fileName>Clops</fileName>
+      <left>2</left>
+      <top>10</top>
+      <right>9</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="134">
+      <id>134</id>
+      <displayName>Cloud the Soldier</displayName>
+      <fileName>Cloud the Soldier</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="135">
+      <id>135</id>
+      <displayName>Cloud</displayName>
+      <fileName>Cloud</fileName>
+      <left>6</left>
+      <top>10</top>
+      <right>9</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="136">
+      <id>136</id>
+      <displayName>Clyde</displayName>
+      <fileName>Clyde</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>2</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="137">
+      <id>137</id>
       <displayName>Cockatrice</displayName>
       <fileName>Cockatrice</fileName>
       <left>6</left>
@@ -205,8 +1645,476 @@
       <native>1</native>
     </card>
 
-    <card id="18">
-      <id>18</id>
+    <card id="138">
+      <id>138</id>
+      <displayName>CPU</displayName>
+      <fileName>CPU</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="139">
+      <id>139</id>
+      <displayName>Crawler</displayName>
+      <fileName>Crawler</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="140">
+      <id>140</id>
+      <displayName>Creeps</displayName>
+      <fileName>Creeps</fileName>
+      <left>2</left>
+      <top>5</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="141">
+      <id>141</id>
+      <displayName>Crusader</displayName>
+      <fileName>Crusader</fileName>
+      <left>5</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="142">
+      <id>142</id>
+      <displayName>Cura</displayName>
+      <fileName>Cura</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="143">
+      <id>143</id>
+      <displayName>Curaga</displayName>
+      <fileName>Curaga</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="144">
+      <id>144</id>
+      <displayName>Cure</displayName>
+      <fileName>Cure</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="145">
+      <id>145</id>
+      <displayName>Cyan</displayName>
+      <fileName>Cyan</fileName>
+      <left>8</left>
+      <top>1</top>
+      <right>10</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="146">
+      <id>146</id>
+      <displayName>Czar Dragon</displayName>
+      <fileName>Czar Dragon</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="147">
+      <id>147</id>
+      <displayName>Daravon</displayName>
+      <fileName>Daravon</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="148">
+      <id>148</id>
+      <displayName>Dark Elf</displayName>
+      <fileName>Dark Elf</fileName>
+      <left>5</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="149">
+      <id>149</id>
+      <displayName>Dark Force</displayName>
+      <fileName>Dark Force</fileName>
+      <left>1</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="150">
+      <id>150</id>
+      <displayName>Daryl</displayName>
+      <fileName>Daryl</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="151">
+      <id>151</id>
+      <displayName>Death Claw</displayName>
+      <fileName>Death Claw</fileName>
+      <left>2</left>
+      <top>4</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="152">
+      <id>152</id>
+      <displayName>Deathguise</displayName>
+      <fileName>Deathguise</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="153">
+      <id>153</id>
+      <displayName>Defender X</displayName>
+      <fileName>Defender X</fileName>
+      <left>4</left>
+      <top>4</top>
+      <right>4</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="154">
+      <id>154</id>
+      <displayName>Delita</displayName>
+      <fileName>Delita</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>1</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="155">
+      <id>155</id>
+      <displayName>Demi</displayName>
+      <fileName>Demi</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="156">
+      <id>156</id>
+      <displayName>Demonolith</displayName>
+      <fileName>Demonolith</fileName>
+      <left>5</left>
+      <top>1</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="157">
+      <id>157</id>
+      <displayName>Diablos</displayName>
+      <fileName>Diablos</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>10</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="158">
+      <id>158</id>
+      <displayName>Diamond Weapon</displayName>
+      <fileName>Diamond Weapon</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="159">
+      <id>159</id>
+      <displayName>Dingo</displayName>
+      <fileName>Dingo</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="160">
+      <id>160</id>
+      <displayName>Dinonix</displayName>
+      <fileName>Dinonix</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>1</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="161">
+      <id>161</id>
+      <displayName>Displayer</displayName>
+      <fileName>Displayer</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="162">
+      <id>162</id>
+      <displayName>Doom Gaze</displayName>
+      <fileName>Doom Gaze</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="163">
+      <id>163</id>
+      <displayName>Doom</displayName>
+      <fileName>Doom</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="164">
+      <id>164</id>
+      <displayName>Doomtrain</displayName>
+      <fileName>Doomtrain</fileName>
+      <left>10</left>
+      <top>3</top>
+      <right>1</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="165">
+      <id>165</id>
+      <displayName>Dr. Lugae</displayName>
+      <fileName>Dr. Lugae</fileName>
+      <left>3</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="166">
+      <id>166</id>
+      <displayName>Draclau</displayName>
+      <fileName>Draclau</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="167">
+      <id>167</id>
+      <displayName>Dragon Grass</displayName>
+      <fileName>Dragon Grass</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="168">
+      <id>168</id>
+      <displayName>Drogan</displayName>
+      <fileName>Drogan</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="169">
+      <id>169</id>
+      <displayName>Dual Horn</displayName>
+      <fileName>Dual Horn</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="170">
+      <id>170</id>
+      <displayName>Dullahan</displayName>
+      <fileName>Dullahan</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="171">
+      <id>171</id>
+      <displayName>Duncan</displayName>
+      <fileName>Duncan</fileName>
+      <left>2</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="172">
+      <id>172</id>
+      <displayName>Dune Buggy</displayName>
+      <fileName>Dune Buggy</fileName>
+      <left>9</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="173">
+      <id>173</id>
+      <displayName>Dycedarg</displayName>
+      <fileName>Dycedarg</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="174">
+      <id>174</id>
+      <displayName>Dyne</displayName>
+      <fileName>Dyne</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="175">
+      <id>175</id>
+      <displayName>Earth Guardian</displayName>
+      <fileName>Earth Guardian</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="176">
+      <id>176</id>
+      <displayName>Edea</displayName>
+      <fileName>Edea</fileName>
+      <left>3</left>
+      <top>10</top>
+      <right>10</right>
+      <bottom>3</bottom>
+      <level>100</level>
+      <native>0</native>
+    </card>
+
+    <card id="177">
+      <id>177</id>
       <displayName>Eden</displayName>
       <fileName>Eden</fileName>
       <left>10</left>
@@ -217,8 +2125,56 @@
       <native>1</native>
     </card>
 
-    <card id="19">
-      <id>19</id>
+    <card id="178">
+      <id>178</id>
+      <displayName>Edgar</displayName>
+      <fileName>Edgar</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>10</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="179">
+      <id>179</id>
+      <displayName>Edge</displayName>
+      <fileName>Edge</fileName>
+      <left>10</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="180">
+      <id>180</id>
+      <displayName>Edward</displayName>
+      <fileName>Edward</fileName>
+      <left>10</left>
+      <top>4</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="181">
+      <id>181</id>
+      <displayName>Eiko</displayName>
+      <fileName>Eiko</fileName>
+      <left>10</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="182">
+      <id>182</id>
       <displayName>Elastoid</displayName>
       <fileName>Elastoid</fileName>
       <left>7</left>
@@ -229,20 +2185,356 @@
       <native>1</native>
     </card>
 
-    <card id="20">
-      <id>20</id>
+    <card id="183">
+      <id>183</id>
+      <displayName>Elayne</displayName>
+      <fileName>Elayne</fileName>
+      <left>5</left>
+      <top>1</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="184">
+      <id>184</id>
+      <displayName>Elena</displayName>
+      <fileName>Elena</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>4</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="185">
+      <id>185</id>
+      <displayName>Elidibs the Summoner</displayName>
+      <fileName>Elidibs the Summoner</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="186">
+      <id>186</id>
+      <displayName>Elidibs</displayName>
+      <fileName>Elidibs</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="187">
+      <id>187</id>
+      <displayName>Ellone</displayName>
+      <fileName>Ellone</fileName>
+      <left>3</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="188">
+      <id>188</id>
+      <displayName>Elmdor</displayName>
+      <fileName>Elmdor</fileName>
+      <left>10</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="189">
+      <id>189</id>
       <displayName>Elnoyle</displayName>
       <fileName>Elnoyle</fileName>
       <left>6</left>
-      <top>5</top>
+      <top>4</top>
       <right>3</right>
       <bottom>7</bottom>
       <level>5</level>
       <native>1</native>
     </card>
 
-    <card id="21">
-      <id>21</id>
+    <card id="190">
+      <id>190</id>
+      <displayName>Elvoret</displayName>
+      <fileName>Elvoret</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="191">
+      <id>191</id>
+      <displayName>Emerald Weapon</displayName>
+      <fileName>Emerald Weapon</fileName>
+      <left>8</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="192">
+      <id>192</id>
+      <displayName>Emperor Gestahl</displayName>
+      <fileName>Emperor Gestahl</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="193">
+      <id>193</id>
+      <displayName>Enkidu</displayName>
+      <fileName>Enkidu</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="194">
+      <id>194</id>
+      <displayName>Enterprise</displayName>
+      <fileName>Enterprise</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="195">
+      <id>195</id>
+      <displayName>Epaaj</displayName>
+      <fileName>Epaaj</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="196">
+      <id>196</id>
+      <displayName>Evil Wall</displayName>
+      <fileName>Evil Wall</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="197">
+      <id>197</id>
+      <displayName>Fairy</displayName>
+      <fileName>Fairy</fileName>
+      <left>2</left>
+      <top>9</top>
+      <right>9</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="198">
+      <id>198</id>
+      <displayName>Falcon</displayName>
+      <fileName>Falcon</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="199">
+      <id>199</id>
+      <displayName>Faltzer</displayName>
+      <fileName>Faltzer</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="200">
+      <id>200</id>
+      <displayName>Faris</displayName>
+      <fileName>Faris</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>9</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="201">
+      <id>201</id>
+      <displayName>Fastitocalon-F</displayName>
+      <fileName>Fastitocalon-F</fileName>
+      <left>1</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="202">
+      <id>202</id>
+      <displayName>Fastitocalon</displayName>
+      <fileName>Fastitocalon</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="203">
+      <id>203</id>
+      <displayName>Fat Chocobo</displayName>
+      <fileName>Fat Chocobo</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="204">
+      <id>204</id>
+      <displayName>Fenrir</displayName>
+      <fileName>Fenrir</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="205">
+      <id>205</id>
+      <displayName>Fira</displayName>
+      <fileName>Fira</fileName>
+      <left>2</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="206">
+      <id>206</id>
+      <displayName>Firaga</displayName>
+      <fileName>Firaga</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="207">
+      <id>207</id>
+      <displayName>Fire Crystal</displayName>
+      <fileName>Fire Crystal</fileName>
+      <left>9</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="208">
+      <id>208</id>
+      <displayName>Fire</displayName>
+      <fileName>Fire</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="209">
+      <id>209</id>
+      <displayName>Flame Dog</displayName>
+      <fileName>Flame Dog</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="210">
+      <id>210</id>
+      <displayName>Flame Eater</displayName>
+      <fileName>Flame Eater</fileName>
+      <left>1</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="211">
+      <id>211</id>
+      <displayName>Flare</displayName>
+      <fileName>Flare</fileName>
+      <left>9</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="212">
+      <id>212</id>
       <displayName>Forbidden</displayName>
       <fileName>Forbidden</fileName>
       <left>2</left>
@@ -253,8 +2545,56 @@
       <native>1</native>
     </card>
 
-    <card id="22">
-      <id>22</id>
+    <card id="213">
+      <id>213</id>
+      <displayName>Fossil Fang</displayName>
+      <fileName>Fossil Fang</fileName>
+      <left>3</left>
+      <top>1</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="214">
+      <id>214</id>
+      <displayName>Fratley</displayName>
+      <fileName>Fratley</fileName>
+      <left>2</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="215">
+      <id>215</id>
+      <displayName>Freya</displayName>
+      <fileName>Freya</fileName>
+      <left>5</left>
+      <top>9</top>
+      <right>3</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="216">
+      <id>216</id>
+      <displayName>Frog</displayName>
+      <fileName>Frog</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="217">
+      <id>217</id>
       <displayName>FujinRaijin</displayName>
       <fileName>FujinRaijin</fileName>
       <left>4</left>
@@ -265,8 +2605,140 @@
       <native>1</native>
     </card>
 
-    <card id="23">
-      <id>23</id>
+    <card id="218">
+      <id>218</id>
+      <displayName>Funeral</displayName>
+      <fileName>Funeral</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="219">
+      <id>219</id>
+      <displayName>Funguar</displayName>
+      <fileName>Funguar</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>1</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="220">
+      <id>220</id>
+      <displayName>FuSoYa</displayName>
+      <fileName>FuSoYa</fileName>
+      <left>10</left>
+      <top>4</top>
+      <right>10</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="221">
+      <id>221</id>
+      <displayName>Gafgarion</displayName>
+      <fileName>Gafgarion</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>8</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="222">
+      <id>222</id>
+      <displayName>Galuf</displayName>
+      <fileName>Galuf</fileName>
+      <left>10</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="223">
+      <id>223</id>
+      <displayName>Gargantua</displayName>
+      <fileName>Gargantua</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="224">
+      <id>224</id>
+      <displayName>Garland</displayName>
+      <fileName>Garland</fileName>
+      <left>8</left>
+      <top>7</top>
+      <right>1</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="225">
+      <id>225</id>
+      <displayName>Garnet</displayName>
+      <fileName>Garnet</fileName>
+      <left>4</left>
+      <top>10</top>
+      <right>2</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="226">
+      <id>226</id>
+      <displayName>Garula</displayName>
+      <fileName>Garula</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>4</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="227">
+      <id>227</id>
+      <displayName>Gau</displayName>
+      <fileName>Gau</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="228">
+      <id>228</id>
+      <displayName>Gayla</displayName>
+      <fileName>Gayla</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="229">
+      <id>229</id>
       <displayName>Geezard</displayName>
       <fileName>Geezard</fileName>
       <left>5</left>
@@ -277,8 +2749,68 @@
       <native>1</native>
     </card>
 
-    <card id="24">
-      <id>24</id>
+    <card id="230">
+      <id>230</id>
+      <displayName>Gelwan</displayName>
+      <fileName>Gelwan</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="231">
+      <id>231</id>
+      <displayName>Gemini</displayName>
+      <fileName>Gemini</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="232">
+      <id>232</id>
+      <displayName>General Gilgamesh</displayName>
+      <fileName>General Gilgamesh</fileName>
+      <left>5</left>
+      <top>9</top>
+      <right>1</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="233">
+      <id>233</id>
+      <displayName>General Leo</displayName>
+      <fileName>General Leo</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="234">
+      <id>234</id>
+      <displayName>Geosgaeno</displayName>
+      <fileName>Geosgaeno</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="235">
+      <id>235</id>
       <displayName>Gerogero</displayName>
       <fileName>Gerogero</fileName>
       <left>3</left>
@@ -289,8 +2821,8 @@
       <native>1</native>
     </card>
 
-    <card id="25">
-      <id>25</id>
+    <card id="236">
+      <id>236</id>
       <displayName>Gesper</displayName>
       <fileName>Gesper</fileName>
       <left>1</left>
@@ -301,8 +2833,80 @@
       <native>1</native>
     </card>
 
-    <card id="26">
-      <id>26</id>
+    <card id="237">
+      <id>237</id>
+      <displayName>Ghost Train</displayName>
+      <fileName>Ghost Train</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="238">
+      <id>238</id>
+      <displayName>Ghost</displayName>
+      <fileName>Ghost</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="239">
+      <id>239</id>
+      <displayName>Gi Nattak</displayName>
+      <fileName>Gi Nattak</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="240">
+      <id>240</id>
+      <displayName>Gi Specter</displayName>
+      <fileName>Gi Specter</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="241">
+      <id>241</id>
+      <displayName>Gigas</displayName>
+      <fileName>Gigas</fileName>
+      <left>2</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="242">
+      <id>242</id>
+      <displayName>Gilgame</displayName>
+      <fileName>Gilgame</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="243">
+      <id>243</id>
       <displayName>Gilgamesh</displayName>
       <fileName>Gilgamesh</fileName>
       <left>6</left>
@@ -313,8 +2917,200 @@
       <native>1</native>
     </card>
 
-    <card id="27">
-      <id>27</id>
+    <card id="244">
+      <id>244</id>
+      <displayName>Gill</displayName>
+      <fileName>Gill</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="245">
+      <id>245</id>
+      <displayName>GIM47N</displayName>
+      <fileName>GIM47N</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="246">
+      <id>246</id>
+      <displayName>Gimme Cat</displayName>
+      <fileName>Gimme Cat</fileName>
+      <left>5</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="247">
+      <id>247</id>
+      <displayName>Gizamaluke</displayName>
+      <fileName>Gizamaluke</fileName>
+      <left>1</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="248">
+      <id>248</id>
+      <displayName>Glacial Eye</displayName>
+      <fileName>Glacial Eye</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="249">
+      <id>249</id>
+      <displayName>Goblin Mage</displayName>
+      <fileName>Goblin Mage</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="250">
+      <id>250</id>
+      <displayName>Goblin</displayName>
+      <fileName>Goblin</fileName>
+      <left>1</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="251">
+      <id>251</id>
+      <displayName>Goddess</displayName>
+      <fileName>Goddess</fileName>
+      <left>8</left>
+      <top>1</top>
+      <right>7</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="252">
+      <id>252</id>
+      <displayName>Godo</displayName>
+      <fileName>Godo</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="253">
+      <id>253</id>
+      <displayName>Gogo</displayName>
+      <fileName>Gogo</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="254">
+      <id>254</id>
+      <displayName>Golagros</displayName>
+      <fileName>Golagros</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="255">
+      <id>255</id>
+      <displayName>Golbez</displayName>
+      <fileName>Golbez</fileName>
+      <left>9</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="256">
+      <id>256</id>
+      <displayName>Gold Chocobo</displayName>
+      <fileName>Gold Chocobo</fileName>
+      <left>10</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="257">
+      <id>257</id>
+      <displayName>Gold Frog</displayName>
+      <fileName>Gold Frog</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="258">
+      <id>258</id>
+      <displayName>Goltana</displayName>
+      <fileName>Goltana</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="259">
+      <id>259</id>
+      <displayName>Granaldo</displayName>
+      <fileName>Granaldo</fileName>
+      <left>5</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="260">
+      <id>260</id>
       <displayName>Grand Mantis</displayName>
       <fileName>Grand Mantis</fileName>
       <left>3</left>
@@ -325,8 +3121,8 @@
       <native>1</native>
     </card>
 
-    <card id="28">
-      <id>28</id>
+    <card id="261">
+      <id>261</id>
       <displayName>Grat</displayName>
       <fileName>Grat</fileName>
       <left>1</left>
@@ -337,8 +3133,44 @@
       <native>1</native>
     </card>
 
-    <card id="29">
-      <id>29</id>
+    <card id="262">
+      <id>262</id>
+      <displayName>Great Malboro</displayName>
+      <fileName>Great Malboro</fileName>
+      <left>5</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="263">
+      <id>263</id>
+      <displayName>Green Chocobo</displayName>
+      <fileName>Green Chocobo</fileName>
+      <left>7</left>
+      <top>1</top>
+      <right>4</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="264">
+      <id>264</id>
+      <displayName>Grenade</displayName>
+      <fileName>Grenade</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="265">
+      <id>265</id>
       <displayName>Grendel</displayName>
       <fileName>Grendel</fileName>
       <left>2</left>
@@ -349,8 +3181,188 @@
       <native>1</native>
     </card>
 
-    <card id="30">
-      <id>30</id>
+    <card id="266">
+      <id>266</id>
+      <displayName>Griever</displayName>
+      <fileName>Griever</fileName>
+      <left>3</left>
+      <top>10</top>
+      <right>4</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="267">
+      <id>267</id>
+      <displayName>Grimlock</displayName>
+      <fileName>Grimlock</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="268">
+      <id>268</id>
+      <displayName>Grunt</displayName>
+      <fileName>Grunt</fileName>
+      <left>6</left>
+      <top>1</top>
+      <right>1</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="269">
+      <id>269</id>
+      <displayName>Guado Guardian</displayName>
+      <fileName>Guado Guardian</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="270">
+      <id>270</id>
+      <displayName>Guard Scorpion</displayName>
+      <fileName>Guard Scorpion</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="271">
+      <id>271</id>
+      <displayName>Guardian</displayName>
+      <fileName>Guardian</fileName>
+      <left>5</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="272">
+      <id>272</id>
+      <displayName>Gungho</displayName>
+      <fileName>Gungho</fileName>
+      <left>2</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="273">
+      <id>273</id>
+      <displayName>Gustav</displayName>
+      <fileName>Gustav</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="274">
+      <id>274</id>
+      <displayName>Hades</displayName>
+      <fileName>Hades</fileName>
+      <left>10</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="275">
+      <id>275</id>
+      <displayName>Halma</displayName>
+      <fileName>Halma</fileName>
+      <left>2</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="276">
+      <id>276</id>
+      <displayName>Halycanos</displayName>
+      <fileName>Halycanos</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="277">
+      <id>277</id>
+      <displayName>Hashmalum</displayName>
+      <fileName>Hashmalum</fileName>
+      <left>9</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="278">
+      <id>278</id>
+      <displayName>Headmaster Cid</displayName>
+      <fileName>Headmaster Cid</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="279">
+      <id>279</id>
+      <displayName>Heli-Gunner</displayName>
+      <fileName>Heli-Gunner</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="280">
+      <id>280</id>
+      <displayName>Hell House</displayName>
+      <fileName>Hell House</fileName>
+      <left>3</left>
+      <top>1</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="281">
+      <id>281</id>
       <displayName>Hexadragon</displayName>
       <fileName>Hexadragon</fileName>
       <left>3</left>
@@ -361,8 +3373,572 @@
       <native>1</native>
     </card>
 
-    <card id="31">
-      <id>31</id>
+    <card id="282">
+      <id>282</id>
+      <displayName>Hidon</displayName>
+      <fileName>Hidon</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="283">
+      <id>283</id>
+      <displayName>Highwind</displayName>
+      <fileName>Highwind</fileName>
+      <left>6</left>
+      <top>9</top>
+      <right>8</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="284">
+      <id>284</id>
+      <displayName>Hilda Garde 1</displayName>
+      <fileName>Hilda Garde 1</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>5</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="285">
+      <id>285</id>
+      <displayName>Hilda Garde 2</displayName>
+      <fileName>Hilda Garde 2</fileName>
+      <left>4</left>
+      <top>9</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="286">
+      <id>286</id>
+      <displayName>Hilda Garde 3</displayName>
+      <fileName>Hilda Garde 3</fileName>
+      <left>9</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="287">
+      <id>287</id>
+      <displayName>Hilgigars</displayName>
+      <fileName>Hilgigars</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="288">
+      <id>288</id>
+      <displayName>Hippaul</displayName>
+      <fileName>Hippaul</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>4</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="289">
+      <id>289</id>
+      <displayName>Hojo</displayName>
+      <fileName>Hojo</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>10</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="290">
+      <id>290</id>
+      <displayName>Holy</displayName>
+      <fileName>Holy</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="291">
+      <id>291</id>
+      <displayName>Hydra</displayName>
+      <fileName>Hydra</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="292">
+      <id>292</id>
+      <displayName>Ice Beast</displayName>
+      <fileName>Ice Beast</fileName>
+      <left>3</left>
+      <top>1</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="293">
+      <id>293</id>
+      <displayName>Ifrit</displayName>
+      <fileName>Ifrit</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="294">
+      <id>294</id>
+      <displayName>Iguion</displayName>
+      <fileName>Iguion</fileName>
+      <left>2</left>
+      <top>8</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="295">
+      <id>295</id>
+      <displayName>Imp</displayName>
+      <fileName>Imp</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="296">
+      <id>296</id>
+      <displayName>Inferno</displayName>
+      <fileName>Inferno</fileName>
+      <left>4</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="297">
+      <id>297</id>
+      <displayName>Interceptor</displayName>
+      <fileName>Interceptor</fileName>
+      <left>1</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="298">
+      <id>298</id>
+      <displayName>Iron Giant</displayName>
+      <fileName>Iron Giant</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="299">
+      <id>299</id>
+      <displayName>Irvine</displayName>
+      <fileName>Irvine</fileName>
+      <left>10</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="300">
+      <id>300</id>
+      <displayName>Ixion</displayName>
+      <fileName>Ixion</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="301">
+      <id>301</id>
+      <displayName>Izlude</displayName>
+      <fileName>Izlude</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="302">
+      <id>302</id>
+      <displayName>Jecht</displayName>
+      <fileName>Jecht</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>10</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="303">
+      <id>303</id>
+      <displayName>Jelleye</displayName>
+      <fileName>Jelleye</fileName>
+      <left>7</left>
+      <top>3</top>
+      <right>2</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="304">
+      <id>304</id>
+      <displayName>Jenica</displayName>
+      <fileName>Jenica</fileName>
+      <left>7</left>
+      <top>1</top>
+      <right>5</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="305">
+      <id>305</id>
+      <displayName>Jenova BIRTH</displayName>
+      <fileName>Jenova BIRTH</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="306">
+      <id>306</id>
+      <displayName>Jenova DEATH</displayName>
+      <fileName>Jenova DEATH</fileName>
+      <left>8</left>
+      <top>3</top>
+      <right>8</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="307">
+      <id>307</id>
+      <displayName>Jenova LIFE</displayName>
+      <fileName>Jenova LIFE</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="308">
+      <id>308</id>
+      <displayName>Jenova Synthesis</displayName>
+      <fileName>Jenova Synthesis</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="309">
+      <id>309</id>
+      <displayName>Jenova</displayName>
+      <fileName>Jenova</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="310">
+      <id>310</id>
+      <displayName>Jumbo Cactuar</displayName>
+      <fileName>Jumbo Cactuar</fileName>
+      <left>4</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="311">
+      <id>311</id>
+      <displayName>Kain</displayName>
+      <fileName>Kain</fileName>
+      <left>10</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="312">
+      <id>312</id>
+      <displayName>Kanabrif</displayName>
+      <fileName>Kanabrif</fileName>
+      <left>4</left>
+      <top>4</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="313">
+      <id>313</id>
+      <displayName>Karlabos</displayName>
+      <fileName>Karlabos</fileName>
+      <left>1</left>
+      <top>3</top>
+      <right>3</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="314">
+      <id>314</id>
+      <displayName>Kefka</displayName>
+      <fileName>Kefka</fileName>
+      <left>9</left>
+      <top>9</top>
+      <right>1</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="315">
+      <id>315</id>
+      <displayName>Kelga</displayName>
+      <fileName>Kelga</fileName>
+      <left>8</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="316">
+      <id>316</id>
+      <displayName>Kelk Ronso</displayName>
+      <fileName>Kelk Ronso</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="317">
+      <id>317</id>
+      <displayName>Killer Bee</displayName>
+      <fileName>Killer Bee</fileName>
+      <left>2</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="318">
+      <id>318</id>
+      <displayName>Kimahri</displayName>
+      <fileName>Kimahri</fileName>
+      <left>9</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="319">
+      <id>319</id>
+      <displayName>King Elban</displayName>
+      <fileName>King Elban</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="320">
+      <id>320</id>
+      <displayName>King-Ryu</displayName>
+      <fileName>King-Ryu</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="321">
+      <id>321</id>
+      <displayName>Kinoc</displayName>
+      <fileName>Kinoc</fileName>
+      <left>1</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="322">
+      <id>322</id>
+      <displayName>Kirin</displayName>
+      <fileName>Kirin</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="323">
+      <id>323</id>
+      <displayName>Kiros</displayName>
+      <fileName>Kiros</fileName>
+      <left>10</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="324">
+      <id>324</id>
+      <displayName>Kjata</displayName>
+      <fileName>Kjata</fileName>
+      <left>2</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="325">
+      <id>325</id>
+      <displayName>Kletian</displayName>
+      <fileName>Kletian</fileName>
+      <left>1</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="326">
+      <id>326</id>
+      <displayName>Knights of the Round</displayName>
+      <fileName>Knights of the Round</fileName>
+      <left>10</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="327">
+      <id>327</id>
+      <displayName>Kraken</displayName>
+      <fileName>Kraken</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="328">
+      <id>328</id>
+      <displayName>Krile</displayName>
+      <fileName>Krile</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="329">
+      <id>329</id>
       <displayName>Krysta</displayName>
       <fileName>Krysta</fileName>
       <left>1</left>
@@ -373,8 +3949,128 @@
       <native>1</native>
     </card>
 
-    <card id="32">
-      <id>32</id>
+    <card id="330">
+      <id>330</id>
+      <displayName>Kuja</displayName>
+      <fileName>Kuja</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>10</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="331">
+      <id>331</id>
+      <displayName>Kusariqqu</displayName>
+      <fileName>Kusariqqu</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="332">
+      <id>332</id>
+      <displayName>Laguna</displayName>
+      <fileName>Laguna</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>10</right>
+      <bottom>3</bottom>
+      <level>100</level>
+      <native>0</native>
+    </card>
+
+    <card id="333">
+      <id>333</id>
+      <displayName>Lamia</displayName>
+      <fileName>Lamia</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="334">
+      <id>334</id>
+      <displayName>Land Crawler</displayName>
+      <fileName>Land Crawler</fileName>
+      <left>7</left>
+      <top>3</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="335">
+      <id>335</id>
+      <displayName>Lani</displayName>
+      <fileName>Lani</fileName>
+      <left>8</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="336">
+      <id>336</id>
+      <displayName>Larg</displayName>
+      <fileName>Larg</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="337">
+      <id>337</id>
+      <displayName>Larva</displayName>
+      <fileName>Larva</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="338">
+      <id>338</id>
+      <displayName>Lede</displayName>
+      <fileName>Lede</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="339">
+      <id>339</id>
+      <displayName>Leo</displayName>
+      <fileName>Leo</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="340">
+      <id>340</id>
       <displayName>Leviathan</displayName>
       <fileName>Leviathan</fileName>
       <left>7</left>
@@ -385,8 +4081,260 @@
       <native>1</native>
     </card>
 
-    <card id="33">
-      <id>33</id>
+    <card id="341">
+      <id>341</id>
+      <displayName>Libra</displayName>
+      <fileName>Libra</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="342">
+      <id>342</id>
+      <displayName>Life</displayName>
+      <fileName>Life</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="343">
+      <id>343</id>
+      <displayName>Liquid Flame</displayName>
+      <fileName>Liquid Flame</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="344">
+      <id>344</id>
+      <displayName>Lizard Man</displayName>
+      <fileName>Lizard Man</fileName>
+      <left>1</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="345">
+      <id>345</id>
+      <displayName>Locke</displayName>
+      <fileName>Locke</fileName>
+      <left>7</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="346">
+      <id>346</id>
+      <displayName>Lord Ochu</displayName>
+      <fileName>Lord Ochu</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="347">
+      <id>347</id>
+      <displayName>Lost Number</displayName>
+      <fileName>Lost Number</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="348">
+      <id>348</id>
+      <displayName>Lugaborg</displayName>
+      <fileName>Lugaborg</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="349">
+      <id>349</id>
+      <displayName>Lulu</displayName>
+      <fileName>Lulu</fileName>
+      <left>10</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="350">
+      <id>350</id>
+      <displayName>Lumber Beast</displayName>
+      <fileName>Lumber Beast</fileName>
+      <left>6</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="351">
+      <id>351</id>
+      <displayName>Lunasaur</displayName>
+      <fileName>Lunasaur</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="352">
+      <id>352</id>
+      <displayName>Machine Giant</displayName>
+      <fileName>Machine Giant</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="353">
+      <id>353</id>
+      <displayName>Mad Oscar</displayName>
+      <fileName>Mad Oscar</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="354">
+      <id>354</id>
+      <displayName>Madonna</displayName>
+      <fileName>Madonna</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="355">
+      <id>355</id>
+      <displayName>Maduin</displayName>
+      <fileName>Maduin</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="356">
+      <id>356</id>
+      <displayName>Mage</displayName>
+      <fileName>Mage</fileName>
+      <left>9</left>
+      <top>3</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="357">
+      <id>357</id>
+      <displayName>Magic Pot</displayName>
+      <fileName>Magic Pot</fileName>
+      <left>1</left>
+      <top>1</top>
+      <right>2</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="358">
+      <id>358</id>
+      <displayName>Magissa</displayName>
+      <fileName>Magissa</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="359">
+      <id>359</id>
+      <displayName>Magitek Armor</displayName>
+      <fileName>Magitek Armor</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>1</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="360">
+      <id>360</id>
+      <displayName>Magus Sisters</displayName>
+      <fileName>Magus Sisters</fileName>
+      <left>9</left>
+      <top>10</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="361">
+      <id>361</id>
+      <displayName>Malak</displayName>
+      <fileName>Malak</fileName>
+      <left>3</left>
+      <top>9</top>
+      <right>6</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="362">
+      <id>362</id>
       <displayName>Malboro</displayName>
       <fileName>Malboro</fileName>
       <left>2</left>
@@ -397,8 +4345,116 @@
       <native>1</native>
     </card>
 
-    <card id="34">
-      <id>34</id>
+    <card id="363">
+      <id>363</id>
+      <displayName>Marcus</displayName>
+      <fileName>Marcus</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="364">
+      <id>364</id>
+      <displayName>Maria</displayName>
+      <fileName>Maria</fileName>
+      <left>3</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="365">
+      <id>365</id>
+      <displayName>Marine</displayName>
+      <fileName>Marine</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="366">
+      <id>366</id>
+      <displayName>Marlene</displayName>
+      <fileName>Marlene</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>8</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="367">
+      <id>367</id>
+      <displayName>Master Tonberry</displayName>
+      <fileName>Master Tonberry</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="368">
+      <id>368</id>
+      <displayName>Materia Keeper</displayName>
+      <fileName>Materia Keeper</fileName>
+      <left>1</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="369">
+      <id>369</id>
+      <displayName>Meliadoul</displayName>
+      <fileName>Meliadoul</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="370">
+      <id>370</id>
+      <displayName>Mellusion</displayName>
+      <fileName>Mellusion</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="371">
+      <id>371</id>
+      <displayName>Meltigemini</displayName>
+      <fileName>Meltigemini</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="372">
+      <id>372</id>
       <displayName>Mesmerize</displayName>
       <fileName>Mesmerize</fileName>
       <left>4</left>
@@ -409,8 +4465,128 @@
       <native>1</native>
     </card>
 
-    <card id="35">
-      <id>35</id>
+    <card id="373">
+      <id>373</id>
+      <displayName>Meteor</displayName>
+      <fileName>Meteor</fileName>
+      <left>8</left>
+      <top>9</top>
+      <right>8</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="374">
+      <id>374</id>
+      <displayName>Mid</displayName>
+      <fileName>Mid</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="375">
+      <id>375</id>
+      <displayName>Midgar Zolom</displayName>
+      <fileName>Midgar Zolom</fileName>
+      <left>8</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="376">
+      <id>376</id>
+      <displayName>Mika</displayName>
+      <fileName>Mika</fileName>
+      <left>5</left>
+      <top>3</top>
+      <right>10</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="377">
+      <id>377</id>
+      <displayName>Milon</displayName>
+      <fileName>Milon</fileName>
+      <left>8</left>
+      <top>8</top>
+      <right>6</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="378">
+      <id>378</id>
+      <displayName>Miluda</displayName>
+      <fileName>Miluda</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="379">
+      <id>379</id>
+      <displayName>Mimic</displayName>
+      <fileName>Mimic</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="380">
+      <id>380</id>
+      <displayName>Mind</displayName>
+      <fileName>Mind</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="381">
+      <id>381</id>
+      <displayName>Mindy</displayName>
+      <fileName>Mindy</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="382">
+      <id>382</id>
+      <displayName>Minimog</displayName>
+      <fileName>Minimog</fileName>
+      <left>2</left>
+      <top>9</top>
+      <right>3</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="383">
+      <id>383</id>
       <displayName>Minotaur</displayName>
       <fileName>Minotaur</fileName>
       <left>9</left>
@@ -421,8 +4597,20 @@
       <native>1</native>
     </card>
 
-    <card id="36">
-      <id>36</id>
+    <card id="384">
+      <id>384</id>
+      <displayName>Mist</displayName>
+      <fileName>Mist</fileName>
+      <left>10</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="385">
+      <id>385</id>
       <displayName>Mobile Type 8</displayName>
       <fileName>Mobile Type 8</fileName>
       <left>3</left>
@@ -433,8 +4621,236 @@
       <native>1</native>
     </card>
 
-    <card id="37">
-      <id>37</id>
+    <card id="386">
+      <id>386</id>
+      <displayName>Mog</displayName>
+      <fileName>Mog</fileName>
+      <left>10</left>
+      <top>8</top>
+      <right>6</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="387">
+      <id>387</id>
+      <displayName>Mogri</displayName>
+      <fileName>Mogri</fileName>
+      <left>6</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="388">
+      <id>388</id>
+      <displayName>Mom Bomb</displayName>
+      <fileName>Mom Bomb</fileName>
+      <left>6</left>
+      <top>1</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="389">
+      <id>389</id>
+      <displayName>Moogle Eater</displayName>
+      <fileName>Moogle Eater</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="390">
+      <id>390</id>
+      <displayName>Moogle</displayName>
+      <fileName>Moogle</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="391">
+      <id>391</id>
+      <displayName>Moss Fungus</displayName>
+      <fileName>Moss Fungus</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="392">
+      <id>392</id>
+      <displayName>Mustadio</displayName>
+      <fileName>Mustadio</fileName>
+      <left>9</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="393">
+      <id>393</id>
+      <displayName>Namingway</displayName>
+      <fileName>Namingway</fileName>
+      <left>2</left>
+      <top>9</top>
+      <right>9</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="394">
+      <id>394</id>
+      <displayName>Necron</displayName>
+      <fileName>Necron</fileName>
+      <left>8</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="395">
+      <id>395</id>
+      <displayName>Necrophobe</displayName>
+      <fileName>Necrophobe</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="396">
+      <id>396</id>
+      <displayName>Neo Bahamut</displayName>
+      <fileName>Neo Bahamut</fileName>
+      <left>6</left>
+      <top>10</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="397">
+      <id>397</id>
+      <displayName>Nut Eater</displayName>
+      <fileName>Nut Eater</fileName>
+      <left>2</left>
+      <top>2</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="398">
+      <id>398</id>
+      <displayName>Oblitzerator</displayName>
+      <fileName>Oblitzerator</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="399">
+      <id>399</id>
+      <displayName>Ochu</displayName>
+      <fileName>Ochu</fileName>
+      <left>3</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="400">
+      <id>400</id>
+      <displayName>Octomammoth</displayName>
+      <fileName>Octomammoth</fileName>
+      <left>1</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="401">
+      <id>401</id>
+      <displayName>Odin</displayName>
+      <fileName>Odin</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="402">
+      <id>402</id>
+      <displayName>Oglop</displayName>
+      <fileName>Oglop</fileName>
+      <left>8</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="403">
+      <id>403</id>
+      <displayName>Ogopogo</displayName>
+      <fileName>Ogopogo</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="404">
+      <id>404</id>
+      <displayName>Ogre</displayName>
+      <fileName>Ogre</fileName>
+      <left>3</left>
+      <top>1</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="405">
+      <id>405</id>
       <displayName>Oilboyle</displayName>
       <fileName>Oilboyle</fileName>
       <left>8</left>
@@ -445,8 +4861,164 @@
       <native>1</native>
     </card>
 
-    <card id="38">
-      <id>38</id>
+    <card id="406">
+      <id>406</id>
+      <displayName>Olan</displayName>
+      <fileName>Olan</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>8</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="407">
+      <id>407</id>
+      <displayName>Omdolia</displayName>
+      <fileName>Omdolia</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="408">
+      <id>408</id>
+      <displayName>Omega</displayName>
+      <fileName>Omega</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="409">
+      <id>409</id>
+      <displayName>Omniscient</displayName>
+      <fileName>Omniscient</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="410">
+      <id>410</id>
+      <displayName>Opera Impresario</displayName>
+      <fileName>Opera Impresario</fileName>
+      <left>1</left>
+      <top>2</top>
+      <right>3</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="411">
+      <id>411</id>
+      <displayName>Orinas</displayName>
+      <fileName>Orinas</fileName>
+      <left>1</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="412">
+      <id>412</id>
+      <displayName>Orlandu</displayName>
+      <fileName>Orlandu</fileName>
+      <left>9</left>
+      <top>10</top>
+      <right>2</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="413">
+      <id>413</id>
+      <displayName>Ovelia</displayName>
+      <fileName>Ovelia</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="414">
+      <id>414</id>
+      <displayName>Owain</displayName>
+      <fileName>Owain</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="415">
+      <id>415</id>
+      <displayName>Ozma</displayName>
+      <fileName>Ozma</fileName>
+      <left>7</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="416">
+      <id>416</id>
+      <displayName>Palidor</displayName>
+      <fileName>Palidor</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="417">
+      <id>417</id>
+      <displayName>Palmer</displayName>
+      <fileName>Palmer</fileName>
+      <left>8</left>
+      <top>7</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="418">
+      <id>418</id>
+      <displayName>Palom</displayName>
+      <fileName>Palom</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>9</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="419">
+      <id>419</id>
       <displayName>Pandemona</displayName>
       <fileName>Pandemona</fileName>
       <left>7</left>
@@ -457,8 +5029,152 @@
       <native>1</native>
     </card>
 
-    <card id="39">
-      <id>39</id>
+    <card id="420">
+      <id>420</id>
+      <displayName>Phantom</displayName>
+      <fileName>Phantom</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="421">
+      <id>421</id>
+      <displayName>Phoenix</displayName>
+      <fileName>Phoenix</fileName>
+      <left>10</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="422">
+      <id>422</id>
+      <displayName>Phunbaba</displayName>
+      <fileName>Phunbaba</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="423">
+      <id>423</id>
+      <displayName>Pig</displayName>
+      <fileName>Pig</fileName>
+      <left>9</left>
+      <top>6</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="424">
+      <id>424</id>
+      <displayName>Pink Puff</displayName>
+      <fileName>Pink Puff</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="425">
+      <id>425</id>
+      <displayName>Pirhana</displayName>
+      <fileName>Pirhana</fileName>
+      <left>1</left>
+      <top>2</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="426">
+      <id>426</id>
+      <displayName>Pisces</displayName>
+      <fileName>Pisces</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="427">
+      <id>427</id>
+      <displayName>Plague</displayName>
+      <fileName>Plague</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="428">
+      <id>428</id>
+      <displayName>Plant Brain</displayName>
+      <fileName>Plant Brain</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="429">
+      <id>429</id>
+      <displayName>Pluto Knight</displayName>
+      <fileName>Pluto Knight</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="430">
+      <id>430</id>
+      <displayName>Poltergeist</displayName>
+      <fileName>Poltergeist</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="431">
+      <id>431</id>
+      <displayName>Porom</displayName>
+      <fileName>Porom</fileName>
+      <left>9</left>
+      <top>8</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="432">
+      <id>432</id>
       <displayName>Propagator</displayName>
       <fileName>Propagator</fileName>
       <left>8</left>
@@ -469,8 +5185,20 @@
       <native>1</native>
     </card>
 
-    <card id="40">
-      <id>40</id>
+    <card id="433">
+      <id>433</id>
+      <displayName>Proud Clod</displayName>
+      <fileName>Proud Clod</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="434">
+      <id>434</id>
       <displayName>PuPu</displayName>
       <fileName>PuPu</fileName>
       <left>1</left>
@@ -481,8 +5209,212 @@
       <native>1</native>
     </card>
 
-    <card id="41">
-      <id>41</id>
+    <card id="435">
+      <id>435</id>
+      <displayName>Quake</displayName>
+      <fileName>Quake</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="436">
+      <id>436</id>
+      <displayName>Quale</displayName>
+      <fileName>Quale</fileName>
+      <left>4</left>
+      <top>8</top>
+      <right>3</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="437">
+      <id>437</id>
+      <displayName>Queen Elban</displayName>
+      <fileName>Queen Elban</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="438">
+      <id>438</id>
+      <displayName>Queklain</displayName>
+      <fileName>Queklain</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="439">
+      <id>439</id>
+      <displayName>Quezacotl</displayName>
+      <fileName>Quezacotl</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="440">
+      <id>440</id>
+      <displayName>Quina</displayName>
+      <fileName>Quina</fileName>
+      <left>10</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="441">
+      <id>441</id>
+      <displayName>Quistis</displayName>
+      <fileName>Quistis</fileName>
+      <left>2</left>
+      <top>9</top>
+      <right>6</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="442">
+      <id>442</id>
+      <displayName>Rachel</displayName>
+      <fileName>Rachel</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="443">
+      <id>443</id>
+      <displayName>Rafa</displayName>
+      <fileName>Rafa</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="444">
+      <id>444</id>
+      <displayName>Ragnarok</displayName>
+      <fileName>Ragnarok</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="445">
+      <id>445</id>
+      <displayName>Ragora</displayName>
+      <fileName>Ragora</fileName>
+      <left>6</left>
+      <top>2</top>
+      <right>2</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="446">
+      <id>446</id>
+      <displayName>Raiden</displayName>
+      <fileName>Raiden</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="447">
+      <id>447</id>
+      <displayName>Raine</displayName>
+      <fileName>Raine</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="448">
+      <id>448</id>
+      <displayName>Ralvuimago</displayName>
+      <fileName>Ralvuimago</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="449">
+      <id>449</id>
+      <displayName>Ramuh</displayName>
+      <fileName>Ramuh</fileName>
+      <left>9</left>
+      <top>4</top>
+      <right>2</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="450">
+      <id>450</id>
+      <displayName>Ramza</displayName>
+      <fileName>Ramza</fileName>
+      <left>9</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="451">
+      <id>451</id>
+      <displayName>Red Bat</displayName>
+      <fileName>Red Bat</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="452">
+      <id>452</id>
       <displayName>Red Giant</displayName>
       <fileName>Red Giant</fileName>
       <left>7</left>
@@ -493,8 +5425,524 @@
       <native>1</native>
     </card>
 
-    <card id="42">
-      <id>42</id>
+    <card id="453">
+      <id>453</id>
+      <displayName>Red Rose</displayName>
+      <fileName>Red Rose</fileName>
+      <left>5</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="454">
+      <id>454</id>
+      <displayName>RedXIII</displayName>
+      <fileName>RedXIII</fileName>
+      <left>5</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="455">
+      <id>455</id>
+      <displayName>Reeve</displayName>
+      <fileName>Reeve</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>10</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="456">
+      <id>456</id>
+      <displayName>Reflect</displayName>
+      <fileName>Reflect</fileName>
+      <left>2</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="457">
+      <id>457</id>
+      <displayName>Regent Cid</displayName>
+      <fileName>Regent Cid</fileName>
+      <left>2</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="458">
+      <id>458</id>
+      <displayName>Reina</displayName>
+      <fileName>Reina</fileName>
+      <left>4</left>
+      <top>9</top>
+      <right>3</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="459">
+      <id>459</id>
+      <displayName>Reis the Dragon</displayName>
+      <fileName>Reis the Dragon</fileName>
+      <left>3</left>
+      <top>9</top>
+      <right>9</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="460">
+      <id>460</id>
+      <displayName>Reis</displayName>
+      <fileName>Reis</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>10</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="461">
+      <id>461</id>
+      <displayName>Relm</displayName>
+      <fileName>Relm</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>10</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="462">
+      <id>462</id>
+      <displayName>Remora</displayName>
+      <fileName>Remora</fileName>
+      <left>7</left>
+      <top>1</top>
+      <right>9</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="463">
+      <id>463</id>
+      <displayName>Reno</displayName>
+      <fileName>Reno</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="464">
+      <id>464</id>
+      <displayName>Rikku</displayName>
+      <fileName>Rikku</fileName>
+      <left>9</left>
+      <top>10</top>
+      <right>4</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="465">
+      <id>465</id>
+      <displayName>Rinoa</displayName>
+      <fileName>Rinoa</fileName>
+      <left>10</left>
+      <top>4</top>
+      <right>10</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="466">
+      <id>466</id>
+      <displayName>Rofel</displayName>
+      <fileName>Rofel</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>1</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="467">
+      <id>467</id>
+      <displayName>Rosa</displayName>
+      <fileName>Rosa</fileName>
+      <left>8</left>
+      <top>10</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="468">
+      <id>468</id>
+      <displayName>Rubicant</displayName>
+      <fileName>Rubicant</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="469">
+      <id>469</id>
+      <displayName>Ruby Dragon</displayName>
+      <fileName>Ruby Dragon</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="470">
+      <id>470</id>
+      <displayName>Ruby Weapon</displayName>
+      <fileName>Ruby Weapon</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="471">
+      <id>471</id>
+      <displayName>Rude</displayName>
+      <fileName>Rude</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="472">
+      <id>472</id>
+      <displayName>Rudvich</displayName>
+      <fileName>Rudvich</fileName>
+      <left>5</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="473">
+      <id>473</id>
+      <displayName>Rufus</displayName>
+      <fileName>Rufus</fileName>
+      <left>2</left>
+      <top>10</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="474">
+      <id>474</id>
+      <displayName>Ruvelia</displayName>
+      <fileName>Ruvelia</fileName>
+      <left>7</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="475">
+      <id>475</id>
+      <displayName>Rydia</displayName>
+      <fileName>Rydia</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="476">
+      <id>476</id>
+      <displayName>Sabin</displayName>
+      <fileName>Sabin</fileName>
+      <left>10</left>
+      <top>5</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="477">
+      <id>477</id>
+      <displayName>Sacred</displayName>
+      <fileName>Sacred</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>1</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="478">
+      <id>478</id>
+      <displayName>Saggitarius</displayName>
+      <fileName>Saggitarius</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="479">
+      <id>479</id>
+      <displayName>SAM08G</displayName>
+      <fileName>SAM08G</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="480">
+      <id>480</id>
+      <displayName>Sanctuary Keeper</displayName>
+      <fileName>Sanctuary Keeper</fileName>
+      <left>8</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="481">
+      <id>481</id>
+      <displayName>Sand Worm</displayName>
+      <fileName>Sand Worm</fileName>
+      <left>2</left>
+      <top>1</top>
+      <right>6</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="482">
+      <id>482</id>
+      <displayName>Sandy</displayName>
+      <fileName>Sandy</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="483">
+      <id>483</id>
+      <displayName>Scorpio</displayName>
+      <fileName>Scorpio</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="484">
+      <id>484</id>
+      <displayName>Sea Devil</displayName>
+      <fileName>Sea Devil</fileName>
+      <left>7</left>
+      <top>4</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="485">
+      <id>485</id>
+      <displayName>Sealed Guardian</displayName>
+      <fileName>Sealed Guardian</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="486">
+      <id>486</id>
+      <displayName>Sealion</displayName>
+      <fileName>Sealion</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="487">
+      <id>487</id>
+      <displayName>Seifer</displayName>
+      <fileName>Seifer</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="488">
+      <id>488</id>
+      <displayName>Selphie</displayName>
+      <fileName>Selphie</fileName>
+      <left>4</left>
+      <top>10</top>
+      <right>8</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="489">
+      <id>489</id>
+      <displayName>Sephiroth</displayName>
+      <fileName>Sephiroth</fileName>
+      <left>1</left>
+      <top>10</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="490">
+      <id>490</id>
+      <displayName>Serpentarius</displayName>
+      <fileName>Serpentarius</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="491">
+      <id>491</id>
+      <displayName>Seto</displayName>
+      <fileName>Seto</fileName>
+      <left>3</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="492">
+      <id>492</id>
+      <displayName>Setzer</displayName>
+      <fileName>Setzer</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="493">
+      <id>493</id>
+      <displayName>Seymour</displayName>
+      <fileName>Seymour</fileName>
+      <left>8</left>
+      <top>10</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="494">
+      <id>494</id>
+      <displayName>Shadow</displayName>
+      <fileName>Shadow</fileName>
+      <left>3</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="495">
+      <id>495</id>
+      <displayName>Shinryu</displayName>
+      <fileName>Shinryu</fileName>
+      <left>8</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="496">
+      <id>496</id>
       <displayName>Shiva</displayName>
       <fileName>Shiva</fileName>
       <left>9</left>
@@ -505,8 +5953,116 @@
       <native>1</native>
     </card>
 
-    <card id="43">
-      <id>43</id>
+    <card id="497">
+      <id>497</id>
+      <displayName>Shoat</displayName>
+      <fileName>Shoat</fileName>
+      <left>8</left>
+      <top>10</top>
+      <right>1</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="498">
+      <id>498</id>
+      <displayName>Shumi Tribe</displayName>
+      <fileName>Shumi Tribe</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="499">
+      <id>499</id>
+      <displayName>Silf</displayName>
+      <fileName>Silf</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="500">
+      <id>500</id>
+      <displayName>Simon</displayName>
+      <fileName>Simon</fileName>
+      <left>5</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="501">
+      <id>501</id>
+      <displayName>Simurgh</displayName>
+      <fileName>Simurgh</fileName>
+      <left>3</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="502">
+      <id>502</id>
+      <displayName>Sin</displayName>
+      <fileName>Sin</fileName>
+      <left>10</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="503">
+      <id>503</id>
+      <displayName>Sinspawn Echuilles</displayName>
+      <fileName>Sinspawn Echuilles</fileName>
+      <left>7</left>
+      <top>3</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="504">
+      <id>504</id>
+      <displayName>Sinspawn Genais</displayName>
+      <fileName>Sinspawn Genais</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="505">
+      <id>505</id>
+      <displayName>Sinspawn Gui</displayName>
+      <fileName>Sinspawn Gui</fileName>
+      <left>1</left>
+      <top>4</top>
+      <right>7</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="506">
+      <id>506</id>
       <displayName>Siren</displayName>
       <fileName>Siren</fileName>
       <left>2</left>
@@ -517,8 +6073,32 @@
       <native>1</native>
     </card>
 
-    <card id="44">
-      <id>44</id>
+    <card id="507">
+      <id>507</id>
+      <displayName>Sky Armor</displayName>
+      <fileName>Sky Armor</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="508">
+      <id>508</id>
+      <displayName>Sky Base</displayName>
+      <fileName>Sky Base</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="509">
+      <id>509</id>
       <displayName>Snow Lion</displayName>
       <fileName>Snow Lion</fileName>
       <left>3</left>
@@ -529,8 +6109,200 @@
       <native>1</native>
     </card>
 
-    <card id="45">
-      <id>45</id>
+    <card id="510">
+      <id>510</id>
+      <displayName>Snow</displayName>
+      <fileName>Snow</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="511">
+      <id>511</id>
+      <displayName>Soldier 1st</displayName>
+      <fileName>Soldier 1st</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="512">
+      <id>512</id>
+      <displayName>Soldier 2nd</displayName>
+      <fileName>Soldier 2nd</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>3</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="513">
+      <id>513</id>
+      <displayName>Soul Gun</displayName>
+      <fileName>Soul Gun</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="514">
+      <id>514</id>
+      <displayName>Spherimorph</displayName>
+      <fileName>Spherimorph</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="515">
+      <id>515</id>
+      <displayName>Sphinxara</displayName>
+      <fileName>Sphinxara</fileName>
+      <left>8</left>
+      <top>8</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="516">
+      <id>516</id>
+      <displayName>Squall</displayName>
+      <fileName>Squall</fileName>
+      <left>9</left>
+      <top>10</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>100</level>
+      <native>0</native>
+    </card>
+
+    <card id="517">
+      <id>517</id>
+      <displayName>Sr. Behemoth</displayName>
+      <fileName>Sr. Behemoth</fileName>
+      <left>5</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="518">
+      <id>518</id>
+      <displayName>St. Ajora</displayName>
+      <fileName>St. Ajora</fileName>
+      <left>4</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="519">
+      <id>519</id>
+      <displayName>Steiner</displayName>
+      <fileName>Steiner</fileName>
+      <left>8</left>
+      <top>6</top>
+      <right>10</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="520">
+      <id>520</id>
+      <displayName>Stella</displayName>
+      <fileName>Stella</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="521">
+      <id>521</id>
+      <displayName>Still Life</displayName>
+      <fileName>Still Life</fileName>
+      <left>1</left>
+      <top>2</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="522">
+      <id>522</id>
+      <displayName>Stiltzkin</displayName>
+      <fileName>Stiltzkin</fileName>
+      <left>1</left>
+      <top>9</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="523">
+      <id>523</id>
+      <displayName>Strago</displayName>
+      <fileName>Strago</fileName>
+      <left>10</left>
+      <top>9</top>
+      <right>5</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="524">
+      <id>524</id>
+      <displayName>Submarine</displayName>
+      <fileName>Submarine</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="525">
+      <id>525</id>
+      <displayName>Sylph</displayName>
+      <fileName>Sylph</fileName>
+      <left>5</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="526">
+      <id>526</id>
       <displayName>T-Rexaur</displayName>
       <fileName>T-Rexaur</fileName>
       <left>7</left>
@@ -541,8 +6313,152 @@
       <native>1</native>
     </card>
 
-    <card id="46">
-      <id>46</id>
+    <card id="527">
+      <id>527</id>
+      <displayName>Taharka</displayName>
+      <fileName>Taharka</fileName>
+      <left>2</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="528">
+      <id>528</id>
+      <displayName>Tantarian</displayName>
+      <fileName>Tantarian</fileName>
+      <left>8</left>
+      <top>1</top>
+      <right>6</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="529">
+      <id>529</id>
+      <displayName>Tauros</displayName>
+      <fileName>Tauros</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="530">
+      <id>530</id>
+      <displayName>Tellah</displayName>
+      <fileName>Tellah</fileName>
+      <left>10</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="531">
+      <id>531</id>
+      <displayName>Terra</displayName>
+      <fileName>Terra</fileName>
+      <left>6</left>
+      <top>10</top>
+      <right>9</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="532">
+      <id>532</id>
+      <displayName>Terrato</displayName>
+      <fileName>Terrato</fileName>
+      <left>9</left>
+      <top>8</top>
+      <right>3</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="533">
+      <id>533</id>
+      <displayName>Teta</displayName>
+      <fileName>Teta</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>4</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="534">
+      <id>534</id>
+      <displayName>Thorn</displayName>
+      <fileName>Thorn</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>1</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="535">
+      <id>535</id>
+      <displayName>Thrustaevis</displayName>
+      <fileName>Thrustaevis</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="536">
+      <id>536</id>
+      <displayName>Thundaga</displayName>
+      <fileName>Thundaga</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="537">
+      <id>537</id>
+      <displayName>Thundara</displayName>
+      <fileName>Thundara</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="538">
+      <id>538</id>
+      <displayName>Thunder</displayName>
+      <fileName>Thunder</fileName>
+      <left>6</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="539">
+      <id>539</id>
       <displayName>Tiamat</displayName>
       <fileName>Tiamat</fileName>
       <left>4</left>
@@ -553,8 +6469,92 @@
       <native>1</native>
     </card>
 
-    <card id="47">
-      <id>47</id>
+    <card id="540">
+      <id>540</id>
+      <displayName>Tidus</displayName>
+      <fileName>Tidus</fileName>
+      <left>6</left>
+      <top>10</top>
+      <right>2</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="541">
+      <id>541</id>
+      <displayName>Tifa</displayName>
+      <fileName>Tifa</fileName>
+      <left>5</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="542">
+      <id>542</id>
+      <displayName>Tiny Bronco</displayName>
+      <fileName>Tiny Bronco</fileName>
+      <left>2</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="543">
+      <id>543</id>
+      <displayName>Titan</displayName>
+      <fileName>Titan</fileName>
+      <left>3</left>
+      <top>10</top>
+      <right>3</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="544">
+      <id>544</id>
+      <displayName>Toad</displayName>
+      <fileName>Toad</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="545">
+      <id>545</id>
+      <displayName>Tonberry King</displayName>
+      <fileName>Tonberry King</fileName>
+      <left>4</left>
+      <top>4</top>
+      <right>6</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="546">
+      <id>546</id>
+      <displayName>Tonberry</displayName>
+      <fileName>Tonberry</fileName>
+      <left>4</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="547">
+      <id>547</id>
       <displayName>Torama</displayName>
       <fileName>Torama</fileName>
       <left>4</left>
@@ -565,8 +6565,44 @@
       <native>1</native>
     </card>
 
-    <card id="48">
-      <id>48</id>
+    <card id="548">
+      <id>548</id>
+      <displayName>Touch Me</displayName>
+      <fileName>Touch Me</fileName>
+      <left>3</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="549">
+      <id>549</id>
+      <displayName>Trap Door</displayName>
+      <fileName>Trap Door</fileName>
+      <left>2</left>
+      <top>4</top>
+      <right>4</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="550">
+      <id>550</id>
+      <displayName>Trauma</displayName>
+      <fileName>Trauma</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="551">
+      <id>551</id>
       <displayName>Tri-Face</displayName>
       <fileName>Tri-Face</fileName>
       <left>5</left>
@@ -577,8 +6613,8 @@
       <native>1</native>
     </card>
 
-    <card id="49">
-      <id>49</id>
+    <card id="552">
+      <id>552</id>
       <displayName>Tri-Point</displayName>
       <fileName>Tri-Point</fileName>
       <left>8</left>
@@ -589,8 +6625,80 @@
       <native>1</native>
     </card>
 
-    <card id="50">
-      <id>50</id>
+    <card id="553">
+      <id>553</id>
+      <displayName>Trillium</displayName>
+      <fileName>Trillium</fileName>
+      <left>2</left>
+      <top>1</top>
+      <right>4</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="554">
+      <id>554</id>
+      <displayName>Tritoch</displayName>
+      <fileName>Tritoch</fileName>
+      <left>1</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="555">
+      <id>555</id>
+      <displayName>Triton</displayName>
+      <fileName>Triton</fileName>
+      <left>4</left>
+      <top>7</top>
+      <right>6</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="556">
+      <id>556</id>
+      <displayName>Tros</displayName>
+      <fileName>Tros</fileName>
+      <left>7</left>
+      <top>3</top>
+      <right>3</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="557">
+      <id>557</id>
+      <displayName>Tseng</displayName>
+      <fileName>Tseng</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="558">
+      <id>558</id>
+      <displayName>Tunnel Armor</displayName>
+      <fileName>Tunnel Armor</fileName>
+      <left>4</left>
+      <top>1</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="559">
+      <id>559</id>
       <displayName>Turtapod</displayName>
       <fileName>Turtapod</fileName>
       <left>7</left>
@@ -601,8 +6709,32 @@
       <native>1</native>
     </card>
 
-    <card id="51">
-      <id>51</id>
+    <card id="560">
+      <id>560</id>
+      <displayName>Twin Tania</displayName>
+      <fileName>Twin Tania</fileName>
+      <left>7</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="561">
+      <id>561</id>
+      <displayName>Typhoon</displayName>
+      <fileName>Typhoon</fileName>
+      <left>7</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="562">
+      <id>562</id>
       <displayName>Ultima Weapon</displayName>
       <fileName>Ultima Weapon</fileName>
       <left>8</left>
@@ -613,8 +6745,296 @@
       <native>1</native>
     </card>
 
-    <card id="52">
-      <id>52</id>
+    <card id="563">
+      <id>563</id>
+      <displayName>Ultima</displayName>
+      <fileName>Ultima</fileName>
+      <left>10</left>
+      <top>9</top>
+      <right>3</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="564">
+      <id>564</id>
+      <displayName>Ultimate Weapon</displayName>
+      <fileName>Ultimate Weapon</fileName>
+      <left>7</left>
+      <top>5</top>
+      <right>7</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="565">
+      <id>565</id>
+      <displayName>Ultimecia</displayName>
+      <fileName>Ultimecia</fileName>
+      <left>10</left>
+      <top>5</top>
+      <right>9</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="566">
+      <id>566</id>
+      <displayName>Ultros</displayName>
+      <fileName>Ultros</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="567">
+      <id>567</id>
+      <displayName>Umaro</displayName>
+      <fileName>Umaro</fileName>
+      <left>5</left>
+      <top>9</top>
+      <right>8</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="568">
+      <id>568</id>
+      <displayName>Valefor</displayName>
+      <fileName>Valefor</fileName>
+      <left>6</left>
+      <top>1</top>
+      <right>9</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="569">
+      <id>569</id>
+      <displayName>Valia Pira</displayName>
+      <fileName>Valia Pira</fileName>
+      <left>7</left>
+      <top>8</top>
+      <right>4</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="570">
+      <id>570</id>
+      <displayName>Valvalis</displayName>
+      <fileName>Valvalis</fileName>
+      <left>8</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="571">
+      <id>571</id>
+      <displayName>Vargas</displayName>
+      <fileName>Vargas</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="572">
+      <id>572</id>
+      <displayName>Velius</displayName>
+      <fileName>Velius</fileName>
+      <left>9</left>
+      <top>2</top>
+      <right>9</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="573">
+      <id>573</id>
+      <displayName>Vincent</displayName>
+      <fileName>Vincent</fileName>
+      <left>9</left>
+      <top>9</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="574">
+      <id>574</id>
+      <displayName>Virgo</displayName>
+      <fileName>Virgo</fileName>
+      <left>3</left>
+      <top>6</top>
+      <right>4</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="575">
+      <id>575</id>
+      <displayName>Vivi</displayName>
+      <fileName>Vivi</fileName>
+      <left>2</left>
+      <top>10</top>
+      <right>9</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="576">
+      <id>576</id>
+      <displayName>Vlakordos</displayName>
+      <fileName>Vlakordos</fileName>
+      <left>1</left>
+      <top>5</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="577">
+      <id>577</id>
+      <displayName>Vormav</displayName>
+      <fileName>Vormav</fileName>
+      <left>2</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="578">
+      <id>578</id>
+      <displayName>Vysage</displayName>
+      <fileName>Vysage</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="579">
+      <id>579</id>
+      <displayName>Wakka</displayName>
+      <fileName>Wakka</fileName>
+      <left>8</left>
+      <top>8</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="580">
+      <id>580</id>
+      <displayName>Ward</displayName>
+      <fileName>Ward</fileName>
+      <left>8</left>
+      <top>10</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>100</level>
+      <native>0</native>
+    </card>
+
+    <card id="581">
+      <id>581</id>
+      <displayName>Warrior Monk</displayName>
+      <fileName>Warrior Monk</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>6</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="582">
+      <id>582</id>
+      <displayName>Wart Puck</displayName>
+      <fileName>Wart Puck</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>3</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="583">
+      <id>583</id>
+      <displayName>Water Crystal</displayName>
+      <fileName>Water Crystal</fileName>
+      <left>10</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="584">
+      <id>584</id>
+      <displayName>Water</displayName>
+      <fileName>Water</fileName>
+      <left>6</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="585">
+      <id>585</id>
+      <displayName>Watera</displayName>
+      <fileName>Watera</fileName>
+      <left>3</left>
+      <top>8</top>
+      <right>2</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="586">
+      <id>586</id>
+      <displayName>Waterga</displayName>
+      <fileName>Waterga</fileName>
+      <left>3</left>
+      <top>8</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="587">
+      <id>587</id>
       <displayName>WedgeBiggs</displayName>
       <fileName>WedgeBiggs</fileName>
       <left>7</left>
@@ -625,8 +7045,128 @@
       <native>1</native>
     </card>
 
-    <card id="53">
-      <id>53</id>
+    <card id="588">
+      <id>588</id>
+      <displayName>Wendigo</displayName>
+      <fileName>Wendigo</fileName>
+      <left>6</left>
+      <top>7</top>
+      <right>3</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="589">
+      <id>589</id>
+      <displayName>Whelk</displayName>
+      <fileName>Whelk</fileName>
+      <left>2</left>
+      <top>7</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="590">
+      <id>590</id>
+      <displayName>White Dragon</displayName>
+      <fileName>White Dragon</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>5</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="591">
+      <id>591</id>
+      <displayName>White Materia</displayName>
+      <fileName>White Materia</fileName>
+      <left>1</left>
+      <top>9</top>
+      <right>9</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="592">
+      <id>592</id>
+      <displayName>Wiegraf</displayName>
+      <fileName>Wiegraf</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="593">
+      <id>593</id>
+      <displayName>Wind Crystal</displayName>
+      <fileName>Wind Crystal</fileName>
+      <left>9</left>
+      <top>2</top>
+      <right>10</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="594">
+      <id>594</id>
+      <displayName>Wing Raptor</displayName>
+      <fileName>Wing Raptor</fileName>
+      <left>4</left>
+      <top>5</top>
+      <right>1</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="595">
+      <id>595</id>
+      <displayName>Wood Sprite</displayName>
+      <fileName>Wood Sprite</fileName>
+      <left>5</left>
+      <top>3</top>
+      <right>6</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="596">
+      <id>596</id>
+      <displayName>Worker 8</displayName>
+      <fileName>Worker 8</fileName>
+      <left>8</left>
+      <top>4</top>
+      <right>10</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="597">
+      <id>597</id>
+      <displayName>Worker</displayName>
+      <fileName>Worker</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="598">
+      <id>598</id>
       <displayName>X-ATM092</displayName>
       <fileName>X-ATM092</fileName>
       <left>3</left>
@@ -635,6 +7175,330 @@
       <bottom>7</bottom>
       <level>6</level>
       <native>1</native>
+    </card>
+
+    <card id="599">
+      <id>599</id>
+      <displayName>X-Death</displayName>
+      <fileName>X-Death</fileName>
+      <left>10</left>
+      <top>3</top>
+      <right>8</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="600">
+      <id>600</id>
+      <displayName>Yan</displayName>
+      <fileName>Yan</fileName>
+      <left>2</left>
+      <top>3</top>
+      <right>1</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="601">
+      <id>601</id>
+      <displayName>Yang</displayName>
+      <fileName>Yang</fileName>
+      <left>3</left>
+      <top>10</top>
+      <right>5</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="602">
+      <id>602</id>
+      <displayName>Yat-99</displayName>
+      <fileName>Yat-99</fileName>
+      <left>3</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="603">
+      <id>603</id>
+      <displayName>Yellow Chocobo</displayName>
+      <fileName>Yellow Chocobo</fileName>
+      <left>5</left>
+      <top>2</top>
+      <right>2</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="604">
+      <id>604</id>
+      <displayName>Yenke Ronso</displayName>
+      <fileName>Yenke Ronso</fileName>
+      <left>4</left>
+      <top>6</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="605">
+      <id>605</id>
+      <displayName>Yeti</displayName>
+      <fileName>Yeti</fileName>
+      <left>4</left>
+      <top>2</top>
+      <right>5</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="606">
+      <id>606</id>
+      <displayName>Yojimbo</displayName>
+      <fileName>Yojimbo</fileName>
+      <left>3</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="607">
+      <id>607</id>
+      <displayName>Yuffie</displayName>
+      <fileName>Yuffie</fileName>
+      <left>10</left>
+      <top>9</top>
+      <right>7</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="608">
+      <id>608</id>
+      <displayName>Yuna</displayName>
+      <fileName>Yuna</fileName>
+      <left>2</left>
+      <top>8</top>
+      <right>10</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="609">
+      <id>609</id>
+      <displayName>Yunalesca</displayName>
+      <fileName>Yunalesca</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>3</right>
+      <bottom>9</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="610">
+      <id>610</id>
+      <displayName>Zack</displayName>
+      <fileName>Zack</fileName>
+      <left>5</left>
+      <top>9</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="611">
+      <id>611</id>
+      <displayName>Zaghnol</displayName>
+      <fileName>Zaghnol</fileName>
+      <left>6</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="612">
+      <id>612</id>
+      <displayName>Zalbag</displayName>
+      <fileName>Zalbag</fileName>
+      <left>8</left>
+      <top>3</top>
+      <right>5</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="613">
+      <id>613</id>
+      <displayName>Zalera</displayName>
+      <fileName>Zalera</fileName>
+      <left>9</left>
+      <top>7</top>
+      <right>6</right>
+      <bottom>3</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="614">
+      <id>614</id>
+      <displayName>Zalmo</displayName>
+      <fileName>Zalmo</fileName>
+      <left>8</left>
+      <top>1</top>
+      <right>3</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="615">
+      <id>615</id>
+      <displayName>Zell</displayName>
+      <fileName>Zell</fileName>
+      <left>6</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>100</level>
+      <native>0</native>
+    </card>
+
+    <card id="616">
+      <id>616</id>
+      <displayName>Zemus</displayName>
+      <fileName>Zemus</fileName>
+      <left>3</left>
+      <top>7</top>
+      <right>8</right>
+      <bottom>7</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="617">
+      <id>617</id>
+      <displayName>Zeromus</displayName>
+      <fileName>Zeromus</fileName>
+      <left>9</left>
+      <top>9</top>
+      <right>4</right>
+      <bottom>1</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="618">
+      <id>618</id>
+      <displayName>Zeza</displayName>
+      <fileName>Zeza</fileName>
+      <left>4</left>
+      <top>4</top>
+      <right>7</right>
+      <bottom>5</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="619">
+      <id>619</id>
+      <displayName>Zidane</displayName>
+      <fileName>Zidane</fileName>
+      <left>10</left>
+      <top>9</top>
+      <right>6</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="620">
+      <id>620</id>
+      <displayName>Ziegfried</displayName>
+      <fileName>Ziegfried</fileName>
+      <left>7</left>
+      <top>2</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="621">
+      <id>621</id>
+      <displayName>Zio Nut</displayName>
+      <fileName>Zio Nut</fileName>
+      <left>3</left>
+      <top>4</top>
+      <right>7</right>
+      <bottom>6</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="622">
+      <id>622</id>
+      <displayName>Zodiac</displayName>
+      <fileName>Zodiac</fileName>
+      <left>3</left>
+      <top>8</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="623">
+      <id>623</id>
+      <displayName>Zok</displayName>
+      <fileName>Zok</fileName>
+      <left>5</left>
+      <top>3</top>
+      <right>7</right>
+      <bottom>2</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="624">
+      <id>624</id>
+      <displayName>Zone Eater</displayName>
+      <fileName>Zone Eater</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>1</right>
+      <bottom>4</bottom>
+      <level>99</level>
+      <native>0</native>
+    </card>
+
+    <card id="625">
+      <id>625</id>
+      <displayName>Zorn</displayName>
+      <fileName>Zorn</fileName>
+      <left>8</left>
+      <top>2</top>
+      <right>4</right>
+      <bottom>8</bottom>
+      <level>99</level>
+      <native>0</native>
     </card>
   </cards>
 </deck>

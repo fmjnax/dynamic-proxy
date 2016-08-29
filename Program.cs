@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using TripleTriadOffline.Forms;
 
 namespace TripleTriadOffline
@@ -13,6 +14,7 @@ namespace TripleTriadOffline
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
             Application.EnableVisualStyles();

@@ -40,6 +40,7 @@
             this.btnLevel8 = new System.Windows.Forms.Button();
             this.btnLevel9 = new System.Windows.Forms.Button();
             this.btnLevel10 = new System.Windows.Forms.Button();
+            this.lstAvailable = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnSelectCard
@@ -68,6 +69,7 @@
             this.btnLevel1.TabIndex = 5;
             this.btnLevel1.TabStop = false;
             this.btnLevel1.UseVisualStyleBackColor = false;
+            this.btnLevel1.Click += new System.EventHandler(this.btnLevel1_Click);
             // 
             // btnLevel2
             // 
@@ -186,6 +188,17 @@
             this.btnLevel10.TabStop = false;
             this.btnLevel10.UseVisualStyleBackColor = false;
             // 
+            // lstAvailable
+            // 
+            this.lstAvailable.BackColor = System.Drawing.Color.Black;
+            this.lstAvailable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstAvailable.ForeColor = System.Drawing.Color.White;
+            this.lstAvailable.FormattingEnabled = true;
+            this.lstAvailable.Location = new System.Drawing.Point(38, 39);
+            this.lstAvailable.Name = "lstAvailable";
+            this.lstAvailable.Size = new System.Drawing.Size(132, 119);
+            this.lstAvailable.TabIndex = 15;
+            // 
             // SelectCards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +206,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(500, 346);
+            this.Controls.Add(this.lstAvailable);
             this.Controls.Add(this.btnLevel10);
             this.Controls.Add(this.btnLevel9);
             this.Controls.Add(this.btnLevel8);
@@ -226,5 +240,6 @@
         private System.Windows.Forms.Button btnLevel8;
         private System.Windows.Forms.Button btnLevel9;
         private System.Windows.Forms.Button btnLevel10;
+        private System.Windows.Forms.ListBox lstAvailable;
     }
 }
