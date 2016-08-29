@@ -62,7 +62,7 @@
             this.btnLevel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnLevel1.FlatAppearance.BorderSize = 0;
             this.btnLevel1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLevel1.Location = new System.Drawing.Point(21, 15);
+            this.btnLevel1.Location = new System.Drawing.Point(22, 15);
             this.btnLevel1.Name = "btnLevel1";
             this.btnLevel1.Size = new System.Drawing.Size(25, 17);
             this.btnLevel1.TabIndex = 5;
