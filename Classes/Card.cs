@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace TripleTriadOffline
 {
@@ -24,6 +21,7 @@ namespace TripleTriadOffline
             displayName = "";
             fileName = "";
             currentColor = null;
+            native = 0;
         }
 
         public bool isUsed { get; set; }
@@ -36,6 +34,7 @@ namespace TripleTriadOffline
         public string displayName { get; set; }
         public string fileName { get; set; }
         public string currentColor { get; set; }
+        public int native { get; set; }
 
         //public Texture2D Texture
         //{

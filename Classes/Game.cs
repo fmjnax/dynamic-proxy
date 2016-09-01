@@ -8,38 +8,193 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using TripleTriadOffline.Classes;
+using TripleTriadOffline.Forms;
 
-namespace TripleTriadOffline
+namespace TripleTriadOffline 
 {
-    public partial class Game : Form
+    public class Game
     {
         private Rectangle mainFrame;
-        private GameBoard gameBoard;
-
+        
         private int playerScore = 5;
         private int opponentScore = 5;
 
-        private int plcol = 25;
-        private int plrow = 25;
-        private int ploffset = 50;
-        private int plmove = 25;
-
-        private int orcol = 410;
-        private int orrow = 25;
-        private int oroffset = 50;
-        private int ormove = -25;
-
-        private int turn = 1;
+        
         private int checkMove = 0;
 
         private string gameResult = "";
 
-        Card[] playerCard = new Card[5];
-        Card[] opponentCard = new Card[5];
+        private static Deck masterDeck;
+        private static Deck playerDeck;
+        private static Lobby lobby;
 
-        Card selectedCard;
+        private static Challenge challenge;
+        private static SelectCards selectCards;
+        private static ConfirmHand confirmHand;
+        private static GameBoard gameBoard;
 
-        Slot placedSlot;
+
+        public void Start()
+        {
+            masterDeck = new Deck();
+            
+            var masterCards = from r in Global.masterDeckXml.Descendants("card")
+
+            select new
+            {
+                ID = r.Element("id").Value,
+                DisplayName = r.Element("displayName").Value,
+                FileName = r.Element("fileName").Value,
+                Left = r.Element("left").Value,
+                Top = r.Element("top").Value,
+                Right = r.Element("right").Value,
+                Bottom = r.Element("bottom").Value,
+                Level = r.Element("level").Value,
+                Native = r.Element("native").Value
+            };
+
+            foreach (var r in masterCards)
+            {
+                Card card = new Card();
+                card.id = Int32.Parse(r.ID);
+                card.displayName = r.DisplayName;
+                card.fileName = r.FileName;
+                card.left = Int32.Parse(r.Left);
+                card.top = Int32.Parse(r.Top);
+                card.right = Int32.Parse(r.Right);
+                card.bottom = Int32.Parse(r.Bottom);
+                card.level = Int32.Parse(r.Level);
+                card.native = Int32.Parse(r.Native);
+
+                masterDeck.AddCard(card);
+            }
+
+            playerDeck = new Deck();
+
+            var cards = from r in Global.playerDeckXml.Descendants("card")
+
+            select new
+            {
+                ID = r.Element("id").Value,
+            };
+
+            foreach (var r in cards)
+            {
+                playerDeck.AddCard(masterDeck.GetCardById(Int32.Parse(r.ID)));
+            }
+
+            lobby = new Lobby();
+
+            lobby.Show();
+
+            /*
+            Card[] playerCard = new Card[5];
+            Card[] opponentCard = new Card[5];
+
+            //Card selectedCard;
+
+            //Slot placedSlot;
+
+            List<string> playerCardList = new List<string>();
+            playerCardList.Add("1");
+            playerCardList.Add("3");
+            playerCardList.Add("5");
+            playerCardList.Add("7");
+            playerCardList.Add("9");
+
+            List<string> opponentCardList = new List<string>();
+            opponentCardList.Add("2");
+            opponentCardList.Add("4");
+            opponentCardList.Add("6");
+            opponentCardList.Add("8");
+            opponentCardList.Add("10");
+
+            LoadPlayingHand(playingHand, playerCard, "blue", true);
+            LoadPlayingHand(playingHand, opponentCard, "red", true);            
+            */
+        }
+
+        internal static void AcceptHand(Deck playingHand)
+        {
+            DisposeChildForms();
+
+            gameBoard = new GameBoard(playingHand);
+
+            lobby.showFormModal(gameBoard);
+        }
+
+        private static void DisposeChildForms()
+        {
+            confirmHand.Dispose();
+            selectCards.Dispose();
+            challenge.Dispose();
+        }
+
+        internal static void RejectHand(Deck playingHand)
+        {
+            confirmHand.Dispose();
+            selectCards.RejectHand(playingHand);
+        }
+
+        internal static Deck GetPlayerDeck()
+        {
+            return playerDeck;
+        }
+
+        internal static Deck GetMasterDeck()
+        {
+            return masterDeck;
+        }
+
+        internal static void Challenge()
+        {
+            challenge = new Challenge();
+            lobby.showFormModal(challenge);
+        }
+
+        internal static void SelectCards()
+        {
+            selectCards = new SelectCards();
+            //lobby = Application.OpenForms["Lobby"] as Lobby;
+            challenge.Dispose();
+            lobby.showFormModal(selectCards);
+        }
+
+        internal static void ConfirmHand(Deck playingHand)
+        {
+            confirmHand = new ConfirmHand(playingHand);
+            selectCards.showFormModal(confirmHand);
+        }
+
+
+        internal static void SellCard(string cardName, int count)
+        {
+            Card card = masterDeck.GetCardByName(cardName);
+
+            var deletedCard = from r in Global.playerDeckXml.Descendants("card")
+                                where r.Element("id").Value == card.id.ToString()
+
+                                select r;
+
+
+            var x = 1;
+
+            while (x <= count)
+            {
+                foreach (var r in deletedCard.Reverse())
+                {
+                    r.Remove();
+                    break;
+                }
+
+                playerDeck.RemoveCardByName(cardName);
+
+                x++;
+            }
+
+            Global.playerDeckXml.Save("playerDeck.xml");
+        }
 
         public Game()
         {
@@ -49,9 +204,7 @@ namespace TripleTriadOffline
             Rectangle mainFrame;
 
             //MouseState oldMouseState;
-
-            GameBoard gameBoard;
-
+         
 
             //private SpriteFont font;
 
@@ -69,31 +222,18 @@ namespace TripleTriadOffline
 
             mainFrame = new Rectangle(0, 0, 500, 500);
 
-            gameBoard = new GameBoard();
+            
 
             //gameBoard.Texture = Content.Load<Texture2D>("gameBoard");
 
             //font = Content.Load<SpriteFont>("scoreFont");
             //resultFont = Content.Load<SpriteFont>("scoreFont");
 
-            List<string> playerCardList = new List<string>();
-            playerCardList.Add("1");
-            playerCardList.Add("3");
-            playerCardList.Add("5");
-            playerCardList.Add("7");
-            playerCardList.Add("9");
-
-            List<string> opponentCardList = new List<string>();
-            opponentCardList.Add("2");
-            opponentCardList.Add("4");
-            opponentCardList.Add("6");
-            opponentCardList.Add("8");
-            opponentCardList.Add("10");
+           
 
 
-            LoadPlayingHand(playerCardList, playerCard, "blue", true);
-            LoadPlayingHand(opponentCardList, opponentCard, "red", true);
-
+            
+            /*
             x = 0;
             while (x < 5)
             {
@@ -106,19 +246,36 @@ namespace TripleTriadOffline
                 CreateCardBounds();
 
                 x++;
-            };
+            };*/
 
-            gameBoard.Show();
+            //gameBoard.Show();
 
             //this.IsMouseVisible = true;
         }
 
-        private void Game_Load(object sender, EventArgs e)
+        internal static void BuyCard(string cardName, int count)
         {
+            Card card = masterDeck.GetCardByName(cardName);
 
+            var x = 1;
+
+            while (x <= count)
+            {
+                playerDeck.AddCard(card);
+
+                Global.playerDeckXml.Element("deck").Element("cards").Add(new XElement("card", new XElement("id", card.id)));
+                Global.playerDeckXml.Save("playerDeck.xml");
+
+                x++;
+            }
         }
 
-        private void LoadPlayingHand(List<string> cardList, Card[] card, string color, bool open)
+        private void Game_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        static void LoadPlayingHand(List<string> cardList, Card[] card, string color, bool open)
         {
             int x = 0;
 
@@ -219,6 +376,7 @@ namespace TripleTriadOffline
             }
         }
 
+        /*
         private void OpponentTurn()
         {
             int x = 0;
@@ -255,6 +413,7 @@ namespace TripleTriadOffline
                 turn = 1;
             }
         }
+        */
 
         /*
         private void PlayerTurn(MouseState mouseState, Point mousePosition)
@@ -292,6 +451,7 @@ namespace TripleTriadOffline
         }
         */
 
+        /*
         private void UpdateScore()
         {
             int blue = 0;
@@ -330,6 +490,7 @@ namespace TripleTriadOffline
             playerScore = blue;
             opponentScore = red;
         }
+        */
 
         private void CheckMove(Slot placedSlot)
         {
@@ -497,7 +658,8 @@ namespace TripleTriadOffline
             checkMove = 0;
         }
 
-        private void SelectCard(Card card)
+
+/*        private void SelectCard(Card card)
         {
             int x = 0;
             int col;
@@ -527,9 +689,10 @@ namespace TripleTriadOffline
                 card.position.X += move;
                 selectedCard = card;
             }
-            */
-        }
+            
+        }*/
         
+            /*
         private void PlayCard(Card card, Slot slot)
         {
             if (slot.isOccupied == false && card.isUsed == false)
@@ -552,18 +715,7 @@ namespace TripleTriadOffline
                 checkMove = 1;
             }
         }
-
-        private void CreateCardBounds()
-        {
-            int x = 0;
-
-            while (x<5)
-            {
-                //playerCard[x].rect = new Rectangle((int)playerCard[x].position.X, (int)playerCard[x].position.Y, playerCard[x].texture.Width, playerCard[x].texture.Height);
-                //opponentCard[x].rect = new Rectangle((int)opponentCard[x].position.X, (int)opponentCard[x].position.Y, opponentCard[x].texture.Width, opponentCard[x].texture.Height);
-                x++;
-            }
-        }
+        */
 
         /*
         protected override void Draw(GameTime gameTime)

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using TripleTriadOffline.Forms;
+using TripleTriadOffline.Classes;
 
 namespace TripleTriadOffline
 {
@@ -24,7 +25,7 @@ namespace TripleTriadOffline
             var start = new Splash();
             start.FormClosed += WindowClosed;
             start.Show();
-            Application.Run();
+           Application.Run();
         }
 
         static void WindowClosed(object sender, FormClosedEventArgs e)

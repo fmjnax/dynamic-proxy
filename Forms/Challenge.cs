@@ -24,10 +24,7 @@ namespace TripleTriadOffline.Forms
 
         private void btnChallenge_Click(object sender, EventArgs e)
         {
-            Form selectCards = new SelectCards();
-            Lobby lobby = Application.OpenForms["Lobby"] as Lobby;
-            this.Dispose();
-            lobby.showFormModal(selectCards);
+            Game.SelectCards();
         }
 
         protected override void WndProc(ref Message m)

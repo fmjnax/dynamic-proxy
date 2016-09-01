@@ -41,6 +41,9 @@
             this.btnLevel9 = new System.Windows.Forms.Button();
             this.btnLevel10 = new System.Windows.Forms.Button();
             this.lstAvailable = new System.Windows.Forms.ListBox();
+            this.lblPCCount = new System.Windows.Forms.Label();
+            this.pctPlayerCard = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPlayerCard)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelectCard
@@ -83,6 +86,7 @@
             this.btnLevel2.TabIndex = 6;
             this.btnLevel2.TabStop = false;
             this.btnLevel2.UseVisualStyleBackColor = false;
+            this.btnLevel2.Click += new System.EventHandler(this.btnLevel2_Click);
             // 
             // btnLevel3
             // 
@@ -96,6 +100,7 @@
             this.btnLevel3.TabIndex = 7;
             this.btnLevel3.TabStop = false;
             this.btnLevel3.UseVisualStyleBackColor = false;
+            this.btnLevel3.Click += new System.EventHandler(this.btnLevel3_Click);
             // 
             // btnLevel4
             // 
@@ -109,6 +114,7 @@
             this.btnLevel4.TabIndex = 8;
             this.btnLevel4.TabStop = false;
             this.btnLevel4.UseVisualStyleBackColor = false;
+            this.btnLevel4.Click += new System.EventHandler(this.btnLevel4_Click);
             // 
             // btnLevel5
             // 
@@ -122,6 +128,7 @@
             this.btnLevel5.TabIndex = 9;
             this.btnLevel5.TabStop = false;
             this.btnLevel5.UseVisualStyleBackColor = false;
+            this.btnLevel5.Click += new System.EventHandler(this.btnLevel5_Click);
             // 
             // btnLevel6
             // 
@@ -135,6 +142,7 @@
             this.btnLevel6.TabIndex = 10;
             this.btnLevel6.TabStop = false;
             this.btnLevel6.UseVisualStyleBackColor = false;
+            this.btnLevel6.Click += new System.EventHandler(this.btnLevel6_Click);
             // 
             // btnLevel7
             // 
@@ -148,6 +156,7 @@
             this.btnLevel7.TabIndex = 11;
             this.btnLevel7.TabStop = false;
             this.btnLevel7.UseVisualStyleBackColor = false;
+            this.btnLevel7.Click += new System.EventHandler(this.btnLevel7_Click);
             // 
             // btnLevel8
             // 
@@ -161,6 +170,7 @@
             this.btnLevel8.TabIndex = 12;
             this.btnLevel8.TabStop = false;
             this.btnLevel8.UseVisualStyleBackColor = false;
+            this.btnLevel8.Click += new System.EventHandler(this.btnLevel8_Click);
             // 
             // btnLevel9
             // 
@@ -174,6 +184,7 @@
             this.btnLevel9.TabIndex = 13;
             this.btnLevel9.TabStop = false;
             this.btnLevel9.UseVisualStyleBackColor = false;
+            this.btnLevel9.Click += new System.EventHandler(this.btnLevel9_Click);
             // 
             // btnLevel10
             // 
@@ -187,6 +198,7 @@
             this.btnLevel10.TabIndex = 14;
             this.btnLevel10.TabStop = false;
             this.btnLevel10.UseVisualStyleBackColor = false;
+            this.btnLevel10.Click += new System.EventHandler(this.btnLevel10_Click);
             // 
             // lstAvailable
             // 
@@ -197,7 +209,33 @@
             this.lstAvailable.Location = new System.Drawing.Point(38, 39);
             this.lstAvailable.Name = "lstAvailable";
             this.lstAvailable.Size = new System.Drawing.Size(132, 119);
+            this.lstAvailable.Sorted = true;
             this.lstAvailable.TabIndex = 15;
+            this.lstAvailable.SelectedIndexChanged += new System.EventHandler(this.lstAvailable_SelectedIndexChanged);
+            // 
+            // lblPCCount
+            // 
+            this.lblPCCount.AutoSize = true;
+            this.lblPCCount.BackColor = System.Drawing.Color.Transparent;
+            this.lblPCCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPCCount.ForeColor = System.Drawing.Color.White;
+            this.lblPCCount.Location = new System.Drawing.Point(230, 71);
+            this.lblPCCount.Name = "lblPCCount";
+            this.lblPCCount.Size = new System.Drawing.Size(9, 9);
+            this.lblPCCount.TabIndex = 16;
+            this.lblPCCount.Text = "0";
+            // 
+            // pctPlayerCard
+            // 
+            this.pctPlayerCard.BackColor = System.Drawing.Color.Black;
+            this.pctPlayerCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pctPlayerCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pctPlayerCard.Location = new System.Drawing.Point(176, 88);
+            this.pctPlayerCard.Name = "pctPlayerCard";
+            this.pctPlayerCard.Size = new System.Drawing.Size(70, 70);
+            this.pctPlayerCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pctPlayerCard.TabIndex = 17;
+            this.pctPlayerCard.TabStop = false;
             // 
             // SelectCards
             // 
@@ -206,6 +244,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(500, 346);
+            this.Controls.Add(this.pctPlayerCard);
+            this.Controls.Add(this.lblPCCount);
             this.Controls.Add(this.lstAvailable);
             this.Controls.Add(this.btnLevel10);
             this.Controls.Add(this.btnLevel9);
@@ -223,7 +263,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "SelectCards";
             this.Load += new System.EventHandler(this.SelectCards_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pctPlayerCard)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -241,5 +283,7 @@
         private System.Windows.Forms.Button btnLevel9;
         private System.Windows.Forms.Button btnLevel10;
         private System.Windows.Forms.ListBox lstAvailable;
+        private System.Windows.Forms.Label lblPCCount;
+        private System.Windows.Forms.PictureBox pctPlayerCard;
     }
 }

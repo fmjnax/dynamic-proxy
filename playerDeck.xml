@@ -1,0 +1,17 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<deck>
+  <cards>
+    <card>
+      <id>1</id>
+    </card>
+	
+	<card>
+      <id>123</id>
+    </card>
+	
+	<card>
+      <id>625</id>
+    </card>
+
+  </cards>
+</deck>
