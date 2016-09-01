@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using TripleTriadOffline.Classes;
 
 namespace TripleTriadOffline
 {
@@ -32,11 +33,11 @@ namespace TripleTriadOffline
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameBoard));
-            this.pctPC1 = new System.Windows.Forms.PictureBox();
-            this.pctPC2 = new System.Windows.Forms.PictureBox();
-            this.pctPC3 = new System.Windows.Forms.PictureBox();
-            this.pctPC4 = new System.Windows.Forms.PictureBox();
-            this.pctPC5 = new System.Windows.Forms.PictureBox();
+            this.pctPC1 = new CardPictureBox();
+            this.pctPC2 = new CardPictureBox();
+            this.pctPC3 = new CardPictureBox();
+            this.pctPC4 = new CardPictureBox();
+            this.pctPC5 = new CardPictureBox();
             this.lblTop = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctPC1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPC2)).BeginInit();
@@ -157,11 +158,11 @@ namespace TripleTriadOffline
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pctPC1;
-        private System.Windows.Forms.PictureBox pctPC2;
-        private System.Windows.Forms.PictureBox pctPC3;
-        private System.Windows.Forms.PictureBox pctPC4;
-        private System.Windows.Forms.PictureBox pctPC5;
+        private CardPictureBox pctPC1;
+        private CardPictureBox pctPC2;
+        private CardPictureBox pctPC3;
+        private CardPictureBox pctPC4;
+        private CardPictureBox pctPC5;
         private Label lblTop;
     }
 }

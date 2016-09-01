@@ -37,7 +37,6 @@ namespace TripleTriadOffline.Forms
             form.ShowDialog(this);
         }
 
-        
         protected override void WndProc(ref Message m)
         {
             switch (m.Msg)

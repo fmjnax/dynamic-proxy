@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TripleTriadOffline.Classes;
 
 namespace TripleTriadOffline
 {
@@ -59,24 +60,54 @@ namespace TripleTriadOffline
             var x = 1;
             foreach (var card in playingHand)
             {
+                foreach (Control pctBox in this.Controls)
+                {
+                    if (pctBox is PictureBox && pctBox.Name.Contains(x.ToString()))
+                    {
+                        CardPictureBox cardPctBox = (CardPictureBox)pctBox;
+
+                        cardPctBox.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
+                        cardPctBox.card = card;
+                        cardPctBox.isUsed = false;
+                        cardPctBox.currentColor = "Blue";
+                        break;
+                    }
+                }
+                /*
                 switch (x)
                 {
                     case 1:
                         pctPC1.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
+                        pctPC1.card = card;
+                        pctPC1.isUsed = false;
+                        pctPC1.currentColor = "Blue";
                         break;
                     case 2:
                         pctPC2.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
+                        pctPC2.card = card;
+                        pctPC2.isUsed = false;
+                        pctPC2.currentColor = "Blue";
                         break;
                     case 3:
                         pctPC3.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
+                        pctPC3.card = card;
+                        pctPC3.isUsed = false;
+                        pctPC3.currentColor = "Blue";
                         break;
                     case 4:
                         pctPC4.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
+                        pctPC4.card = card;
+                        pctPC4.isUsed = false;
+                        pctPC4.currentColor = "Blue";
                         break;
                     case 5:
                         pctPC5.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
+                        pctPC5.card = card;
+                        pctPC5.isUsed = false;
+                        pctPC5.currentColor = "Blue";
                         break;
                 }
+                */
                 x++;
             }
         }
@@ -117,28 +148,51 @@ namespace TripleTriadOffline
             {
                 if (x is PictureBox && x.Name.Contains("pctPC"))
                 {
-                    //x.SendToBack();
-                    pctPC5.SendToBack();
-                    pctPC4.SendToBack();
-                    pctPC3.SendToBack();
-                    pctPC2.SendToBack();
-                    pctPC1.SendToBack();
-                    x.Left = plcol;
+                    CardPictureBox cardPctBox = (CardPictureBox)x;
+
+                    if (cardPctBox.isUsed == false)
+                    {
+                        //x.SendToBack();
+                        pctPC5.SendToBack();
+                        pctPC4.SendToBack();
+                        pctPC3.SendToBack();
+                        pctPC2.SendToBack();
+                        pctPC1.SendToBack();
+                        cardPctBox.Left = plcol;
+                    }
                 }
             }
 
-            cardBox.BringToFront();
-            cardBox.Left = cardBox.Left + plmove;
+            if (cardBox.Left <= plmove)
+            {
+                cardBox.BringToFront();
+                cardBox.Left = cardBox.Left + plmove;
+            }
         }
 
         private void GameBoard_MouseClick(object sender, MouseEventArgs e)
         {
             for (int x = 0; x <= 8; x++)
             {
-                if (slot[x].rect.Contains(e.X, e.Y))
+                if (slot[x].rect.Contains(e.X, e.Y) && slot[x].isOccupied == false)
                 {
-                    pctPC1.Left = slot[x].rect.X;
-                    pctPC1.Top = slot[x].rect.Y;
+                    foreach (Control pctBox in this.Controls)
+                    {
+                        if (pctBox is PictureBox && pctBox.Left > plmove)
+                        {
+                            CardPictureBox cardPctBox = (CardPictureBox)pctBox;
+
+                            if (cardPctBox.isUsed == false)
+                            {
+                                cardPctBox.Left = slot[x].rect.X;
+                                cardPctBox.Top = slot[x].rect.Y;
+                                cardPctBox.isUsed = true;
+
+                                //select card is moved to an open slot. Now let's calculate the move and switch turns
+                            }
+                            break;
+                        }
+                    }
                     break;
                 }
             }
