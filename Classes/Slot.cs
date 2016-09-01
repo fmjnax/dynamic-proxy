@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Drawing;
+using TripleTriadOffline.Classes;
 
 namespace TripleTriadOffline
 {
@@ -14,11 +15,13 @@ namespace TripleTriadOffline
             name = Name;
             rect = Rect;
             isOccupied = false;
+            pctBox = null;
         }
 
         public string name { get; set; }
         public Rectangle rect { get; set; }
         public bool isOccupied { get; set; }
+        public CardPictureBox pctBox { get; set; }
         public Card CardSlotted 
         {
             get {return cardSlotted;}

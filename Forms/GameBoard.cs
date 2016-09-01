@@ -36,7 +36,11 @@ namespace TripleTriadOffline
         private int turn = 1;
 
         public Slot[] slot = new Slot[9];
-        
+
+        Slot placedSlot;
+
+        private int checkMove = 0;
+
         public Vector2 position;
          Vector2 center;
 
@@ -73,41 +77,6 @@ namespace TripleTriadOffline
                         break;
                     }
                 }
-                /*
-                switch (x)
-                {
-                    case 1:
-                        pctPC1.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
-                        pctPC1.card = card;
-                        pctPC1.isUsed = false;
-                        pctPC1.currentColor = "Blue";
-                        break;
-                    case 2:
-                        pctPC2.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
-                        pctPC2.card = card;
-                        pctPC2.isUsed = false;
-                        pctPC2.currentColor = "Blue";
-                        break;
-                    case 3:
-                        pctPC3.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
-                        pctPC3.card = card;
-                        pctPC3.isUsed = false;
-                        pctPC3.currentColor = "Blue";
-                        break;
-                    case 4:
-                        pctPC4.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
-                        pctPC4.card = card;
-                        pctPC4.isUsed = false;
-                        pctPC4.currentColor = "Blue";
-                        break;
-                    case 5:
-                        pctPC5.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
-                        pctPC5.card = card;
-                        pctPC5.isUsed = false;
-                        pctPC5.currentColor = "Blue";
-                        break;
-                }
-                */
                 x++;
             }
         }
@@ -188,7 +157,16 @@ namespace TripleTriadOffline
                                 cardPctBox.Top = slot[x].rect.Y;
                                 cardPctBox.isUsed = true;
 
-                                //select card is moved to an open slot. Now let's calculate the move and switch turns
+                                slot[x].cardSlotted = cardPctBox.card;
+                                slot[x].isOccupied = true;
+                                slot[x].pctBox = cardPctBox;
+
+
+                                //selected card is moved to an open slot. Now let's calculate the move and switch turns
+                                placedSlot = slot[x];
+                                checkMove = 1;
+
+                                CheckMove(placedSlot);
                             }
                             break;
                         }
@@ -197,7 +175,200 @@ namespace TripleTriadOffline
                 }
             }
         }
- 
+
+        private void CheckMove(Slot placedSlot)
+        {
+            string color = "";
+
+            if (checkMove == 1) { color = placedSlot.cardSlotted.currentColor == "red" ? "red" : "blue"; }
+
+            if (placedSlot == slot[0] && checkMove == 1)
+            {
+                //check slots 1 and 3
+                if (slot[1].isOccupied == true && placedSlot.cardSlotted.right > slot[1].cardSlotted.left)
+                {
+                    //slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[1].cardSlotted.fileName);
+                    slot[1].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[1].pctBox.card.fileName + ".jpg");
+                    slot[1].cardSlotted.currentColor = color;
+                }
+                if (slot[3].isOccupied == true && placedSlot.cardSlotted.bottom > slot[3].cardSlotted.top)
+                {
+                    //slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[3].cardSlotted.fileName);
+                    slot[3].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[3].pctBox.card.fileName + ".jpg");
+                    slot[3].cardSlotted.currentColor = color;
+                }
+            }
+            if (placedSlot == slot[1] && checkMove == 1)
+            {
+                //check slots 0, 2, and 4
+                if (slot[0].isOccupied == true && placedSlot.cardSlotted.left > slot[0].cardSlotted.right)
+                {
+                    //slot[0].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[0].cardSlotted.fileName);
+                    slot[0].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[0].pctBox.card.fileName + ".jpg");
+                    slot[0].cardSlotted.currentColor = color;
+                }
+                if (slot[2].isOccupied == true && placedSlot.cardSlotted.bottom > slot[2].cardSlotted.top)
+                {
+                    //slot[2].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[2].cardSlotted.fileName);
+                    slot[2].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[2].pctBox.card.fileName + ".jpg");
+                    slot[2].cardSlotted.currentColor = color;
+                }
+                if (slot[4].isOccupied == true && placedSlot.cardSlotted.right > slot[4].cardSlotted.left)
+                {
+                    //slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[4].cardSlotted.fileName);
+                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
+                    slot[4].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[2] && checkMove == 1)
+            {
+                //check slots 1 and 5
+                if (slot[1].isOccupied == true && placedSlot.cardSlotted.left > slot[1].cardSlotted.right)
+                {
+                    //slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[1].cardSlotted.fileName);
+                    slot[1].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[1].pctBox.card.fileName + ".jpg");
+                    slot[1].cardSlotted.currentColor = color;
+                }
+                if (slot[5].isOccupied == true && placedSlot.cardSlotted.bottom > slot[5].cardSlotted.top)
+                {
+                    //slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[5].cardSlotted.fileName);
+                    slot[5].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[5].pctBox.card.fileName + ".jpg");
+                    slot[5].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[3] && checkMove == 1)
+            {
+                //check slots 0, 4, and 6
+                if (slot[0].isOccupied == true && placedSlot.cardSlotted.top > slot[0].cardSlotted.bottom)
+                {
+                    //slot[0].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[0].cardSlotted.fileName);
+                    slot[0].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[0].pctBox.card.fileName + ".jpg");
+                    slot[0].cardSlotted.currentColor = color;
+                }
+                if (slot[4].isOccupied == true && placedSlot.cardSlotted.right > slot[4].cardSlotted.left)
+                {
+                    //slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[4].cardSlotted.fileName);
+                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
+                    slot[4].cardSlotted.currentColor = color;
+                }
+                if (slot[6].isOccupied == true && placedSlot.cardSlotted.bottom > slot[6].cardSlotted.top)
+                {
+                    //slot[6].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[6].cardSlotted.fileName);
+                    slot[6].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[6].pctBox.card.fileName + ".jpg");
+                    slot[6].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[4] && checkMove == 1)
+            {
+                //check slots 1, 3, 5, and 7
+                if (slot[1].isOccupied == true && placedSlot.cardSlotted.top > slot[1].cardSlotted.bottom)
+                {
+                    // slot[1].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[1].cardSlotted.fileName);
+                    slot[1].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[1].pctBox.card.fileName + ".jpg");
+                    slot[1].cardSlotted.currentColor = color;
+                }
+                if (slot[3].isOccupied == true && placedSlot.cardSlotted.left > slot[3].cardSlotted.right)
+                {
+                    //slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[3].cardSlotted.fileName);
+                    slot[3].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[3].pctBox.card.fileName + ".jpg");
+                    slot[3].cardSlotted.currentColor = color;
+                }
+                if (slot[5].isOccupied == true && placedSlot.cardSlotted.right > slot[5].cardSlotted.left)
+                {
+                    //slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[5].cardSlotted.fileName);
+                    slot[5].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[5].pctBox.card.fileName + ".jpg");
+                    slot[5].cardSlotted.currentColor = color;
+                }
+                if (slot[7].isOccupied == true && placedSlot.cardSlotted.bottom > slot[7].cardSlotted.top)
+                {
+                    //slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[7].cardSlotted.fileName);
+                    slot[7].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[7].pctBox.card.fileName + ".jpg");
+                    slot[7].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[5] && checkMove == 1)
+            {
+                //check slots 2, 4, and 8
+                if (slot[2].isOccupied == true && placedSlot.cardSlotted.top > slot[2].cardSlotted.bottom)
+                {
+                    //slot[2].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[2].cardSlotted.fileName);
+                    slot[2].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[2].pctBox.card.fileName + ".jpg");
+                    slot[2].cardSlotted.currentColor = color;
+                }
+                if (slot[4].isOccupied == true && placedSlot.cardSlotted.right > slot[4].cardSlotted.left)
+                {
+                    //slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[4].cardSlotted.fileName);
+                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
+                    slot[4].cardSlotted.currentColor = color;
+                }
+                if (slot[8].isOccupied == true && placedSlot.cardSlotted.bottom > slot[8].cardSlotted.top)
+                {
+                    //slot[8].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[8].cardSlotted.fileName);
+                    slot[8].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[8].pctBox.card.fileName + ".jpg");
+                    slot[8].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[6] && checkMove == 1)
+            {
+                //check slots 3 and 7
+                if (slot[3].isOccupied == true && placedSlot.cardSlotted.top > slot[3].cardSlotted.bottom)
+                {
+                    //slot[3].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[3].cardSlotted.fileName);
+                    slot[3].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[3].pctBox.card.fileName + ".jpg");
+                    slot[3].cardSlotted.currentColor = color;
+                }
+                if (slot[7].isOccupied == true && placedSlot.cardSlotted.right > slot[7].cardSlotted.left)
+                {
+                    //slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[7].cardSlotted.fileName);
+                    slot[7].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[7].pctBox.card.fileName + ".jpg");
+                    slot[7].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[7] && checkMove == 1)
+            {
+                //check slots 4, 6, and 8
+                if (slot[4].isOccupied == true && placedSlot.cardSlotted.top > slot[4].cardSlotted.bottom)
+                {
+                    //slot[4].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[4].cardSlotted.fileName);
+                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
+                    slot[4].cardSlotted.currentColor = color;
+                }
+                if (slot[6].isOccupied == true && placedSlot.cardSlotted.right > slot[6].cardSlotted.left)
+                {
+                    //slot[6].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[6].cardSlotted.fileName);
+                    slot[6].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[6].pctBox.card.fileName + ".jpg");
+                    slot[6].cardSlotted.currentColor = color;
+                }
+                if (slot[8].isOccupied == true && placedSlot.cardSlotted.left > slot[8].cardSlotted.right)
+                {
+                    //slot[8].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[8].cardSlotted.fileName);
+                    slot[8].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[8].pctBox.card.fileName + ".jpg");
+                    slot[8].cardSlotted.currentColor = color;
+                }
+            }
+            else if (placedSlot == slot[8] && checkMove == 1)
+            {
+                //check slots 5 and 7
+                if (slot[5].isOccupied == true && placedSlot.cardSlotted.top > slot[5].cardSlotted.bottom)
+                {
+                    //slot[5].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[5].cardSlotted.fileName);
+                    slot[5].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[5].pctBox.card.fileName + ".jpg");
+                    slot[5].cardSlotted.currentColor = color;
+                }
+                if (slot[7].isOccupied == true && placedSlot.cardSlotted.left > slot[7].cardSlotted.right)
+                {
+                    //slot[7].cardSlotted.texture = Content.Load<Texture2D>("deck/" + color + "/" + slot[7].cardSlotted.fileName);
+                    slot[7].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[7].pctBox.card.fileName + ".jpg");
+                    slot[7].cardSlotted.currentColor = color;
+                }
+            }
+
+            checkMove = 0;
+        }
+
+
+
+
         private void lblTop_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

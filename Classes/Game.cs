@@ -198,59 +198,7 @@ namespace TripleTriadOffline
 
         public Game()
         {
-            //GraphicsDeviceManager graphics;
-            //SpriteBatch spriteBatch;
 
-            Rectangle mainFrame;
-
-            //MouseState oldMouseState;
-         
-
-            //private SpriteFont font;
-
-
-            //private SpriteFont resultFont;
-
-            int x = 0;
-
-            //spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            //graphics.IsFullScreen = false;
-            //graphics.PreferredBackBufferHeight = 500;
-            //graphics.PreferredBackBufferWidth = 500;
-            //graphics.ApplyChanges();
-
-            mainFrame = new Rectangle(0, 0, 500, 500);
-
-            
-
-            //gameBoard.Texture = Content.Load<Texture2D>("gameBoard");
-
-            //font = Content.Load<SpriteFont>("scoreFont");
-            //resultFont = Content.Load<SpriteFont>("scoreFont");
-
-           
-
-
-            
-            /*
-            x = 0;
-            while (x < 5)
-            {
-                playerCard[x].position.X = plcol;
-                playerCard[x].position.Y = plrow + ploffset * (x + 1);
-
-                opponentCard[x].position.X = orcol;
-                opponentCard[x].position.Y = orrow + oroffset * (x + 1);
-
-                CreateCardBounds();
-
-                x++;
-            };*/
-
-            //gameBoard.Show();
-
-            //this.IsMouseVisible = true;
         }
 
         internal static void BuyCard(string cardName, int count)
