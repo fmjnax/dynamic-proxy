@@ -91,7 +91,7 @@ namespace TripleTriadOffline.Forms
                 lblPCOffensive.Text = "0";
                 lblPCDefensive.Text = "0";
                 
-                Game.SellCard(cboPlayerCards.Text, Int32.Parse(txtPCSell.Text));
+                CardShop.SellCard(cboPlayerCards.Text, Int32.Parse(txtPCSell.Text));
                 
                 UpdatePlayerCardViewer(playerDeck);
 
@@ -103,7 +103,7 @@ namespace TripleTriadOffline.Forms
         {
             int oldIndex = cboPlayerCards.SelectedIndex;
 
-            Game.BuyCard(cboShop.Text, Int32.Parse(txtSBuy.Text));
+            CardShop.BuyCard(cboShop.Text, Int32.Parse(txtSBuy.Text));
             
             UpdatePlayerCardViewer(playerDeck);
 

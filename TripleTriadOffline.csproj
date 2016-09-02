@@ -51,6 +51,7 @@
     <Compile Include="Classes\CardPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Classes\CardShop.cs" />
     <Compile Include="Classes\Deck.cs" />
     <Compile Include="Classes\Game.cs" />
     <Compile Include="Classes\Global.cs" />
