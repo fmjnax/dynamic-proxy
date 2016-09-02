@@ -112,18 +112,6 @@ namespace TripleTriadOffline.Forms
             base.WndProc(ref m);
         }
 
-        private void LoadPlayingHand(List<string> cardList, Card[] card, string color, bool open)
-        {
-            int x = 0;
-
-            
-
-            foreach (string cardId in cardList)
-            {
-               
-            }
-        }
-
         private void btnLevel1_Click(object sender, EventArgs e)
         {
             RefreshAvailableCardList(1);

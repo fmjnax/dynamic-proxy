@@ -6,8 +6,6 @@ namespace TripleTriadOffline
     {
         //public Texture2D texture;
         public Rectangle rect;
-        public Vector2 position;
-        Vector2 center;
 
         public Card()
         {
@@ -46,18 +44,6 @@ namespace TripleTriadOffline
         {
             get { return rect; }
             set { rect = value; }
-        }
-
-        public Vector2 Position
-        {
-            get { return position; }
-            set { position = value; }
-        }
-
-        public Vector2 Center
-        {
-            get { return center; }
-            set { center = value; }
         }
     }
 }

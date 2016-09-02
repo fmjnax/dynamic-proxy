@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Board.cs" />
     <Compile Include="Classes\Card.cs" />
     <Compile Include="Classes\CardPictureBox.cs">
       <SubType>Component</SubType>
@@ -55,12 +54,7 @@
     <Compile Include="Classes\Deck.cs" />
     <Compile Include="Classes\Game.cs" />
     <Compile Include="Classes\Global.cs" />
-    <Compile Include="Classes\MathHelper.cs" />
-    <Compile Include="Classes\Matrix.cs" />
-    <Compile Include="Classes\Quaternion.cs" />
     <Compile Include="Classes\Slot.cs" />
-    <Compile Include="Classes\Vector2.cs" />
-    <Compile Include="Classes\Vector3.cs" />
     <Compile Include="Forms\Challenge.cs">
       <SubType>Form</SubType>
     </Compile>

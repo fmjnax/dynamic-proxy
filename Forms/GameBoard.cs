@@ -439,6 +439,11 @@ namespace TripleTriadOffline
 
         private void OpponentTurn()
         {
+            //AI ranking, from easiest to hardest
+            //1:
+            //first available card in the first available slot
+            //INITIAL LOGIC - Already Exists
+            /*
             int slotLoop = 0;
 
             if (turn == 2)
@@ -469,20 +474,157 @@ namespace TripleTriadOffline
                     }
                     slotLoop++;
                 }
+            }
+            */
 
-                checkMove = 1;
-                CheckMove(placedSlot);
 
-                UpdateScore();
+            //2:
+            //first available slot, find first slotted neighbor, first available card to beat else first available card, if no neighbor, first available card
+            if (turn == 2)
+            {
+                int x = 0;
 
-                if (IsGameFinished() == false)
+                for (x = 0; x < 9; x++)
                 {
-                    SwitchTurns();
+                    if (slot[x].isOccupied == false)
+                    {
+                        switch (x)
+                        {
+                            case 0:
+                                if (slot[1].isOccupied == true)
+                                {
+                                    foreach (Control oppCard in this.Controls)
+                                    {
+                                        if (oppCard is PictureBox && oppCard.Name.Contains("OC"))
+                                        {
+                                            CardPictureBox cpb = (CardPictureBox)oppCard;
+                                            if (cpb.isUsed == false && cpb.card.right > slot[1].pctBox.card.left)
+                                            {
+                                                CardClick(cpb);
+
+                                                Point point = new Point(slot[x].rect.X, slot[x].rect.Y);
+                                                PlaceCard(point);
+
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                                else if (slot[3].isOccupied == true)
+                                {
+                                    foreach (Control oppCard in this.Controls)
+                                    {
+                                        if (oppCard is PictureBox && oppCard.Name.Contains("OC"))
+                                        {
+                                            CardPictureBox cpb = (CardPictureBox)oppCard;
+                                            if (cpb.isUsed == false && cpb.card.bottom > slot[3].pctBox.card.top)
+                                            {
+                                                CardClick(cpb);
+
+                                                Point point = new Point(slot[x].rect.X, slot[x].rect.Y);
+                                                PlaceCard(point);
+
+                                                break;
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+
+                                }
+
+                                break;
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
+                                break;
+                            case 4:
+                                break;
+                            case 5:
+                                break;
+                            case 6:
+                                break;
+                            case 7:
+                                break;
+                            case 8:
+                                break;
+                        }
+
+                        break;
+                    }
+                    x++;
                 }
-                else
-                {
-                    //GameOver
-                }
+            }
+
+            //3:
+            //first available slot, find first slotted neighbor, build list of all available cards to beat, 
+            //find second slotted neighbor, build list of all available cards to beat, 
+            //compare first list and second list, first available match, 
+            //if not list match, first available from first list group
+            //if no neighbors, first available card
+
+            //4:
+            //first available slot, find first slotted neighbor, build list of all available cards to beat, 
+            //find second slotted neighbor, build list of all available cards to beat, 
+            //find third slotted neighbor, build list of all available cards to beat, 
+            //compare all lists, first available match, 
+            //if not list match, compare 2 lists (1&2, 1&3, 2&3) for match, first available match
+            //if not list match, first available from list group
+            //if no neighbors, first available card
+
+            //5:
+            //first available slot, find first slotted neighbor, build list of all available cards to beat, 
+            //find second slotted neighbor, build list of all available cards to beat, 
+            //find third slotted neighbor, build list of all available cards to beat, 
+            //find fourth slotted neighbor, build list of all available cards to beat, 
+            //compare all lists, first available match, 
+            //if not list match, compare 3 lists (1&2&3, 1&2&4, 1&3&4, 2&3&4) for match, first available match
+            //if not list match, compare 2 lists (1&2, 1&3, 1&4, 2&3, 2&4) for match, first available match
+            //if not list match, first available from list group
+            //if no neighbors, first available card
+
+            //6:
+            //use AI 5 logic, except instead of first available:
+            //card with highest number facing first open slot
+
+            //7:
+            //use AI 5 logic, except instead of first available:
+            //card with highest number AVERAGE facing two open slots
+
+            //8:
+            //use AI 5 logic, except instead of first available:
+            //card with highest number AVERAGE facing three open slots
+
+            //9:
+            //use AI 5 logic, except instead of first available:
+            //card with highest number AVERAGE facing four open slots
+
+            //10:
+            //use AI 9 logic, but add GOD MODE!!!!! (TBD)
+            //Maybe God mode scans player hand and compares open facing card with opposite side of opponent hand
+            //and picks the card that the player cannot beat. Would be unavailable in a "closed" table, though.
+            //Instead of looking at the first available slot, look at them all and determine which card is the best play
+            //Maybe more ideas will come as above AI is implemented and tested
+            //Add more thoughts as needed. 
+
+
+           
+
+            checkMove = 1;
+            CheckMove(placedSlot);
+
+            UpdateScore();
+
+            if (IsGameFinished() == false)
+            {
+                SwitchTurns();
+            }
+            else
+            {
+                //GameOver
             }
         }
 
