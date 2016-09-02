@@ -27,15 +27,37 @@ namespace TripleTriadOffline.Forms
             {
                 int count = Int32.Parse(lblPCCount.Text);
 
-                Card card = playerDeck.GetCardByName(lstAvailable.Text);
-                playingHand.AddCard(card);
-                playerDeck.RemoveCardByName(lstAvailable.Text);
-
-                RefreshAvailableCardList(card.level);
-
-                if (playingHand.GetCount() == 5)
+                if (count != 0)
                 {
-                    Game.ConfirmHand(playingHand);
+                    Card card = playerDeck.GetCardByName(lstAvailable.Text);
+                    playingHand.AddCard(card);
+                    playerDeck.RemoveCardByName(lstAvailable.Text);
+
+                    switch (playingHand.GetCount())
+                        {
+                        case 1:
+                            pctSelected1.Image = pctPlayerCard.Image;
+                            break;
+                        case 2:
+                            pctSelected2.Image = pctPlayerCard.Image;
+                            break;
+                        case 3:
+                            pctSelected3.Image = pctPlayerCard.Image;
+                            break;
+                        case 4:
+                            pctSelected4.Image = pctPlayerCard.Image;
+                            break;
+                        case 5:
+                            pctSelected5.Image = pctPlayerCard.Image;
+                            break;
+                    }
+
+                    RefreshAvailableCardList(card.level);
+
+                    if (playingHand.GetCount() == 5)
+                    {
+                        Game.ConfirmHand(playingHand);
+                    }
                 }
             }
         }
@@ -68,6 +90,12 @@ namespace TripleTriadOffline.Forms
 
             playingHand.Clear();
             RefreshAvailableCardList(1);
+
+            pctSelected1.Image = null;
+            pctSelected2.Image = null;
+            pctSelected3.Image = null;
+            pctSelected4.Image = null;
+            pctSelected5.Image = null;
         }
 
         protected override void WndProc(ref Message m)

@@ -21,6 +21,11 @@ namespace TripleTriadOffline
         public Rectangle rect;
         public Rectangle topBar;
 
+        private int playerScore = 5;
+        private int opponentScore = 5;
+
+        private string gameResult = "";
+
         private int plcol = 25;
 
         private int plrow = 25;
@@ -38,11 +43,9 @@ namespace TripleTriadOffline
         public Slot[] slot = new Slot[9];
 
         Slot placedSlot;
+        private Card selectedCard;
 
         private int checkMove = 0;
-
-        public Vector2 position;
-         Vector2 center;
 
         public GameBoard(Deck playingHand)
         {
@@ -99,9 +102,11 @@ namespace TripleTriadOffline
                 }
                 x++;
             }
+
+            TurnIndicator.Image = Image.FromFile(@"skins\p1-turn.gif");
         }
 
-    private void GameBoard_Load(object sender, EventArgs e)
+        private void GameBoard_Load(object sender, EventArgs e)
         {
 
         }
@@ -160,6 +165,8 @@ namespace TripleTriadOffline
         {
             CardPictureBox cardPctBox = (CardPictureBox)cardBox;
 
+            selectedCard = null;
+
             if (cardPctBox.isUsed == false)
             {
                 foreach (Control x in this.Controls)
@@ -194,6 +201,7 @@ namespace TripleTriadOffline
                 }
 
                 cardPctBox.BringToFront();
+                selectedCard = cardPctBox.card;
 
                 if (cardPctBox.Name.Contains("pctPC") && cardPctBox.isUsed == false && cardPctBox.Left == plcol)
                 {
@@ -208,9 +216,37 @@ namespace TripleTriadOffline
 
         private void GameBoard_MouseClick(object sender, MouseEventArgs e)
         {
+            if (turn == 1 && selectedCard != null)
+            {
+                Point point = new Point(e.X, e.Y);
+                PlaceCard(point);
+
+                checkMove = 1;
+                CheckMove(placedSlot);
+
+                UpdateScore();
+
+                if (IsGameFinished() == false)
+                {
+                    SwitchTurns();
+
+                    if (turn == 2)
+                    {
+                        OpponentTurn();
+                    }
+                }
+                else
+                {
+                    //GameOver
+                }
+            }
+        }
+
+        private void PlaceCard(Point point)
+        {
             for (int x = 0; x <= 8; x++)
             {
-                if (slot[x].rect.Contains(e.X, e.Y) && slot[x].isOccupied == false)
+                if (slot[x].rect.Contains(point.X, point.Y) && slot[x].isOccupied == false)
                 {
                     foreach (Control pctBox in this.Controls)
                     {
@@ -231,15 +267,26 @@ namespace TripleTriadOffline
 
                                 //selected card is moved to an open slot. Now let's calculate the move and switch turns
                                 placedSlot = slot[x];
-                                checkMove = 1;
-
-                                CheckMove(placedSlot);
                             }
                             break;
                         }
                     }
                     break;
                 }
+            }
+        }
+
+        private void SwitchTurns()
+        {
+            if (turn == 1)
+            {
+                turn = 2;
+                TurnIndicator.Image = Image.FromFile(@"skins\p2-turn.gif");
+            }
+            else
+            {
+                turn = 1;
+                TurnIndicator.Image = Image.FromFile(@"skins\p1-turn.gif");
             }
         }
 
@@ -254,13 +301,11 @@ namespace TripleTriadOffline
                 //check slots 1 and 3
                 if (slot[1].isOccupied == true && placedSlot.pctBox.card.right > slot[1].pctBox.card.left)
                 {
-                    slot[1].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[1].pctBox.card.fileName + ".jpg");
-                    slot[1].pctBox.currentColor = color;
+                    FlipCard(slot[1], color);
                 }
                 if (slot[3].isOccupied == true && placedSlot.pctBox.card.bottom > slot[3].pctBox.card.top)
                 {
-                    slot[3].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[3].pctBox.card.fileName + ".jpg");
-                    slot[3].pctBox.currentColor = color;
+                    FlipCard(slot[3], color);
                 }
             }
             if (placedSlot == slot[1] && checkMove == 1)
@@ -268,18 +313,15 @@ namespace TripleTriadOffline
                 //check slots 0, 2, and 4
                 if (slot[0].isOccupied == true && placedSlot.pctBox.card.left > slot[0].pctBox.card.right)
                 {
-                    slot[0].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[0].pctBox.card.fileName + ".jpg");
-                    slot[0].pctBox.currentColor = color;
+                    FlipCard(slot[0], color);
                 }
-                if (slot[2].isOccupied == true && placedSlot.pctBox.card.bottom > slot[2].pctBox.card.top)
+                if (slot[2].isOccupied == true && placedSlot.pctBox.card.right > slot[2].pctBox.card.left)
                 {
-                    slot[2].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[2].pctBox.card.fileName + ".jpg");
-                    slot[2].pctBox.currentColor = color;
+                    FlipCard(slot[2], color);
                 }
-                if (slot[4].isOccupied == true && placedSlot.pctBox.card.right > slot[4].pctBox.card.left)
+                if (slot[4].isOccupied == true && placedSlot.pctBox.card.bottom > slot[4].pctBox.card.top)
                 {
-                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
-                    slot[4].pctBox.currentColor = color;
+                    FlipCard(slot[4], color);
                 }
             }
             else if (placedSlot == slot[2] && checkMove == 1)
@@ -287,13 +329,11 @@ namespace TripleTriadOffline
                 //check slots 1 and 5
                 if (slot[1].isOccupied == true && placedSlot.pctBox.card.left > slot[1].pctBox.card.right)
                 {
-                    slot[1].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[1].pctBox.card.fileName + ".jpg");
-                    slot[1].pctBox.currentColor = color;
+                    FlipCard(slot[1], color);
                 }
                 if (slot[5].isOccupied == true && placedSlot.pctBox.card.bottom > slot[5].pctBox.card.top)
                 {
-                    slot[5].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[5].pctBox.card.fileName + ".jpg");
-                    slot[5].pctBox.currentColor = color;
+                    FlipCard(slot[5], color);
                 }
             }
             else if (placedSlot == slot[3] && checkMove == 1)
@@ -301,18 +341,15 @@ namespace TripleTriadOffline
                 //check slots 0, 4, and 6
                 if (slot[0].isOccupied == true && placedSlot.pctBox.card.top > slot[0].pctBox.card.bottom)
                 {
-                    slot[0].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[0].pctBox.card.fileName + ".jpg");
-                    slot[0].pctBox.currentColor = color;
+                    FlipCard(slot[0], color);
                 }
                 if (slot[4].isOccupied == true && placedSlot.pctBox.card.right > slot[4].pctBox.card.left)
                 {
-                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
-                    slot[4].pctBox.currentColor = color;
+                    FlipCard(slot[4], color);
                 }
                 if (slot[6].isOccupied == true && placedSlot.pctBox.card.bottom > slot[6].pctBox.card.top)
                 {
-                    slot[6].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[6].pctBox.card.fileName + ".jpg");
-                    slot[6].pctBox.currentColor = color;
+                    FlipCard(slot[6], color);
                 }
             }
             else if (placedSlot == slot[4] && checkMove == 1)
@@ -320,23 +357,19 @@ namespace TripleTriadOffline
                 //check slots 1, 3, 5, and 7
                 if (slot[1].isOccupied == true && placedSlot.pctBox.card.top > slot[1].pctBox.card.bottom)
                 {
-                    slot[1].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[1].pctBox.card.fileName + ".jpg");
-                    slot[1].pctBox.currentColor = color;
+                    FlipCard(slot[1], color);
                 }
                 if (slot[3].isOccupied == true && placedSlot.pctBox.card.left > slot[3].pctBox.card.right)
                 {
-                    slot[3].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[3].pctBox.card.fileName + ".jpg");
-                    slot[3].pctBox.currentColor = color;
+                    FlipCard(slot[3], color);
                 }
                 if (slot[5].isOccupied == true && placedSlot.pctBox.card.right > slot[5].pctBox.card.left)
                 {
-                    slot[5].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[5].pctBox.card.fileName + ".jpg");
-                    slot[5].pctBox.currentColor = color;
+                    FlipCard(slot[5], color);
                 }
                 if (slot[7].isOccupied == true && placedSlot.pctBox.card.bottom > slot[7].pctBox.card.top)
                 {
-                    slot[7].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[7].pctBox.card.fileName + ".jpg");
-                    slot[7].pctBox.currentColor = color;
+                    FlipCard(slot[7], color);
                 }
             }
             else if (placedSlot == slot[5] && checkMove == 1)
@@ -344,18 +377,15 @@ namespace TripleTriadOffline
                 //check slots 2, 4, and 8
                 if (slot[2].isOccupied == true && placedSlot.pctBox.card.top > slot[2].pctBox.card.bottom)
                 {
-                    slot[2].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[2].pctBox.card.fileName + ".jpg");
-                    slot[2].pctBox.currentColor = color;
+                    FlipCard(slot[2], color);
                 }
                 if (slot[4].isOccupied == true && placedSlot.pctBox.card.left > slot[4].pctBox.card.right)
                 {
-                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
-                    slot[4].pctBox.currentColor = color;
+                    FlipCard(slot[4], color);
                 }
                 if (slot[8].isOccupied == true && placedSlot.pctBox.card.bottom > slot[8].pctBox.card.top)
                 {
-                    slot[8].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[8].pctBox.card.fileName + ".jpg");
-                    slot[8].pctBox.currentColor = color;
+                    FlipCard(slot[8], color);
                 }
             }
             else if (placedSlot == slot[6] && checkMove == 1)
@@ -363,13 +393,11 @@ namespace TripleTriadOffline
                 //check slots 3 and 7
                 if (slot[3].isOccupied == true && placedSlot.pctBox.card.top > slot[3].pctBox.card.bottom)
                 {
-                    slot[3].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[3].pctBox.card.fileName + ".jpg");
-                    slot[3].pctBox.currentColor = color;
+                    FlipCard(slot[3], color);
                 }
                 if (slot[7].isOccupied == true && placedSlot.pctBox.card.right > slot[7].pctBox.card.left)
                 {
-                    slot[7].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[7].pctBox.card.fileName + ".jpg");
-                    slot[7].pctBox.currentColor = color;
+                    FlipCard(slot[7], color);
                 }
             }
             else if (placedSlot == slot[7] && checkMove == 1)
@@ -377,18 +405,15 @@ namespace TripleTriadOffline
                 //check slots 4, 6, and 8
                 if (slot[4].isOccupied == true && placedSlot.pctBox.card.top > slot[4].pctBox.card.bottom)
                 {
-                    slot[4].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[4].pctBox.card.fileName + ".jpg");
-                    slot[4].pctBox.currentColor = color;
+                    FlipCard(slot[4], color);
                 }
-                if (slot[6].isOccupied == true && placedSlot.pctBox.card.right > slot[6].pctBox.card.left)
+                if (slot[6].isOccupied == true && placedSlot.pctBox.card.left > slot[6].pctBox.card.right)
                 {
-                    slot[6].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[6].pctBox.card.fileName + ".jpg");
-                    slot[6].pctBox.currentColor = color;
+                    FlipCard(slot[6], color);
                 }
-                if (slot[8].isOccupied == true && placedSlot.pctBox.card.left > slot[8].pctBox.card.right)
+                if (slot[8].isOccupied == true && placedSlot.pctBox.card.right > slot[8].pctBox.card.left)
                 {
-                    slot[8].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[8].pctBox.card.fileName + ".jpg");
-                    slot[8].pctBox.currentColor = color;
+                    FlipCard(slot[8], color);
                 }
             }
             else if (placedSlot == slot[8] && checkMove == 1)
@@ -396,16 +421,152 @@ namespace TripleTriadOffline
                 //check slots 5 and 7
                 if (slot[5].isOccupied == true && placedSlot.pctBox.card.top > slot[5].pctBox.card.bottom)
                 {
-                    slot[5].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[5].pctBox.card.fileName + ".jpg");
-                    slot[5].pctBox.currentColor = color;
+                    FlipCard(slot[5], color);
                 }
                 if (slot[7].isOccupied == true && placedSlot.pctBox.card.left > slot[7].pctBox.card.right)
                 {
-                    slot[7].pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot[7].pctBox.card.fileName + ".jpg");
-                    slot[7].pctBox.currentColor = color;
+                    FlipCard(slot[7], color);
                 }
             }
             checkMove = 0;
+        }
+
+        private void FlipCard(Slot slot, string color)
+        {
+            slot.pctBox.Image = Image.FromFile(@"Deck\" + color + @"\" + slot.pctBox.card.fileName + ".jpg");
+            slot.pctBox.currentColor = color;
+        }
+
+        private void OpponentTurn()
+        {
+            int slotLoop = 0;
+
+            if (turn == 2)
+            {
+                foreach (Control oppCard in this.Controls)
+                {
+                    if (oppCard is PictureBox && oppCard.Name.Contains("OC"))
+                    {
+                        CardPictureBox cpb = (CardPictureBox)oppCard;
+                        if (cpb.isUsed == false)
+                        {
+                            CardClick(cpb);
+                            break;
+                        }
+                    }
+                }
+
+                while (slotLoop < 9)
+                {
+                    if (slot[slotLoop].isOccupied == false)
+                    {
+                        Point point = new Point(slot[slotLoop].rect.X, slot[slotLoop].rect.Y);
+                        PlaceCard(point);
+                        //PlayCard(selectedCard, gameBoard.slot[slotLoop]);
+                        //reload the texture, in case "closed" rule
+                        //selectedCard.Texture = Content.Load<Texture2D>("deck/" + selectedCard.currentColor + "/" + selectedCard.fileName);
+                        break;
+                    }
+                    slotLoop++;
+                }
+
+                checkMove = 1;
+                CheckMove(placedSlot);
+
+                UpdateScore();
+
+                if (IsGameFinished() == false)
+                {
+                    SwitchTurns();
+                }
+                else
+                {
+                    //GameOver
+                }
+            }
+        }
+
+        private void UpdateScore()
+        {
+            int blue = 0;
+            int red = 0;
+            int x = 0;
+
+            foreach (Control pctBox in this.Controls)
+            {
+                if (pctBox is PictureBox && pctBox.Name.Contains("pct"))
+                {
+                    CardPictureBox cpb = (CardPictureBox)pctBox;
+                    if (cpb.Name.Contains("PC") && cpb.isUsed == false)
+                    {
+                        blue++;
+                    }
+                    else if (cpb.Name.Contains("OC") && cpb.isUsed == false)
+                    {
+                        red++;
+                    }
+                }
+            }
+
+            x = 0;
+            while (x < 9)
+            {
+                if (slot[x].isOccupied)
+                {
+                    if (slot[x].pctBox.currentColor == "red")
+                    {
+                        red++;
+                    }
+                    if (slot[x].pctBox.currentColor == "blue")
+                    {
+                        blue++;
+                    }
+                }
+                x++;
+            }
+            playerScore = blue;
+            opponentScore = red;
+
+            lblBlueScore.Text = playerScore.ToString();
+            lblRedScore.Text = opponentScore.ToString();
+        }
+
+        private bool IsGameFinished()
+        {
+            bool returnCondition = false;
+
+            int x = 0;
+            int spacesOccupied = 0;
+
+            while (x < 9)
+            {
+                if (slot[x].isOccupied == true)
+                {
+                    spacesOccupied++;
+                }
+                x++;
+            }
+
+            if (spacesOccupied == 9)
+            {
+                //Game is over. Check for winner/loser
+                if (playerScore > opponentScore)
+                {
+                    gameResult = "You win!";
+                }
+                else if (opponentScore > playerScore)
+                {
+                    gameResult = "You lose!";
+                }
+                else if (playerScore == opponentScore)
+                {
+                    gameResult = "Tie game!";
+                }
+
+                lblGameResult.Text = gameResult;
+                returnCondition = true;
+            }
+            return returnCondition;
         }
 
 

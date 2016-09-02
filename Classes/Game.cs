@@ -14,12 +14,7 @@ using TripleTriadOffline.Forms;
 namespace TripleTriadOffline 
 {
     public class Game
-    {       
-        private int playerScore = 5;
-        private int opponentScore = 5;
-                
-        private int checkMove = 0;
-
+    {                      
         private static Deck masterDeck;
         private static Deck playerDeck;
 
@@ -146,59 +141,6 @@ namespace TripleTriadOffline
             
         }
 
-            /*
-        protected override void Update(GameTime gameTime)
-        {
-            var mouseState = Mouse.GetState();
-            var mousePosition = new Point(mouseState.X, mouseState.Y);
-
-            PlayerTurn(mouseState, mousePosition);
-
-            OpponentTurn();
-
-            CheckMove(placedSlot);
-
-            UpdateScore();
-
-            EndGame();
-            
-            base.Update(gameTime);
-        }
-        */
-        /*
-        private void EndGame()
-        {
-            int x = 0;
-            int spacesOccupied = 0;
-
-            while (x<9)
-            {
-                if (gameBoard.slot[x].isOccupied == true)
-                {
-                    spacesOccupied++;
-                }
-                x++;
-            }
-
-            if (spacesOccupied == 9)
-            {
-                //Game is over. Check for winner/loser
-                if (playerScore > opponentScore)
-                {
-                    gameResult = "You win!";
-                }
-                else if (opponentScore > playerScore)
-                {
-                    gameResult = "You lose!";
-                }
-                else if (playerScore == opponentScore)
-                {
-                    gameResult = "Tie game!";
-                }
-            }
-        }
-        */
-
         /*
         private void OpponentTurn()
         {
@@ -235,48 +177,6 @@ namespace TripleTriadOffline
                 };
                 turn = 1;
             }
-        }
-        */
-
-
-        /*
-        private void UpdateScore()
-        {
-            int blue = 0;
-            int red = 0;
-            int x = 0;
-
-            while (x<5)
-            {
-                if (playerCard[x].isUsed == false)
-                {
-                    blue++;
-                }
-                if (opponentCard[x].isUsed == false)
-                {
-                    red++;
-                }
-                x++;
-            }
-
-            x = 0;
-            while (x<9)
-            {
-                if (gameBoard.slot[x].isOccupied)
-                {
-                    if (gameBoard.slot[x].cardSlotted.currentColor == "red")
-                    {
-                        red++;
-                    }
-                    if (gameBoard.slot[x].cardSlotted.currentColor == "blue")
-                    {
-                        blue++;
-                    }
-                }
-                x++;
-            }
-            playerScore = blue;
-            opponentScore = red;
         }
         */
     }

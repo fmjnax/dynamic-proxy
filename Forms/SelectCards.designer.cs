@@ -43,7 +43,17 @@
             this.lstAvailable = new System.Windows.Forms.ListBox();
             this.lblPCCount = new System.Windows.Forms.Label();
             this.pctPlayerCard = new System.Windows.Forms.PictureBox();
+            this.pctSelected1 = new TripleTriadOffline.Classes.CardPictureBox();
+            this.pctSelected2 = new TripleTriadOffline.Classes.CardPictureBox();
+            this.pctSelected3 = new TripleTriadOffline.Classes.CardPictureBox();
+            this.pctSelected4 = new TripleTriadOffline.Classes.CardPictureBox();
+            this.pctSelected5 = new TripleTriadOffline.Classes.CardPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctPlayerCard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelectCard
@@ -237,6 +247,121 @@
             this.pctPlayerCard.TabIndex = 17;
             this.pctPlayerCard.TabStop = false;
             // 
+            // pctSelected1
+            // 
+            this.pctSelected1.BackColor = System.Drawing.Color.Transparent;
+            this.pctSelected1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pctSelected1.bottom = 0;
+            this.pctSelected1.card = null;
+            this.pctSelected1.currentColor = null;
+            this.pctSelected1.displayName = null;
+            this.pctSelected1.fileName = null;
+            this.pctSelected1.id = 0;
+            this.pctSelected1.isUsed = false;
+            this.pctSelected1.left = 0;
+            this.pctSelected1.level = 0;
+            this.pctSelected1.Location = new System.Drawing.Point(38, 229);
+            this.pctSelected1.Name = "pctSelected1";
+            this.pctSelected1.native = 0;
+            this.pctSelected1.right = 0;
+            this.pctSelected1.Size = new System.Drawing.Size(66, 66);
+            this.pctSelected1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctSelected1.TabIndex = 18;
+            this.pctSelected1.TabStop = false;
+            this.pctSelected1.top = 0;
+            // 
+            // pctSelected2
+            // 
+            this.pctSelected2.BackColor = System.Drawing.Color.Transparent;
+            this.pctSelected2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pctSelected2.bottom = 0;
+            this.pctSelected2.card = null;
+            this.pctSelected2.currentColor = null;
+            this.pctSelected2.displayName = null;
+            this.pctSelected2.fileName = null;
+            this.pctSelected2.id = 0;
+            this.pctSelected2.isUsed = false;
+            this.pctSelected2.left = 0;
+            this.pctSelected2.level = 0;
+            this.pctSelected2.Location = new System.Drawing.Point(129, 229);
+            this.pctSelected2.Name = "pctSelected2";
+            this.pctSelected2.native = 0;
+            this.pctSelected2.right = 0;
+            this.pctSelected2.Size = new System.Drawing.Size(66, 66);
+            this.pctSelected2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctSelected2.TabIndex = 19;
+            this.pctSelected2.TabStop = false;
+            this.pctSelected2.top = 0;
+            // 
+            // pctSelected3
+            // 
+            this.pctSelected3.BackColor = System.Drawing.Color.Transparent;
+            this.pctSelected3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pctSelected3.bottom = 0;
+            this.pctSelected3.card = null;
+            this.pctSelected3.currentColor = null;
+            this.pctSelected3.displayName = null;
+            this.pctSelected3.fileName = null;
+            this.pctSelected3.id = 0;
+            this.pctSelected3.isUsed = false;
+            this.pctSelected3.left = 0;
+            this.pctSelected3.level = 0;
+            this.pctSelected3.Location = new System.Drawing.Point(220, 229);
+            this.pctSelected3.Name = "pctSelected3";
+            this.pctSelected3.native = 0;
+            this.pctSelected3.right = 0;
+            this.pctSelected3.Size = new System.Drawing.Size(66, 66);
+            this.pctSelected3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctSelected3.TabIndex = 20;
+            this.pctSelected3.TabStop = false;
+            this.pctSelected3.top = 0;
+            // 
+            // pctSelected4
+            // 
+            this.pctSelected4.BackColor = System.Drawing.Color.Transparent;
+            this.pctSelected4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pctSelected4.bottom = 0;
+            this.pctSelected4.card = null;
+            this.pctSelected4.currentColor = null;
+            this.pctSelected4.displayName = null;
+            this.pctSelected4.fileName = null;
+            this.pctSelected4.id = 0;
+            this.pctSelected4.isUsed = false;
+            this.pctSelected4.left = 0;
+            this.pctSelected4.level = 0;
+            this.pctSelected4.Location = new System.Drawing.Point(311, 229);
+            this.pctSelected4.Name = "pctSelected4";
+            this.pctSelected4.native = 0;
+            this.pctSelected4.right = 0;
+            this.pctSelected4.Size = new System.Drawing.Size(66, 66);
+            this.pctSelected4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctSelected4.TabIndex = 21;
+            this.pctSelected4.TabStop = false;
+            this.pctSelected4.top = 0;
+            // 
+            // pctSelected5
+            // 
+            this.pctSelected5.BackColor = System.Drawing.Color.Transparent;
+            this.pctSelected5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pctSelected5.bottom = 0;
+            this.pctSelected5.card = null;
+            this.pctSelected5.currentColor = null;
+            this.pctSelected5.displayName = null;
+            this.pctSelected5.fileName = null;
+            this.pctSelected5.id = 0;
+            this.pctSelected5.isUsed = false;
+            this.pctSelected5.left = 0;
+            this.pctSelected5.level = 0;
+            this.pctSelected5.Location = new System.Drawing.Point(402, 229);
+            this.pctSelected5.Name = "pctSelected5";
+            this.pctSelected5.native = 0;
+            this.pctSelected5.right = 0;
+            this.pctSelected5.Size = new System.Drawing.Size(66, 66);
+            this.pctSelected5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pctSelected5.TabIndex = 22;
+            this.pctSelected5.TabStop = false;
+            this.pctSelected5.top = 0;
+            // 
             // SelectCards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +369,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(500, 346);
+            this.Controls.Add(this.pctSelected5);
+            this.Controls.Add(this.pctSelected4);
+            this.Controls.Add(this.pctSelected3);
+            this.Controls.Add(this.pctSelected2);
+            this.Controls.Add(this.pctSelected1);
             this.Controls.Add(this.pctPlayerCard);
             this.Controls.Add(this.lblPCCount);
             this.Controls.Add(this.lstAvailable);
@@ -264,6 +394,11 @@
             this.Text = "SelectCards";
             this.Load += new System.EventHandler(this.SelectCards_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pctPlayerCard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctSelected5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +420,10 @@
         private System.Windows.Forms.ListBox lstAvailable;
         private System.Windows.Forms.Label lblPCCount;
         private System.Windows.Forms.PictureBox pctPlayerCard;
+        private Classes.CardPictureBox pctSelected1;
+        private Classes.CardPictureBox pctSelected2;
+        private Classes.CardPictureBox pctSelected3;
+        private Classes.CardPictureBox pctSelected4;
+        private Classes.CardPictureBox pctSelected5;
     }
 }
