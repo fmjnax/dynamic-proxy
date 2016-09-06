@@ -45,8 +45,8 @@
       <top>4</top>
       <right>5</right>
       <bottom>5</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>4</level>
+      <native>1</native>
     </card>
 
     <card id="5">
@@ -285,8 +285,8 @@
       <top>9</top>
       <right>6</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>8</level>
+      <native>1</native>
     </card>
 
     <card id="25">
@@ -729,8 +729,8 @@
       <top>5</top>
       <right>7</right>
       <bottom>8</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>7</level>
+      <native>1</native>
     </card>
 
     <card id="62">
@@ -1053,8 +1053,8 @@
       <top>2</top>
       <right>7</right>
       <bottom>6</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>4</level>
+      <native>1</native>
     </card>
 
     <card id="89">
@@ -1137,8 +1137,8 @@
       <top>6</top>
       <right>2</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>2</level>
+      <native>1</native>
     </card>
 
     <card id="96">
@@ -1305,8 +1305,8 @@
       <top>4</top>
       <right>2</right>
       <bottom>4</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>1</level>
+      <native>1</native>
     </card>
 
     <card id="110">
@@ -1317,8 +1317,8 @@
       <top>1</top>
       <right>8</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>7</level>
+      <native>1</native>
     </card>
 
     <card id="111">
@@ -1365,8 +1365,8 @@
       <top>7</top>
       <right>4</right>
       <bottom>6</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>9</level>
+      <native>1</native>
     </card>
 
     <card id="115">
@@ -1425,8 +1425,8 @@
       <top>7</top>
       <right>3</right>
       <bottom>3</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>5</level>
+      <native>1</native>
     </card>
 
     <card id="120">
@@ -1677,8 +1677,8 @@
       <top>5</top>
       <right>2</right>
       <bottom>5</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>2</level>
+      <native>1</native>
     </card>
 
     <card id="141">
@@ -1809,8 +1809,8 @@
       <top>4</top>
       <right>4</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>3</level>
+      <native>1</native>
     </card>
 
     <card id="152">
@@ -1881,8 +1881,8 @@
       <top>5</top>
       <right>10</right>
       <bottom>8</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>9</level>
+      <native>1</native>
     </card>
 
     <card id="158">
@@ -1965,8 +1965,8 @@
       <top>3</top>
       <right>1</right>
       <bottom>10</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>9</level>
+      <native>1</native>
     </card>
 
     <card id="165">
@@ -2110,7 +2110,7 @@
       <right>10</right>
       <bottom>3</bottom>
       <level>10</level>
-      <native>0</native>
+      <native>1</native>
     </card>
 
     <card id="177">
@@ -2277,8 +2277,8 @@
       <top>7</top>
       <right>8</right>
       <bottom>3</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>6</level>
+      <native>1</native>
     </card>
 
     <card id="191">
@@ -2409,8 +2409,8 @@
       <top>3</top>
       <right>5</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>1</level>
+      <native>1</native>
     </card>
 
     <card id="202">
@@ -2421,8 +2421,8 @@
       <top>7</top>
       <right>5</right>
       <bottom>1</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>3</level>
+      <native>1</native>
     </card>
 
     <card id="203">
@@ -2625,8 +2625,8 @@
       <top>5</top>
       <right>1</right>
       <bottom>1</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>1</level>
+      <native>1</native>
     </card>
 
     <card id="220">
@@ -2673,8 +2673,8 @@
       <top>5</top>
       <right>6</right>
       <bottom>6</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>7</level>
+      <native>1</native>
     </card>
 
     <card id="224">
@@ -2733,8 +2733,8 @@
       <top>2</top>
       <right>1</right>
       <bottom>4</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>1</level>
+      <native>1</native>
     </card>
 
     <card id="229">
@@ -2781,8 +2781,8 @@
       <top>9</top>
       <right>1</right>
       <bottom>9</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>8</level>
+      <native>1</native>
     </card>
 
     <card id="233">
@@ -2937,8 +2937,8 @@
       <top>5</top>
       <right>5</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>5</level>
+      <native>1</native>
     </card>
 
     <card id="246">
@@ -2973,8 +2973,8 @@
       <top>6</top>
       <right>1</right>
       <bottom>4</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>2</level>
+      <native>1</native>
     </card>
 
     <card id="249">
@@ -3105,8 +3105,8 @@
       <top>7</top>
       <right>2</right>
       <bottom>8</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>6</level>
+      <native>1</native>
     </card>
 
     <card id="260">
@@ -3513,8 +3513,8 @@
       <top>9</top>
       <right>6</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>8</level>
+      <native>1</native>
     </card>
 
     <card id="294">
@@ -3525,8 +3525,8 @@
       <top>8</top>
       <right>2</right>
       <bottom>8</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>6</level>
+      <native>1</native>
     </card>
 
     <card id="295">
@@ -3537,8 +3537,8 @@
       <top>3</top>
       <right>7</right>
       <bottom>3</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>4</level>
+      <native>1</native>
     </card>
 
     <card id="296">
@@ -3573,8 +3573,8 @@
       <top>6</top>
       <right>5</right>
       <bottom>6</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>5</level>
+      <native>1</native>
     </card>
 
     <card id="299">
@@ -3585,8 +3585,8 @@
       <top>2</top>
       <right>6</right>
       <bottom>9</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>10</level>
+      <native>1</native>
     </card>
 
     <card id="300">
@@ -3633,8 +3633,8 @@
       <top>3</top>
       <right>2</right>
       <bottom>1</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>2</level>
+      <native>1</native>
     </card>
 
     <card id="304">
@@ -3717,8 +3717,8 @@
       <top>8</top>
       <right>8</right>
       <bottom>4</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>7</level>
+      <native>1</native>
     </card>
 
     <card id="311">
@@ -3873,8 +3873,8 @@
       <top>6</top>
       <right>7</right>
       <bottom>6</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>10</level>
+      <native>1</native>
     </card>
 
     <card id="324">
@@ -3982,7 +3982,7 @@
       <right>10</right>
       <bottom>3</bottom>
       <level>10</level>
-      <native>0</native>
+      <native>1</native>
     </card>
 
     <card id="333">
@@ -4149,8 +4149,8 @@
       <top>5</top>
       <right>7</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>3</level>
+      <native>1</native>
     </card>
 
     <card id="347">
@@ -4581,8 +4581,8 @@
       <top>9</top>
       <right>3</right>
       <bottom>9</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>8</level>
+      <native>1</native>
     </card>
 
     <card id="383">
@@ -4809,8 +4809,8 @@
       <top>8</top>
       <right>10</right>
       <bottom>3</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>9</level>
+      <native>1</native>
     </card>
 
     <card id="402">
@@ -5049,8 +5049,8 @@
       <top>7</top>
       <right>2</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>9</level>
+      <native>1</native>
     </card>
 
     <card id="422">
@@ -5265,8 +5265,8 @@
       <top>2</top>
       <right>9</right>
       <bottom>9</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>8</level>
+      <native>1</native>
     </card>
 
     <card id="440">
@@ -5289,8 +5289,8 @@
       <top>9</top>
       <right>6</right>
       <bottom>10</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>10</level>
+      <native>1</native>
     </card>
 
     <card id="442">
@@ -5409,8 +5409,8 @@
       <top>6</top>
       <right>1</right>
       <bottom>1</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>1</level>
+      <native>1</native>
     </card>
 
     <card id="452">
@@ -5577,8 +5577,8 @@
       <top>4</top>
       <right>10</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>10</level>
+      <native>1</native>
     </card>
 
     <card id="466">
@@ -5625,8 +5625,8 @@
       <top>7</top>
       <right>2</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>5</level>
+      <native>1</native>
     </card>
 
     <card id="470">
@@ -5721,8 +5721,8 @@
       <top>5</top>
       <right>1</right>
       <bottom>9</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>8</level>
+      <native>1</native>
     </card>
 
     <card id="478">
@@ -5745,8 +5745,8 @@
       <top>5</top>
       <right>6</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>3</level>
+      <native>1</native>
     </card>
 
     <card id="480">
@@ -5841,8 +5841,8 @@
       <top>6</top>
       <right>9</right>
       <bottom>10</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>10</level>
+      <native>1</native>
     </card>
 
     <card id="488">
@@ -5853,8 +5853,8 @@
       <top>10</top>
       <right>8</right>
       <bottom>6</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>10</level>
+      <native>1</native>
     </card>
 
     <card id="489">
@@ -5973,8 +5973,8 @@
       <top>6</top>
       <right>5</right>
       <bottom>8</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>6</level>
+      <native>1</native>
     </card>
 
     <card id="499">
@@ -6177,8 +6177,8 @@
       <top>8</top>
       <right>3</right>
       <bottom>5</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>7</level>
+      <native>1</native>
     </card>
 
     <card id="516">
@@ -6190,7 +6190,7 @@
       <right>4</right>
       <bottom>6</bottom>
       <level>10</level>
-      <native>0</native>
+      <native>1</native>
     </card>
 
     <card id="517">
@@ -6417,8 +6417,8 @@
       <top>5</top>
       <right>3</right>
       <bottom>2</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>2</level>
+      <native>1</native>
     </card>
 
     <card id="536">
@@ -6537,8 +6537,8 @@
       <top>4</top>
       <right>6</right>
       <bottom>7</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>5</level>
+      <native>1</native>
     </card>
 
     <card id="546">
@@ -6549,8 +6549,8 @@
       <top>3</top>
       <right>6</right>
       <bottom>4</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>3</level>
+      <native>1</native>
     </card>
 
     <card id="547">
@@ -6597,8 +6597,8 @@
       <top>4</top>
       <right>8</right>
       <bottom>5</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>6</level>
+      <native>1</native>
     </card>
 
     <card id="551">
@@ -6933,8 +6933,8 @@
       <top>6</top>
       <right>5</right>
       <bottom>4</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>4</level>
+      <native>1</native>
     </card>
 
     <card id="579">
@@ -6958,7 +6958,7 @@
       <right>7</right>
       <bottom>2</bottom>
       <level>10</level>
-      <native>0</native>
+      <native>1</native>
     </card>
 
     <card id="581">
@@ -7053,8 +7053,8 @@
       <top>7</top>
       <right>3</right>
       <bottom>1</bottom>
-      <level>99</level>
-      <native>0</native>
+      <level>4</level>
+      <native>1</native>
     </card>
 
     <card id="589">
@@ -7378,7 +7378,7 @@
       <right>5</right>
       <bottom>10</bottom>
       <level>10</level>
-      <native>0</native>
+      <native>1</native>
     </card>
 
     <card id="616">

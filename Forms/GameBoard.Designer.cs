@@ -34,9 +34,9 @@ namespace TripleTriadOffline
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameBoard));
             this.lblTop = new System.Windows.Forms.Label();
-            this.lblRedScore = new System.Windows.Forms.Label();
-            this.lblBlueScore = new System.Windows.Forms.Label();
-            this.lblGameResult = new System.Windows.Forms.Label();
+            this.lblRedScore = new TripleTriadOffline.Classes.CustomLabel();
+            this.lblBlueScore = new TripleTriadOffline.Classes.CustomLabel();
+            this.lblGameResult = new TripleTriadOffline.Classes.CustomLabel();
             this.TurnIndicator = new System.Windows.Forms.PictureBox();
             this.pctOC5 = new TripleTriadOffline.Classes.CardPictureBox();
             this.pctOC4 = new TripleTriadOffline.Classes.CardPictureBox();
@@ -76,11 +76,13 @@ namespace TripleTriadOffline
             // 
             this.lblRedScore.AutoSize = true;
             this.lblRedScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblRedScore.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRedScore.Font = new System.Drawing.Font("Eras Bold ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRedScore.ForeColor = System.Drawing.Color.White;
             this.lblRedScore.Location = new System.Drawing.Point(428, 356);
             this.lblRedScore.Name = "lblRedScore";
-            this.lblRedScore.Size = new System.Drawing.Size(30, 32);
+            this.lblRedScore.OutlineForeColor = System.Drawing.Color.Black;
+            this.lblRedScore.OutlineWidth = 1F;
+            this.lblRedScore.Size = new System.Drawing.Size(32, 31);
             this.lblRedScore.TabIndex = 11;
             this.lblRedScore.Text = "5";
             this.lblRedScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,11 +91,13 @@ namespace TripleTriadOffline
             // 
             this.lblBlueScore.AutoSize = true;
             this.lblBlueScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblBlueScore.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlueScore.Font = new System.Drawing.Font("Eras Bold ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBlueScore.ForeColor = System.Drawing.Color.White;
             this.lblBlueScore.Location = new System.Drawing.Point(40, 356);
             this.lblBlueScore.Name = "lblBlueScore";
-            this.lblBlueScore.Size = new System.Drawing.Size(30, 32);
+            this.lblBlueScore.OutlineForeColor = System.Drawing.Color.Black;
+            this.lblBlueScore.OutlineWidth = 1F;
+            this.lblBlueScore.Size = new System.Drawing.Size(32, 31);
             this.lblBlueScore.TabIndex = 12;
             this.lblBlueScore.Text = "5";
             this.lblBlueScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,11 +105,13 @@ namespace TripleTriadOffline
             // lblGameResult
             // 
             this.lblGameResult.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameResult.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameResult.Font = new System.Drawing.Font("Eras Bold ITC", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameResult.ForeColor = System.Drawing.Color.White;
-            this.lblGameResult.Location = new System.Drawing.Point(91, 356);
+            this.lblGameResult.Location = new System.Drawing.Point(182, 346);
             this.lblGameResult.Name = "lblGameResult";
-            this.lblGameResult.Size = new System.Drawing.Size(317, 32);
+            this.lblGameResult.OutlineForeColor = System.Drawing.Color.Black;
+            this.lblGameResult.OutlineWidth = 1F;
+            this.lblGameResult.Size = new System.Drawing.Size(135, 32);
             this.lblGameResult.TabIndex = 13;
             this.lblGameResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -121,6 +127,7 @@ namespace TripleTriadOffline
             // 
             // pctOC5
             // 
+            this.pctOC5.attackScore = 0D;
             this.pctOC5.BackColor = System.Drawing.Color.Black;
             this.pctOC5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctOC5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -129,8 +136,14 @@ namespace TripleTriadOffline
             this.pctOC5.canBeatLeft = false;
             this.pctOC5.canBeatRight = false;
             this.pctOC5.canBeatTop = false;
+            this.pctOC5.canLoseBottom = false;
+            this.pctOC5.canLoseLeft = false;
+            this.pctOC5.canLoseRight = false;
+            this.pctOC5.canLoseTop = false;
             this.pctOC5.card = null;
             this.pctOC5.currentColor = null;
+            this.pctOC5.defenseMultiplier = 0D;
+            this.pctOC5.defenseScore = 0D;
             this.pctOC5.displayName = null;
             this.pctOC5.fileName = null;
             this.pctOC5.id = 0;
@@ -140,16 +153,18 @@ namespace TripleTriadOffline
             this.pctOC5.Location = new System.Drawing.Point(410, 275);
             this.pctOC5.Name = "pctOC5";
             this.pctOC5.native = 0;
+            this.pctOC5.playableSlot = 0;
+            this.pctOC5.playScore = 0D;
             this.pctOC5.right = 0;
             this.pctOC5.Size = new System.Drawing.Size(66, 66);
             this.pctOC5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pctOC5.TabIndex = 10;
             this.pctOC5.TabStop = false;
             this.pctOC5.top = 0;
-            this.pctOC5.Click += new System.EventHandler(this.pctOC5_Click);
             // 
             // pctOC4
             // 
+            this.pctOC4.attackScore = 0D;
             this.pctOC4.BackColor = System.Drawing.Color.Black;
             this.pctOC4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctOC4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -158,8 +173,14 @@ namespace TripleTriadOffline
             this.pctOC4.canBeatLeft = false;
             this.pctOC4.canBeatRight = false;
             this.pctOC4.canBeatTop = false;
+            this.pctOC4.canLoseBottom = false;
+            this.pctOC4.canLoseLeft = false;
+            this.pctOC4.canLoseRight = false;
+            this.pctOC4.canLoseTop = false;
             this.pctOC4.card = null;
             this.pctOC4.currentColor = null;
+            this.pctOC4.defenseMultiplier = 0D;
+            this.pctOC4.defenseScore = 0D;
             this.pctOC4.displayName = null;
             this.pctOC4.fileName = null;
             this.pctOC4.id = 0;
@@ -169,16 +190,18 @@ namespace TripleTriadOffline
             this.pctOC4.Location = new System.Drawing.Point(410, 225);
             this.pctOC4.Name = "pctOC4";
             this.pctOC4.native = 0;
+            this.pctOC4.playableSlot = 0;
+            this.pctOC4.playScore = 0D;
             this.pctOC4.right = 0;
             this.pctOC4.Size = new System.Drawing.Size(66, 66);
             this.pctOC4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pctOC4.TabIndex = 9;
             this.pctOC4.TabStop = false;
             this.pctOC4.top = 0;
-            this.pctOC4.Click += new System.EventHandler(this.pctOC4_Click);
             // 
             // pctOC3
             // 
+            this.pctOC3.attackScore = 0D;
             this.pctOC3.BackColor = System.Drawing.Color.Black;
             this.pctOC3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctOC3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -187,8 +210,14 @@ namespace TripleTriadOffline
             this.pctOC3.canBeatLeft = false;
             this.pctOC3.canBeatRight = false;
             this.pctOC3.canBeatTop = false;
+            this.pctOC3.canLoseBottom = false;
+            this.pctOC3.canLoseLeft = false;
+            this.pctOC3.canLoseRight = false;
+            this.pctOC3.canLoseTop = false;
             this.pctOC3.card = null;
             this.pctOC3.currentColor = null;
+            this.pctOC3.defenseMultiplier = 0D;
+            this.pctOC3.defenseScore = 0D;
             this.pctOC3.displayName = null;
             this.pctOC3.fileName = null;
             this.pctOC3.id = 0;
@@ -198,16 +227,18 @@ namespace TripleTriadOffline
             this.pctOC3.Location = new System.Drawing.Point(410, 175);
             this.pctOC3.Name = "pctOC3";
             this.pctOC3.native = 0;
+            this.pctOC3.playableSlot = 0;
+            this.pctOC3.playScore = 0D;
             this.pctOC3.right = 0;
             this.pctOC3.Size = new System.Drawing.Size(66, 66);
             this.pctOC3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pctOC3.TabIndex = 8;
             this.pctOC3.TabStop = false;
             this.pctOC3.top = 0;
-            this.pctOC3.Click += new System.EventHandler(this.pctOC3_Click);
             // 
             // pctOC2
             // 
+            this.pctOC2.attackScore = 0D;
             this.pctOC2.BackColor = System.Drawing.Color.Black;
             this.pctOC2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctOC2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -216,8 +247,14 @@ namespace TripleTriadOffline
             this.pctOC2.canBeatLeft = false;
             this.pctOC2.canBeatRight = false;
             this.pctOC2.canBeatTop = false;
+            this.pctOC2.canLoseBottom = false;
+            this.pctOC2.canLoseLeft = false;
+            this.pctOC2.canLoseRight = false;
+            this.pctOC2.canLoseTop = false;
             this.pctOC2.card = null;
             this.pctOC2.currentColor = null;
+            this.pctOC2.defenseMultiplier = 0D;
+            this.pctOC2.defenseScore = 0D;
             this.pctOC2.displayName = null;
             this.pctOC2.fileName = null;
             this.pctOC2.id = 0;
@@ -227,16 +264,18 @@ namespace TripleTriadOffline
             this.pctOC2.Location = new System.Drawing.Point(410, 125);
             this.pctOC2.Name = "pctOC2";
             this.pctOC2.native = 0;
+            this.pctOC2.playableSlot = 0;
+            this.pctOC2.playScore = 0D;
             this.pctOC2.right = 0;
             this.pctOC2.Size = new System.Drawing.Size(66, 66);
             this.pctOC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pctOC2.TabIndex = 7;
             this.pctOC2.TabStop = false;
             this.pctOC2.top = 0;
-            this.pctOC2.Click += new System.EventHandler(this.pctOC2_Click);
             // 
             // pctOC1
             // 
+            this.pctOC1.attackScore = 0D;
             this.pctOC1.BackColor = System.Drawing.Color.Black;
             this.pctOC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctOC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -245,8 +284,14 @@ namespace TripleTriadOffline
             this.pctOC1.canBeatLeft = false;
             this.pctOC1.canBeatRight = false;
             this.pctOC1.canBeatTop = false;
+            this.pctOC1.canLoseBottom = false;
+            this.pctOC1.canLoseLeft = false;
+            this.pctOC1.canLoseRight = false;
+            this.pctOC1.canLoseTop = false;
             this.pctOC1.card = null;
             this.pctOC1.currentColor = null;
+            this.pctOC1.defenseMultiplier = 0D;
+            this.pctOC1.defenseScore = 0D;
             this.pctOC1.displayName = null;
             this.pctOC1.fileName = null;
             this.pctOC1.id = 0;
@@ -256,16 +301,18 @@ namespace TripleTriadOffline
             this.pctOC1.Location = new System.Drawing.Point(410, 75);
             this.pctOC1.Name = "pctOC1";
             this.pctOC1.native = 0;
+            this.pctOC1.playableSlot = 0;
+            this.pctOC1.playScore = 0D;
             this.pctOC1.right = 0;
             this.pctOC1.Size = new System.Drawing.Size(66, 66);
             this.pctOC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pctOC1.TabIndex = 6;
             this.pctOC1.TabStop = false;
             this.pctOC1.top = 0;
-            this.pctOC1.Click += new System.EventHandler(this.pctOC1_Click);
             // 
             // pctPC5
             // 
+            this.pctPC5.attackScore = 0D;
             this.pctPC5.BackColor = System.Drawing.Color.Black;
             this.pctPC5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctPC5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -274,8 +321,14 @@ namespace TripleTriadOffline
             this.pctPC5.canBeatLeft = false;
             this.pctPC5.canBeatRight = false;
             this.pctPC5.canBeatTop = false;
+            this.pctPC5.canLoseBottom = false;
+            this.pctPC5.canLoseLeft = false;
+            this.pctPC5.canLoseRight = false;
+            this.pctPC5.canLoseTop = false;
             this.pctPC5.card = null;
             this.pctPC5.currentColor = null;
+            this.pctPC5.defenseMultiplier = 0D;
+            this.pctPC5.defenseScore = 0D;
             this.pctPC5.displayName = null;
             this.pctPC5.fileName = null;
             this.pctPC5.id = 0;
@@ -285,6 +338,8 @@ namespace TripleTriadOffline
             this.pctPC5.Location = new System.Drawing.Point(25, 275);
             this.pctPC5.Name = "pctPC5";
             this.pctPC5.native = 0;
+            this.pctPC5.playableSlot = 0;
+            this.pctPC5.playScore = 0D;
             this.pctPC5.right = 0;
             this.pctPC5.Size = new System.Drawing.Size(66, 66);
             this.pctPC5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -295,6 +350,7 @@ namespace TripleTriadOffline
             // 
             // pctPC4
             // 
+            this.pctPC4.attackScore = 0D;
             this.pctPC4.BackColor = System.Drawing.Color.Black;
             this.pctPC4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctPC4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -303,8 +359,14 @@ namespace TripleTriadOffline
             this.pctPC4.canBeatLeft = false;
             this.pctPC4.canBeatRight = false;
             this.pctPC4.canBeatTop = false;
+            this.pctPC4.canLoseBottom = false;
+            this.pctPC4.canLoseLeft = false;
+            this.pctPC4.canLoseRight = false;
+            this.pctPC4.canLoseTop = false;
             this.pctPC4.card = null;
             this.pctPC4.currentColor = null;
+            this.pctPC4.defenseMultiplier = 0D;
+            this.pctPC4.defenseScore = 0D;
             this.pctPC4.displayName = null;
             this.pctPC4.fileName = null;
             this.pctPC4.id = 0;
@@ -314,6 +376,8 @@ namespace TripleTriadOffline
             this.pctPC4.Location = new System.Drawing.Point(25, 225);
             this.pctPC4.Name = "pctPC4";
             this.pctPC4.native = 0;
+            this.pctPC4.playableSlot = 0;
+            this.pctPC4.playScore = 0D;
             this.pctPC4.right = 0;
             this.pctPC4.Size = new System.Drawing.Size(66, 66);
             this.pctPC4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -324,6 +388,7 @@ namespace TripleTriadOffline
             // 
             // pctPC3
             // 
+            this.pctPC3.attackScore = 0D;
             this.pctPC3.BackColor = System.Drawing.Color.Black;
             this.pctPC3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctPC3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -332,8 +397,14 @@ namespace TripleTriadOffline
             this.pctPC3.canBeatLeft = false;
             this.pctPC3.canBeatRight = false;
             this.pctPC3.canBeatTop = false;
+            this.pctPC3.canLoseBottom = false;
+            this.pctPC3.canLoseLeft = false;
+            this.pctPC3.canLoseRight = false;
+            this.pctPC3.canLoseTop = false;
             this.pctPC3.card = null;
             this.pctPC3.currentColor = null;
+            this.pctPC3.defenseMultiplier = 0D;
+            this.pctPC3.defenseScore = 0D;
             this.pctPC3.displayName = null;
             this.pctPC3.fileName = null;
             this.pctPC3.id = 0;
@@ -343,6 +414,8 @@ namespace TripleTriadOffline
             this.pctPC3.Location = new System.Drawing.Point(25, 175);
             this.pctPC3.Name = "pctPC3";
             this.pctPC3.native = 0;
+            this.pctPC3.playableSlot = 0;
+            this.pctPC3.playScore = 0D;
             this.pctPC3.right = 0;
             this.pctPC3.Size = new System.Drawing.Size(66, 66);
             this.pctPC3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -353,6 +426,7 @@ namespace TripleTriadOffline
             // 
             // pctPC2
             // 
+            this.pctPC2.attackScore = 0D;
             this.pctPC2.BackColor = System.Drawing.Color.Black;
             this.pctPC2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctPC2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -361,8 +435,14 @@ namespace TripleTriadOffline
             this.pctPC2.canBeatLeft = false;
             this.pctPC2.canBeatRight = false;
             this.pctPC2.canBeatTop = false;
+            this.pctPC2.canLoseBottom = false;
+            this.pctPC2.canLoseLeft = false;
+            this.pctPC2.canLoseRight = false;
+            this.pctPC2.canLoseTop = false;
             this.pctPC2.card = null;
             this.pctPC2.currentColor = null;
+            this.pctPC2.defenseMultiplier = 0D;
+            this.pctPC2.defenseScore = 0D;
             this.pctPC2.displayName = null;
             this.pctPC2.fileName = null;
             this.pctPC2.id = 0;
@@ -372,6 +452,8 @@ namespace TripleTriadOffline
             this.pctPC2.Location = new System.Drawing.Point(25, 125);
             this.pctPC2.Name = "pctPC2";
             this.pctPC2.native = 0;
+            this.pctPC2.playableSlot = 0;
+            this.pctPC2.playScore = 0D;
             this.pctPC2.right = 0;
             this.pctPC2.Size = new System.Drawing.Size(66, 66);
             this.pctPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -382,6 +464,7 @@ namespace TripleTriadOffline
             // 
             // pctPC1
             // 
+            this.pctPC1.attackScore = 0D;
             this.pctPC1.BackColor = System.Drawing.Color.Black;
             this.pctPC1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pctPC1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -390,8 +473,14 @@ namespace TripleTriadOffline
             this.pctPC1.canBeatLeft = false;
             this.pctPC1.canBeatRight = false;
             this.pctPC1.canBeatTop = false;
+            this.pctPC1.canLoseBottom = false;
+            this.pctPC1.canLoseLeft = false;
+            this.pctPC1.canLoseRight = false;
+            this.pctPC1.canLoseTop = false;
             this.pctPC1.card = null;
             this.pctPC1.currentColor = null;
+            this.pctPC1.defenseMultiplier = 0D;
+            this.pctPC1.defenseScore = 0D;
             this.pctPC1.displayName = null;
             this.pctPC1.fileName = null;
             this.pctPC1.id = 0;
@@ -401,6 +490,8 @@ namespace TripleTriadOffline
             this.pctPC1.Location = new System.Drawing.Point(25, 75);
             this.pctPC1.Name = "pctPC1";
             this.pctPC1.native = 0;
+            this.pctPC1.playableSlot = 0;
+            this.pctPC1.playScore = 0D;
             this.pctPC1.right = 0;
             this.pctPC1.Size = new System.Drawing.Size(66, 66);
             this.pctPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -470,9 +561,9 @@ namespace TripleTriadOffline
         private CardPictureBox pctOC3;
         private CardPictureBox pctOC2;
         private CardPictureBox pctOC1;
-        private Label lblRedScore;
-        private Label lblBlueScore;
-        private Label lblGameResult;
+        private CustomLabel lblRedScore;
+        private CustomLabel lblBlueScore;
+        private CustomLabel lblGameResult;
         private PictureBox TurnIndicator;
     }
 }

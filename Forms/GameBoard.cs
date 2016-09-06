@@ -17,28 +17,18 @@ namespace TripleTriadOffline
 
         private bool dragging;
         private Point pointClicked;
-
-        public Rectangle rect;
         public Rectangle topBar;
 
         private int playerScore = 5;
         private int opponentScore = 5;
-
         private string gameResult = "";
 
         private int plcol = 25;
-
-        private int plrow = 25;
-        private int ploffset = 50;
-
         private int plmove = 25;
-
         private int orcol = 410;
-        private int orrow = 25;
-        private int oroffset = 50;
         private int ormove = -25;
 
-        private int turn = 1;
+        private int turn;
 
         public Slot[] slot = new Slot[9];
 
@@ -50,9 +40,13 @@ namespace TripleTriadOffline
         private List<CardPictureBox> playerHand = new List<CardPictureBox>();
         private List<CardPictureBox> opponentHand = new List<CardPictureBox>();
 
-        public GameBoard(Deck playingHand)
+        private static GameRules ruleSet;
+
+        public GameBoard(Deck playingHand, GameRules incomingRules)
         {
             InitializeComponent();
+
+            ruleSet = incomingRules;
 
             topBar = new Rectangle(0, 0, 496, 15);
 
@@ -107,7 +101,15 @@ namespace TripleTriadOffline
                     {
                         CardPictureBox cardPctBox = (CardPictureBox)pctBox;
 
-                        cardPctBox.Image = Image.FromFile(@"Deck\Red\" + card.fileName + ".jpg");
+                        if (ruleSet.open == true)
+                        {
+                            cardPctBox.Image = Image.FromFile(@"Deck\Red\" + card.fileName + ".jpg");
+                        }
+                        else
+                        {
+                            cardPctBox.Image = Image.FromFile(@"skins\cardBack.png");
+                        }
+
                         cardPctBox.card = card;
                         cardPctBox.left = card.left;
                         cardPctBox.top = card.top;
@@ -128,9 +130,19 @@ namespace TripleTriadOffline
                 x++;
             }
 
-            
+            Random r = new Random();
+            turn = r.Next(1, 3);
 
-            TurnIndicator.Image = Image.FromFile(@"skins\p1-turn.gif");
+            if (turn == 1)
+            {
+                TurnIndicator.Image = Image.FromFile(@"skins\p1-turn.gif");
+            }
+            else
+            {
+                TurnIndicator.Image = Image.FromFile(@"skins\p2-turn.gif");
+                OpponentTurn();
+            }
+            
         }
 
         private void GameBoard_Load(object sender, EventArgs e)
@@ -140,62 +152,27 @@ namespace TripleTriadOffline
 
         private void pctPC1_Click(object sender, EventArgs e)
         {
-            //CardClick(pctPC1);
             CardClick((CardPictureBox)playerHand[0], playerHand);
         }
 
         private void pctPC2_Click(object sender, EventArgs e)
         {
-            //CardClick(pctPC2);
             CardClick((CardPictureBox)playerHand[1], playerHand);
         }
 
         private void pctPC3_Click(object sender, EventArgs e)
         {
-            //CardClick(pctPC3);
             CardClick((CardPictureBox)playerHand[2], playerHand);
         }
 
         private void pctPC4_Click(object sender, EventArgs e)
         {
-            //CardClick(pctPC4);
             CardClick((CardPictureBox)playerHand[3], playerHand);
         }
 
         private void pctPC5_Click(object sender, EventArgs e)
         {
-            //CardClick(pctPC5);
             CardClick((CardPictureBox)playerHand[4], playerHand);
-        }
-
-        private void pctOC1_Click(object sender, EventArgs e)
-        {
-            //CardClick(pctOC1);
-            //CardClick((CardPictureBox)opponentHand[0], opponentHand);
-        }
-
-        private void pctOC2_Click(object sender, EventArgs e)
-        {
-            //CardClick(pctOC2);
-            //CardClick((CardPictureBox)opponentHand[1], opponentHand);
-        }
-
-        private void pctOC3_Click(object sender, EventArgs e)
-        {
-            //CardClick(pctOC3);
-            //CardClick((CardPictureBox)opponentHand[2], opponentHand);
-        }
-
-        private void pctOC4_Click(object sender, EventArgs e)
-        {
-            //CardClick(pctOC4);
-            //CardClick((CardPictureBox)opponentHand[3], opponentHand);
-        }
-
-        private void pctOC5_Click(object sender, EventArgs e)
-        {
-            //CardClick(pctOC5);
-            //CardClick((CardPictureBox)opponentHand[4], opponentHand);
         }
 
         private void CardClick(CardPictureBox incomingCard, List<CardPictureBox> ownerHand)
@@ -278,6 +255,11 @@ namespace TripleTriadOffline
 
                         UpdateSlotProperties();
 
+                        if (turn == 2 && ruleSet.open == false)
+                        {
+                            selectedCard.Image = Image.FromFile(@"Deck\Red\" + selectedCard.card.fileName + ".jpg");
+                        }
+                        
                         placedSlot = slot[x];
                     }
                 }
@@ -952,6 +934,7 @@ namespace TripleTriadOffline
                     }
                 }
 
+                //Evaluate every slot
                 for (x = 0; x < 9; x++)
                 {
                     CardPictureBox playCard = new CardPictureBox();
@@ -1017,9 +1000,6 @@ namespace TripleTriadOffline
             //Instead of looking at the first available slot, look at them all and determine which card is the best play
             //Maybe more ideas will come as above AI is implemented and tested
             //Add more thoughts as needed. 
-
-
-
 
             checkMove = 1;
             CheckMove(placedSlot);
@@ -1189,8 +1169,10 @@ namespace TripleTriadOffline
                             card.defenseMultiplier = 1;
                         }
 
-                        //Multiple by 0 results in skew to playScore. Set to an extremely low value instead
+                        //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
                         if (card.defenseMultiplier == 0) { card.defenseMultiplier = 0.1; }
+
+                        if (ruleSet.open == false) { card.defenseMultiplier = 0.1; }
                     }
                 }
             }
@@ -1329,7 +1311,7 @@ namespace TripleTriadOffline
                     card.defenseScore = 0.1;
                 }
 
-                //Multiple by 0 results in skew to playScore. Set to an extremely low value instead
+                //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
                 if (card.defenseScore == 0) { card.defenseScore = 0.1; }
             }
         }
@@ -1338,16 +1320,9 @@ namespace TripleTriadOffline
         {
             foreach (CardPictureBox card in candidateCards)
             {
-                //candidateCards[candidateSlot].attackScore = 0;
                 card.attackScore = 0;
                 double beatCount = 0;
 
-                /*
-                if (candidateCards[candidateSlot].canBeatLeft == true) { beatCount++; }
-                if (candidateCards[candidateSlot].canBeatTop == true) { beatCount++; }
-                if (candidateCards[candidateSlot].canBeatRight == true) { beatCount++; }
-                if (candidateCards[candidateSlot].canBeatBottom == true) { beatCount++; }
-                */
                 if (card.canBeatLeft == true) { beatCount++; }
                 if (card.canBeatTop == true) { beatCount++; }
                 if (card.canBeatRight == true) { beatCount++; }
@@ -1362,7 +1337,7 @@ namespace TripleTriadOffline
                     card.attackScore = 1;
                 }
 
-                //Multiple by 0 results in skew to playScore. Set to an extremely low value instead
+                //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
                 if (card.attackScore == 0) { card.attackScore = 0.1; }
             }
         }

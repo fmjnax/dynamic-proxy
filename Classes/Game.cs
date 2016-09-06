@@ -24,7 +24,8 @@ namespace TripleTriadOffline
         private static ConfirmHand confirmHand;
         private static GameBoard gameBoard;
 
-
+        private static GameRules ruleSet;
+        
         public void Start()
         {
             masterDeck = new Deck();
@@ -83,7 +84,7 @@ namespace TripleTriadOffline
         {
             DisposeChildForms();
 
-            gameBoard = new GameBoard(playingHand);
+            gameBoard = new GameBoard(playingHand, ruleSet);
 
             lobby.showFormModal(gameBoard);
         }
@@ -117,8 +118,9 @@ namespace TripleTriadOffline
             lobby.showFormModal(challenge);
         }
 
-        internal static void SelectCards()
+        internal static void SelectCards(GameRules incomingRules)
         {
+            ruleSet = incomingRules;
             selectCards = new SelectCards();
             //lobby = Application.OpenForms["Lobby"] as Lobby;
             challenge.Dispose();

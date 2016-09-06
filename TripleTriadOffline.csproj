@@ -51,8 +51,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\CardShop.cs" />
+    <Compile Include="Classes\CustomLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\Deck.cs" />
     <Compile Include="Classes\Game.cs" />
+    <Compile Include="Classes\GameRules.cs" />
     <Compile Include="Classes\Global.cs" />
     <Compile Include="Classes\Slot.cs" />
     <Compile Include="Forms\Challenge.cs">
@@ -91,6 +95,7 @@
     <Compile Include="Forms\Splash.designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Challenge.resx">
