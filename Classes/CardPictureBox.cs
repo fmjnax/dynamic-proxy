@@ -27,5 +27,18 @@ namespace TripleTriadOffline.Classes
         public string currentColor { get; set; }
         public int native { get; set; }
         public Card card { get; set; }
+        public bool canBeatLeft { get; set; }
+        public bool canBeatRight { get; set; }
+        public bool canBeatTop { get; set; }
+        public bool canLoseBottom { get; set; }
+        public bool canLoseLeft { get; set; }
+        public bool canLoseRight { get; set; }
+        public bool canLoseTop { get; set; }
+        public bool canBeatBottom { get; set; }
+        public double attackScore { get; set; }
+        public double defenseScore { get; set; }
+        public double defenseMultiplier { get; set; }
+        public double playScore { get; set; }
+        public int playableSlot { get; set; }
     }
 }

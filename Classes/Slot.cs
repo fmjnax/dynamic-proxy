@@ -16,6 +16,8 @@ namespace TripleTriadOffline
             rect = Rect;
             isOccupied = false;
             pctBox = null;
+            neighbors = 0;
+            openSlots = 0;
         }
 
         public string name { get; set; }
@@ -27,5 +29,7 @@ namespace TripleTriadOffline
             get {return cardSlotted;}
             set {cardSlotted = value;}
         }
+        public double neighbors { get; set; }
+        public double openSlots { get; set; }
     }
 }

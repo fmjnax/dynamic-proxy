@@ -43,9 +43,12 @@ namespace TripleTriadOffline
         public Slot[] slot = new Slot[9];
 
         Slot placedSlot;
-        private Card selectedCard;
+        private CardPictureBox selectedCard;
 
         private int checkMove = 0;
+
+        private List<CardPictureBox> playerHand = new List<CardPictureBox>();
+        private List<CardPictureBox> opponentHand = new List<CardPictureBox>();
 
         public GameBoard(Deck playingHand)
         {
@@ -75,8 +78,19 @@ namespace TripleTriadOffline
 
                         cardPctBox.Image = Image.FromFile(@"Deck\Blue\" + card.fileName + ".jpg");
                         cardPctBox.card = card;
+                        cardPctBox.left = card.left;
+                        cardPctBox.top = card.top;
+                        cardPctBox.right = card.right;
+                        cardPctBox.bottom = card.bottom;
                         cardPctBox.isUsed = false;
+                        cardPctBox.canBeatLeft = false;
+                        cardPctBox.canBeatTop = false;
+                        cardPctBox.canBeatRight = false;
+                        cardPctBox.canBeatBottom = false;
                         cardPctBox.currentColor = "blue";
+
+                        playerHand.Add(cardPctBox);
+
                         break;
                     }
                 }
@@ -95,13 +109,26 @@ namespace TripleTriadOffline
 
                         cardPctBox.Image = Image.FromFile(@"Deck\Red\" + card.fileName + ".jpg");
                         cardPctBox.card = card;
+                        cardPctBox.left = card.left;
+                        cardPctBox.top = card.top;
+                        cardPctBox.right = card.right;
+                        cardPctBox.bottom = card.bottom;
                         cardPctBox.isUsed = false;
+                        cardPctBox.canBeatLeft = false;
+                        cardPctBox.canBeatTop = false;
+                        cardPctBox.canBeatRight = false;
+                        cardPctBox.canBeatBottom = false;
                         cardPctBox.currentColor = "red";
+
+                        opponentHand.Add(cardPctBox);
+
                         break;
                     }
                 }
                 x++;
             }
+
+            
 
             TurnIndicator.Image = Image.FromFile(@"skins\p1-turn.gif");
         }
@@ -113,103 +140,87 @@ namespace TripleTriadOffline
 
         private void pctPC1_Click(object sender, EventArgs e)
         {
-            CardClick(pctPC1);
+            //CardClick(pctPC1);
+            CardClick((CardPictureBox)playerHand[0], playerHand);
         }
 
         private void pctPC2_Click(object sender, EventArgs e)
         {
-            CardClick(pctPC2);
+            //CardClick(pctPC2);
+            CardClick((CardPictureBox)playerHand[1], playerHand);
         }
 
         private void pctPC3_Click(object sender, EventArgs e)
         {
-            CardClick(pctPC3);
+            //CardClick(pctPC3);
+            CardClick((CardPictureBox)playerHand[2], playerHand);
         }
 
         private void pctPC4_Click(object sender, EventArgs e)
         {
-            CardClick(pctPC4);
+            //CardClick(pctPC4);
+            CardClick((CardPictureBox)playerHand[3], playerHand);
         }
 
         private void pctPC5_Click(object sender, EventArgs e)
         {
-            CardClick(pctPC5);
+            //CardClick(pctPC5);
+            CardClick((CardPictureBox)playerHand[4], playerHand);
         }
 
         private void pctOC1_Click(object sender, EventArgs e)
         {
-            CardClick(pctOC1);
+            //CardClick(pctOC1);
+            //CardClick((CardPictureBox)opponentHand[0], opponentHand);
         }
 
         private void pctOC2_Click(object sender, EventArgs e)
         {
-            CardClick(pctOC2);
+            //CardClick(pctOC2);
+            //CardClick((CardPictureBox)opponentHand[1], opponentHand);
         }
 
         private void pctOC3_Click(object sender, EventArgs e)
         {
-            CardClick(pctOC3);
+            //CardClick(pctOC3);
+            //CardClick((CardPictureBox)opponentHand[2], opponentHand);
         }
 
         private void pctOC4_Click(object sender, EventArgs e)
         {
-            CardClick(pctOC4);
+            //CardClick(pctOC4);
+            //CardClick((CardPictureBox)opponentHand[3], opponentHand);
         }
 
         private void pctOC5_Click(object sender, EventArgs e)
         {
-            CardClick(pctOC5);
+            //CardClick(pctOC5);
+            //CardClick((CardPictureBox)opponentHand[4], opponentHand);
         }
 
-        private void CardClick(PictureBox cardBox)
+        private void CardClick(CardPictureBox incomingCard, List<CardPictureBox> ownerHand)
         {
-            CardPictureBox cardPctBox = (CardPictureBox)cardBox;
+            int colAlign = 0, colMove = 0;
 
-            selectedCard = null;
+            { colAlign = turn == 1 ? plcol : orcol; }
+            { colMove = turn == 1 ? plmove : ormove; }
 
-            if (cardPctBox.isUsed == false)
+            if (incomingCard.isUsed == false)
             {
-                foreach (Control x in this.Controls)
+                selectedCard = incomingCard;
+                for (int x = 4; x > -1; x--)
                 {
-                    if (x is PictureBox && x.Name.Contains("pct"))
+                    ownerHand[x].SendToBack();
+                    if (ownerHand[x].Name != selectedCard.Name && ownerHand[x].isUsed == false)
                     {
-                        CardPictureBox cpb = (CardPictureBox)x;
-                        if (cpb.isUsed == false)
-                        {
-                            pctPC5.SendToBack();
-                            pctPC4.SendToBack();
-                            pctPC3.SendToBack();
-                            pctPC2.SendToBack();
-                            pctPC1.SendToBack();
-
-                            pctOC5.SendToBack();
-                            pctOC4.SendToBack();
-                            pctOC3.SendToBack();
-                            pctOC2.SendToBack();
-                            pctOC1.SendToBack();
-
-                            if (cpb.Name.Contains("PC") && cpb.Name != cardPctBox.Name)
-                            {
-                                cpb.Left = plcol;
-                            }
-                            else if (cpb.Name.Contains("OC") && cpb.Name != cardPctBox.Name)
-                            {
-                                cpb.Left = orcol;
-                            }
-                        }
+                        ownerHand[x].Left = colAlign;
                     }
                 }
+                selectedCard.BringToFront();
 
-                cardPctBox.BringToFront();
-                selectedCard = cardPctBox.card;
-
-                if (cardPctBox.Name.Contains("pctPC") && cardPctBox.isUsed == false && cardPctBox.Left == plcol)
+                if (selectedCard.Left == colAlign)
                 {
-                    cardPctBox.Left = cardPctBox.Left + plmove;
-                }
-                else if (cardPctBox.Name.Contains("pctOC") && cardPctBox.isUsed == false && cardPctBox.Left == orcol)
-                {
-                    cardPctBox.Left = cardPctBox.Left + ormove;
+                    selectedCard.Left = selectedCard.Left + colMove;
                 }
             }
         }
@@ -219,25 +230,32 @@ namespace TripleTriadOffline
             if (turn == 1 && selectedCard != null)
             {
                 Point point = new Point(e.X, e.Y);
-                PlaceCard(point);
 
-                checkMove = 1;
-                CheckMove(placedSlot);
-
-                UpdateScore();
-
-                if (IsGameFinished() == false)
+                for (int x = 0; x < 9; x++)
                 {
-                    SwitchTurns();
-
-                    if (turn == 2)
+                    if (slot[x].rect.Contains(point.X, point.Y))
                     {
-                        OpponentTurn();
+                        PlaceCard(point);
+
+                        checkMove = 1;
+                        CheckMove(placedSlot);
+
+                        UpdateScore();
+
+                        if (IsGameFinished() == false)
+                        {
+                            SwitchTurns();
+
+                            if (turn == 2)
+                            {
+                                OpponentTurn();
+                            }
+                        }
+                        else
+                        {
+                            //GameOver
+                        }
                     }
-                }
-                else
-                {
-                    //GameOver
                 }
             }
         }
@@ -248,46 +266,86 @@ namespace TripleTriadOffline
             {
                 if (slot[x].rect.Contains(point.X, point.Y) && slot[x].isOccupied == false)
                 {
-                    foreach (Control pctBox in this.Controls)
+                    if (selectedCard.isUsed == false)
                     {
-                        if (pctBox is PictureBox && pctBox.Left > plmove)
-                        {
-                            CardPictureBox cardPctBox = (CardPictureBox)pctBox;
+                        selectedCard.Left = slot[x].rect.X;
+                        selectedCard.Top = slot[x].rect.Y;
+                        selectedCard.isUsed = true;
 
-                            if (cardPctBox.isUsed == false)
-                            {
-                                cardPctBox.Left = slot[x].rect.X;
-                                cardPctBox.Top = slot[x].rect.Y;
-                                cardPctBox.isUsed = true;
+                        slot[x].cardSlotted = selectedCard.card;
+                        slot[x].isOccupied = true;
+                        slot[x].pctBox = selectedCard;
 
-                                slot[x].cardSlotted = cardPctBox.card;
-                                slot[x].isOccupied = true;
-                                slot[x].pctBox = cardPctBox;
+                        UpdateSlotProperties();
 
-
-                                //selected card is moved to an open slot. Now let's calculate the move and switch turns
-                                placedSlot = slot[x];
-                            }
-                            break;
-                        }
+                        placedSlot = slot[x];
                     }
-                    break;
                 }
+            }
+        }
+
+        private void UpdateSlotProperties()
+        {
+            for (int x=0; x<9; x++)
+            {
+                int neighbors = 0;
+                int openSlots = 0;
+
+                switch (x)
+                {
+                    case 0:
+                        if (slot[1].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[3].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 1:
+                        if (slot[0].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[2].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[4].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 2:
+                        if (slot[1].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[5].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 3:
+                        if (slot[0].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[4].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[6].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 4:
+                        if (slot[1].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[3].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[5].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[7].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 5:
+                        if (slot[2].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[4].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[8].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 6:
+                        if (slot[3].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[7].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 7:
+                        if (slot[4].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[6].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[8].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                    case 8:
+                        if (slot[5].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        if (slot[7].isOccupied == true) { neighbors++; } else { openSlots++; }
+                        break;
+                }
+
+                slot[x].neighbors = neighbors;
+                slot[x].openSlots = openSlots;
             }
         }
 
         private void SwitchTurns()
         {
-            if (turn == 1)
-            {
-                turn = 2;
-                TurnIndicator.Image = Image.FromFile(@"skins\p2-turn.gif");
-            }
-            else
-            {
-                turn = 1;
-                TurnIndicator.Image = Image.FromFile(@"skins\p1-turn.gif");
-            }
+            { turn = turn == 1 ? 2 : 1; }
+            { TurnIndicator.Image = turn == 1 ? Image.FromFile(@"skins\p1-turn.gif") : Image.FromFile(@"skins\p2-turn.gif"); }
         }
 
         private void CheckMove(Slot placedSlot)
@@ -444,24 +502,18 @@ namespace TripleTriadOffline
             //first available card in the first available slot
             //INITIAL LOGIC - Already Exists
             /*
-            int slotLoop = 0;
-
             if (turn == 2)
             {
-                foreach (Control oppCard in this.Controls)
+                for (int x = 0; x <5; x++)
                 {
-                    if (oppCard is PictureBox && oppCard.Name.Contains("OC"))
+                    if (opponentHand[x].isUsed == false)
                     {
-                        CardPictureBox cpb = (CardPictureBox)oppCard;
-                        if (cpb.isUsed == false)
-                        {
-                            CardClick(cpb);
-                            break;
-                        }
+                        CardClick(opponentHand[x], opponentHand);
+                        break;
                     }
                 }
 
-                while (slotLoop < 9)
+                for (int slotLoop = 0; slotLoop < 9; slotLoop++)
                 {
                     if (slot[slotLoop].isOccupied == false)
                     {
@@ -472,92 +524,71 @@ namespace TripleTriadOffline
                         //selectedCard.Texture = Content.Load<Texture2D>("deck/" + selectedCard.currentColor + "/" + selectedCard.fileName);
                         break;
                     }
-                    slotLoop++;
                 }
             }
             */
 
 
             //2:
-            //first available slot, find first slotted neighbor, first available card to beat else first available card, if no neighbor, first available card
+            //first available slot, find slotted neighbors, 
+            //first available card to beat else first available card, 
+            //if no neighbor, first available card
+            /*
             if (turn == 2)
             {
+                List<CardPictureBox> candidateCards = new List<CardPictureBox>();
+
+                foreach (CardPictureBox card in opponentHand)
+                {
+                    if (card.isUsed == false)
+                    {
+                        candidateCards.Add(card);
+                    }
+                }
+
+                CardPictureBox playCard = new CardPictureBox();
+
+                Point point = new Point();
                 int x = 0;
 
                 for (x = 0; x < 9; x++)
                 {
                     if (slot[x].isOccupied == false)
                     {
-                        switch (x)
+                        EvaluatePlay(candidateCards, x);
+                        playCard = null;
+                        playCard = candidateCards.Find(i => i.canBeatLeft == true);
+
+                        if (playCard == null)
                         {
-                            case 0:
-                                if (slot[1].isOccupied == true)
-                                {
-                                    foreach (Control oppCard in this.Controls)
-                                    {
-                                        if (oppCard is PictureBox && oppCard.Name.Contains("OC"))
-                                        {
-                                            CardPictureBox cpb = (CardPictureBox)oppCard;
-                                            if (cpb.isUsed == false && cpb.card.right > slot[1].pctBox.card.left)
-                                            {
-                                                CardClick(cpb);
-
-                                                Point point = new Point(slot[x].rect.X, slot[x].rect.Y);
-                                                PlaceCard(point);
-
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
-                                else if (slot[3].isOccupied == true)
-                                {
-                                    foreach (Control oppCard in this.Controls)
-                                    {
-                                        if (oppCard is PictureBox && oppCard.Name.Contains("OC"))
-                                        {
-                                            CardPictureBox cpb = (CardPictureBox)oppCard;
-                                            if (cpb.isUsed == false && cpb.card.bottom > slot[3].pctBox.card.top)
-                                            {
-                                                CardClick(cpb);
-
-                                                Point point = new Point(slot[x].rect.X, slot[x].rect.Y);
-                                                PlaceCard(point);
-
-                                                break;
-                                            }
-                                        }
-                                    }
-                                }
-                                else
-                                {
-
-                                }
-
-                                break;
-                            case 1:
-                                break;
-                            case 2:
-                                break;
-                            case 3:
-                                break;
-                            case 4:
-                                break;
-                            case 5:
-                                break;
-                            case 6:
-                                break;
-                            case 7:
-                                break;
-                            case 8:
-                                break;
+                            playCard = candidateCards.Find(i => i.canBeatTop == true);
                         }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatRight == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatBottom == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards[0];
+                        }
+
+                        CardClick(playCard, opponentHand);
+
+                        point = new Point(slot[x].rect.X, slot[x].rect.Y);
+                        PlaceCard(point);
 
                         break;
                     }
-                    x++;
                 }
             }
+            */
 
             //3:
             //first available slot, find first slotted neighbor, build list of all available cards to beat, 
@@ -565,18 +596,213 @@ namespace TripleTriadOffline
             //compare first list and second list, first available match, 
             //if not list match, first available from first list group
             //if no neighbors, first available card
+            /*
+            if (turn == 2)
+            {
+                List<CardPictureBox> candidateCards = new List<CardPictureBox>();
+
+                foreach (CardPictureBox card in opponentHand)
+                {
+                    if (card.isUsed == false)
+                    {
+                        candidateCards.Add(card);
+                    }
+                }
+
+                CardPictureBox playCard = new CardPictureBox();
+
+                Point point = new Point();
+                int x = 0;
+
+                for (x = 0; x < 9; x++)
+                {
+                    if (slot[x].isOccupied == false)
+                    {
+                        EvaluatePlay(candidateCards, x);
+
+                        playCard = null;
+
+                        playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true);
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatRight == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatBottom == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatTop == true && i.canBeatRight == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatTop == true && i.canBeatBottom == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatRight == true && i.canBeatBottom == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatLeft == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatTop == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatRight == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards.Find(i => i.canBeatBottom == true);
+                        }
+
+                        if (playCard == null)
+                        {
+                            playCard = candidateCards[0];
+                        }
+
+                        CardClick(playCard, opponentHand);
+
+                        point = new Point(slot[x].rect.X, slot[x].rect.Y);
+                        PlaceCard(point);
+
+                        break;
+                    }
+                }
+            }
+            */
 
             //4:
-            //first available slot, find first slotted neighbor, build list of all available cards to beat, 
+            //first (or random?) available slot, find first slotted neighbor, build list of all available cards to beat, 
             //find second slotted neighbor, build list of all available cards to beat, 
             //find third slotted neighbor, build list of all available cards to beat, 
             //compare all lists, first available match, 
             //if not list match, compare 2 lists (1&2, 1&3, 2&3) for match, first available match
             //if not list match, first available from list group
             //if no neighbors, first available card
+            /*
+            if (turn == 2)
+            {
+                List<CardPictureBox> candidateCards = new List<CardPictureBox>();
+
+                foreach (CardPictureBox card in opponentHand)
+                {
+                    if (card.isUsed == false)
+                    {
+                        candidateCards.Add(card);
+                    }
+                }
+
+                CardPictureBox playCard = new CardPictureBox();
+
+                Point point = new Point();
+                
+                Random r = new Random();
+                int x = r.Next(0,8);
+
+                while (!slot[x].isOccupied == false)
+                { 
+                    x = r.Next(0, 8);
+                }
+
+                EvaluatePlay(candidateCards, x);
+
+                playCard = null;
+
+                playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true && i.canBeatRight == true);
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatBottom == true && i.canBeatTop == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatBottom == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatTop == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatTop == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatRight == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatTop == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards[0];
+                }
+
+                CardClick(playCard, opponentHand);
+
+                point = new Point(slot[x].rect.X, slot[x].rect.Y);
+                PlaceCard(point);
+            }
+            */
 
             //5:
-            //first available slot, find first slotted neighbor, build list of all available cards to beat, 
+            //first (or random?) available slot, find first slotted neighbor, build list of all available cards to beat, 
             //find second slotted neighbor, build list of all available cards to beat, 
             //find third slotted neighbor, build list of all available cards to beat, 
             //find fourth slotted neighbor, build list of all available cards to beat, 
@@ -585,6 +811,188 @@ namespace TripleTriadOffline
             //if not list match, compare 2 lists (1&2, 1&3, 1&4, 2&3, 2&4) for match, first available match
             //if not list match, first available from list group
             //if no neighbors, first available card
+            /*
+            if (turn == 2)
+            {
+                List<CardPictureBox> candidateCards = new List<CardPictureBox>();
+
+                foreach (CardPictureBox card in opponentHand)
+                {
+                    if (card.isUsed == false)
+                    {
+                        candidateCards.Add(card);
+                    }
+                }
+
+                CardPictureBox playCard = new CardPictureBox();
+
+                Point point = new Point();
+
+                Random r = new Random();
+                int x = r.Next(0, 8);
+
+                while (!slot[x].isOccupied == false)
+                {
+                    x = r.Next(0, 8);
+                }
+
+                EvaluatePlay(candidateCards, x);
+
+                playCard = null;
+
+                playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true && i.canBeatRight == true && i.canBeatBottom == true);
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatBottom == true && i.canBeatTop == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatBottom == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatTop == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatTop == true && i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatTop == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatRight == true && i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatLeft == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatTop == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatRight == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards.Find(i => i.canBeatBottom == true);
+                }
+
+                if (playCard == null)
+                {
+                    playCard = candidateCards[0];
+                }
+
+                CardClick(playCard, opponentHand);
+
+                point = new Point(slot[x].rect.X, slot[x].rect.Y);
+                PlaceCard(point);
+            }
+            */
+
+
+            //From here on, instead of first available slot, check for a weighted average based on "stuff"
+            //and play the card with the best average
+            //TBD: What "stuff" makes up the average? Average of all differences between card side value and opposing
+            //side value (and if no neighbor, then card side value)?
+
+            //Possible algorithm:
+            //attackScore - How many neighbors and how many of them can be beat (beat/neighbors)?
+            //defenseScore - How many open slots? Sum of face value / # of open slots
+            //defenseMultiplier - Can the player beat me? N = 1, Y = .5 (If closed rule, assume Y) (average)
+            //attackScore x defenseScore x defenseMultiplier = point value of play. Higher = better
+            if (turn ==2)
+            {
+                int x = 0;
+
+                List<CardPictureBox> candidateCards = new List<CardPictureBox>();
+                List<CardPictureBox> playableCardsBySlot = new List<CardPictureBox>();
+
+                Point point = new Point();
+
+                foreach (CardPictureBox card in opponentHand)
+                {
+                    if (card.isUsed == false)
+                    {
+                        candidateCards.Add(card);
+                    }
+                }
+
+                for (x = 0; x < 9; x++)
+                {
+                    CardPictureBox playCard = new CardPictureBox();
+
+                    if (slot[x].isOccupied == false)
+                    {
+                        EvaluatePlay(candidateCards, x);
+
+                        //attackScore = ratio of occupied neighbor slots and how many of them can be beaten
+                        CalculateAttack(candidateCards, x);
+
+                        //defenseScore = average face values of unoccupied neighbor slots
+                        CalculateDefense(candidateCards, x);
+
+                        //defenseMultiplier = average of open sides that opponent can beat
+                        //unbeatable = 1, beatable = .5. If "closed" rule, assume beatable
+                        CalculateMultiplier(candidateCards, playerHand, x);
+
+                        //playScore = attackScore x defenseScore x defenseMultiplier
+                        CalculatePlayScore(candidateCards, x);
+
+                        playCard = null;
+
+                        //find card for the slot with the highest play score
+                        playCard = candidateCards.OrderByDescending(i => i.playScore).FirstOrDefault();
+                        playCard.playableSlot = x;
+
+                        //add playCard to the list of cards by slot so that we can determine best play
+                        playableCardsBySlot.Add(playCard);
+
+                    }
+                }
+                CardPictureBox bestCard = new CardPictureBox();
+
+                bestCard = playableCardsBySlot.OrderByDescending(i => i.playScore).FirstOrDefault();
+                
+                CardClick(bestCard, opponentHand);
+
+                point = new Point(slot[bestCard.playableSlot].rect.X, slot[bestCard.playableSlot].rect.Y);
+                PlaceCard(point);
+            }
 
             //6:
             //use AI 5 logic, except instead of first available:
@@ -611,7 +1019,7 @@ namespace TripleTriadOffline
             //Add more thoughts as needed. 
 
 
-           
+
 
             checkMove = 1;
             CheckMove(placedSlot);
@@ -628,44 +1036,487 @@ namespace TripleTriadOffline
             }
         }
 
+        private void CalculatePlayScore(List<CardPictureBox> candidateCards, int candidateSlot)
+        {
+            foreach (CardPictureBox card in candidateCards)
+            {
+                card.playScore = card.attackScore * card.defenseScore * card.defenseMultiplier;
+            }
+        }
+
+        private void CalculateMultiplier(List<CardPictureBox> candidateCards, List<CardPictureBox> playerCards, int candidateSlot)
+        {
+            foreach (CardPictureBox card in candidateCards)
+            {
+                foreach (CardPictureBox playerCard in playerCards)
+                {
+                    double countCanBeat = 0;
+
+                    if (playerCard.isUsed == false)
+                    {
+                        card.canLoseBottom = false;
+                        card.canLoseLeft = false;
+                        card.canLoseRight = false;
+                        card.canLoseTop = false;
+
+                        switch (candidateSlot)
+                        {
+                            case 0:
+                                if (slot[1].isOccupied == false)
+                                {
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; }else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[3].isOccupied == false)
+                                {
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 1:
+                                if (slot[0].isOccupied == false)
+                                {
+                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[2].isOccupied == false)
+                                {
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[4].isOccupied == false)
+                                {
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 2:
+                                if (slot[1].isOccupied == false)
+                                {
+                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[5].isOccupied == false)
+                                {
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 3:
+                                if (slot[0].isOccupied == false)
+                                {
+                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[4].isOccupied == false)
+                                {
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[6].isOccupied == false)
+                                {
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 4:
+                                if (slot[1].isOccupied == false)
+                                {
+                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[3].isOccupied == false)
+                                {
+                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[5].isOccupied == false)
+                                {
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[7].isOccupied == false)
+                                {
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 5:
+                                if (slot[2].isOccupied == false)
+                                {
+                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[4].isOccupied == false)
+                                {
+                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[8].isOccupied == false)
+                                {
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 6:
+                                if (slot[3].isOccupied == false)
+                                {
+                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[7].isOccupied == false)
+                                {
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 7:
+                                if (slot[4].isOccupied == false)
+                                {
+                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[6].isOccupied == false)
+                                {
+                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[8].isOccupied == false)
+                                {
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                            case 8:
+                                if (slot[5].isOccupied == false)
+                                {
+                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                if (slot[7].isOccupied == false)
+                                {
+                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                }
+                                break;
+                        }
+                        
+                        if (slot[candidateSlot].openSlots != 0)
+                        {
+                            if (countCanBeat / slot[candidateSlot].openSlots > card.defenseMultiplier)
+                            {
+                                card.defenseMultiplier = countCanBeat / slot[candidateSlot].openSlots;
+                            }
+                        }
+                        else
+                        {
+                            card.defenseMultiplier = 1;
+                        }
+
+                        //Multiple by 0 results in skew to playScore. Set to an extremely low value instead
+                        if (card.defenseMultiplier == 0) { card.defenseMultiplier = 0.1; }
+                    }
+                }
+            }
+        }
+
+        private void CalculateDefense(List<CardPictureBox> candidateCards, int candidateSlot)
+        {
+            foreach (CardPictureBox card in candidateCards)
+            {
+                card.defenseScore = 0;
+                double defenseCount = 0;
+
+                switch (candidateSlot)
+                {
+                    case 0:
+                        if (slot[1].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.right;
+                        }
+                        if (slot[3].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.bottom;
+                        }
+                        break;
+                    case 1:
+                        if (slot[0].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.left;
+                        }
+                        if (slot[2].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.right;
+                        }
+                        if (slot[4].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.bottom;
+                        }
+                        break;
+                    case 2:
+                        if (slot[1].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.left;
+                        }
+                        if (slot[5].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.bottom;
+                        }
+                        break;
+                    case 3:
+                        if (slot[0].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.top;
+                        }
+                        if (slot[4].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.right;
+                        }
+                        if (slot[6].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.bottom;
+                        }
+                        break;
+                    case 4:
+                        if (slot[1].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.top;
+                        }
+                        if (slot[3].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.left;
+                        }
+                        if (slot[5].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.right;
+                        }
+                        if (slot[7].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.bottom;
+                        }
+                        break;
+                    case 5:
+                        if (slot[2].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.top;
+                        }
+                        if (slot[4].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.left;
+                        }
+                        if (slot[8].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.bottom;
+                        }
+                        break;
+                    case 6:
+                        if (slot[7].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.right;
+                        }
+                        if (slot[3].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.top;
+                        }
+                        break;
+                    case 7:
+                        if (slot[6].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.left;
+                        }
+                        if (slot[8].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.right;
+                        }
+                        if (slot[4].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.top;
+                        }
+                        break;
+                    case 8:
+                        if (slot[7].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.left;
+                        }
+                        if (slot[5].isOccupied == false)
+                        {
+                            defenseCount = defenseCount + card.top;
+                        }
+                        break;
+                }
+                if (slot[candidateSlot].openSlots != 0)
+                {
+                    card.defenseScore = defenseCount / slot[candidateSlot].openSlots;
+                }
+                else
+                {
+                    card.defenseScore = 0.1;
+                }
+
+                //Multiple by 0 results in skew to playScore. Set to an extremely low value instead
+                if (card.defenseScore == 0) { card.defenseScore = 0.1; }
+            }
+        }
+
+        private void CalculateAttack(List<CardPictureBox> candidateCards, int candidateSlot)
+        {
+            foreach (CardPictureBox card in candidateCards)
+            {
+                //candidateCards[candidateSlot].attackScore = 0;
+                card.attackScore = 0;
+                double beatCount = 0;
+
+                /*
+                if (candidateCards[candidateSlot].canBeatLeft == true) { beatCount++; }
+                if (candidateCards[candidateSlot].canBeatTop == true) { beatCount++; }
+                if (candidateCards[candidateSlot].canBeatRight == true) { beatCount++; }
+                if (candidateCards[candidateSlot].canBeatBottom == true) { beatCount++; }
+                */
+                if (card.canBeatLeft == true) { beatCount++; }
+                if (card.canBeatTop == true) { beatCount++; }
+                if (card.canBeatRight == true) { beatCount++; }
+                if (card.canBeatBottom == true) { beatCount++; }
+
+                if (slot[candidateSlot].neighbors != 0)
+                {
+                    card.attackScore = beatCount / slot[candidateSlot].neighbors;
+                }
+                else
+                {
+                    card.attackScore = 1;
+                }
+
+                //Multiple by 0 results in skew to playScore. Set to an extremely low value instead
+                if (card.attackScore == 0) { card.attackScore = 0.1; }
+            }
+        }
+
+        private void EvaluatePlay(List<CardPictureBox> candidateCards, int candidateSlot)
+        {
+            foreach (CardPictureBox card in candidateCards)
+            {
+                switch (candidateSlot)
+                {
+                    case 0:
+                        if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatRight = card.right > slot[1].pctBox.card.left ? true : false;
+                        }
+                        if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatBottom = card.bottom > slot[3].pctBox.card.top ? true : false;
+                        }
+                        break;
+                    case 1:
+                        if (slot[0].isOccupied == true && slot[0].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatLeft = card.left > slot[0].pctBox.card.right ? true : false;
+                        }
+                        if (slot[2].isOccupied == true && slot[2].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatRight = card.right > slot[2].pctBox.card.left ? true : false;
+                        }
+                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatBottom = card.bottom > slot[4].pctBox.card.top ? true : false;
+                        }
+                        break;
+                    case 2:
+                        if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatLeft = card.left > slot[1].pctBox.card.right ? true : false;
+                        }
+                        if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatBottom = card.bottom > slot[5].pctBox.card.top ? true : false;
+                        }
+                        break;
+                    case 3:
+                        if (slot[0].isOccupied == true && slot[0].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatTop = card.top > slot[0].pctBox.card.bottom ? true : false;
+                        }
+                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatRight = card.right > slot[4].pctBox.card.left ? true : false;
+                        }
+                        if (slot[6].isOccupied == true && slot[6].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatBottom = card.bottom > slot[6].pctBox.card.top ? true : false;
+                        }
+                        break;
+                    case 4:
+                        if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatTop = card.top > slot[1].pctBox.card.bottom ? true : false;
+                        }
+                        if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatLeft = card.left > slot[3].pctBox.card.right ? true : false;
+                        }
+                        if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatRight = card.right > slot[5].pctBox.card.left ? true : false;
+                        }
+                        if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatBottom = card.bottom > slot[7].pctBox.card.top ? true : false;
+                        }
+                        break;
+                    case 5:
+                        if (slot[2].isOccupied == true && slot[2].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatTop = card.top > slot[2].pctBox.card.bottom ? true : false;
+                        }
+                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatLeft = card.left > slot[4].pctBox.card.right ? true : false;
+                        }
+                        if (slot[8].isOccupied == true && slot[8].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatBottom = card.bottom > slot[8].pctBox.card.top ? true : false;
+                        }
+                        break;
+                    case 6:
+                        if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatRight = card.right > slot[7].pctBox.card.left ? true : false;
+                        }
+                        if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatTop = card.top > slot[3].pctBox.card.bottom ? true : false;
+                        }
+                        break;
+                    case 7:
+                        if (slot[6].isOccupied == true && slot[6].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatLeft = card.left > slot[6].pctBox.card.right ? true : false;
+                        }
+                        if (slot[8].isOccupied == true && slot[8].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatRight = card.right > slot[8].pctBox.card.left ? true : false;
+                        }
+                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatTop = card.top > slot[4].pctBox.card.bottom ? true : false;
+                        }
+                        break;
+                    case 8:
+                        if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatLeft = card.left > slot[7].pctBox.card.right ? true : false;
+                        }
+                        if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
+                        {
+                            card.canBeatTop = card.top > slot[5].pctBox.card.bottom ? true : false;
+                        }
+                        break;
+                }
+            }
+        }
+
         private void UpdateScore()
         {
             int blue = 0;
             int red = 0;
-            int x = 0;
-
-            foreach (Control pctBox in this.Controls)
+            
+            for (int x = 0; x<5; x++)
             {
-                if (pctBox is PictureBox && pctBox.Name.Contains("pct"))
+                if (playerHand[x].currentColor == "blue")
                 {
-                    CardPictureBox cpb = (CardPictureBox)pctBox;
-                    if (cpb.Name.Contains("PC") && cpb.isUsed == false)
-                    {
-                        blue++;
-                    }
-                    else if (cpb.Name.Contains("OC") && cpb.isUsed == false)
-                    {
-                        red++;
-                    }
+                    blue++;
+                }
+                else
+                {
+                    red++;
+                }
+
+                if (opponentHand[x].currentColor == "blue")
+                {
+                    blue++;
+                }
+                else
+                {
+                    red++;
                 }
             }
 
-            x = 0;
-            while (x < 9)
-            {
-                if (slot[x].isOccupied)
-                {
-                    if (slot[x].pctBox.currentColor == "red")
-                    {
-                        red++;
-                    }
-                    if (slot[x].pctBox.currentColor == "blue")
-                    {
-                        blue++;
-                    }
-                }
-                x++;
-            }
             playerScore = blue;
             opponentScore = red;
 
