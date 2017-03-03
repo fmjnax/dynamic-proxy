@@ -144,5 +144,70 @@ namespace TripleTriadOffline.Forms
 
             ruleSet.clear();
         }
+
+        private void cbOpen_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.open = cbOpen.Checked == true ? true : false;
+        }
+
+        private void cbSame_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.same = cbSame.Checked == true ? true : false;
+        }
+
+        private void cbRandom_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.random = cbRandom.Checked == true ? true : false;
+        }
+
+        private void cbElemental_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.elemental = cbElemental.Checked == true ? true : false;
+        }
+
+        private void cbSuddenDeath_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.suddenDeath = cbSuddenDeath.Checked == true ? true : false;
+        }
+
+        private void cbPlus_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.plus = cbPlus.Checked == true ? true : false;
+        }
+
+        private void cbSameWall_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.sameWall = cbSameWall.Checked == true ? true : false;
+        }
+
+        private void cbChaos_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.chaos = cbChaos.Checked == true ? true : false;
+        }
+
+        private void cbCombo_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.combo = cbCombo.Checked == true ? true : false;
+        }
+
+        private void cbFallenAce_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.fallenAce = cbFallenAce.Checked == true ? true : false;
+        }
+
+        private void cbOrder_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.order = cbOrder.Checked == true ? true : false;
+        }
+
+        private void cbReverse_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.reverse = cbReverse.Checked == true ? true : false;
+        }
+
+        private void cbSwap_CheckedChanged(object sender, EventArgs e)
+        {
+            ruleSet.swap = cbSwap.Checked == true ? true : false;
+        }
     }
 }

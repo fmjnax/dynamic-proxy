@@ -110,6 +110,7 @@ namespace TripleTriadOffline.Forms
             this.cbOpen.Size = new System.Drawing.Size(15, 14);
             this.cbOpen.TabIndex = 5;
             this.cbOpen.UseVisualStyleBackColor = false;
+            this.cbOpen.CheckedChanged += new System.EventHandler(this.cbOpen_CheckedChanged);
             // 
             // cbSame
             // 
@@ -122,6 +123,7 @@ namespace TripleTriadOffline.Forms
             this.cbSame.Size = new System.Drawing.Size(15, 14);
             this.cbSame.TabIndex = 6;
             this.cbSame.UseVisualStyleBackColor = false;
+            this.cbSame.CheckedChanged += new System.EventHandler(this.cbSame_CheckedChanged);
             // 
             // cbRandom
             // 
@@ -134,6 +136,7 @@ namespace TripleTriadOffline.Forms
             this.cbRandom.Size = new System.Drawing.Size(15, 14);
             this.cbRandom.TabIndex = 7;
             this.cbRandom.UseVisualStyleBackColor = false;
+            this.cbRandom.CheckedChanged += new System.EventHandler(this.cbRandom_CheckedChanged);
             // 
             // cbElemental
             // 
@@ -146,6 +149,7 @@ namespace TripleTriadOffline.Forms
             this.cbElemental.Size = new System.Drawing.Size(15, 14);
             this.cbElemental.TabIndex = 8;
             this.cbElemental.UseVisualStyleBackColor = false;
+            this.cbElemental.CheckedChanged += new System.EventHandler(this.cbElemental_CheckedChanged);
             // 
             // cbSuddenDeath
             // 
@@ -158,6 +162,7 @@ namespace TripleTriadOffline.Forms
             this.cbSuddenDeath.Size = new System.Drawing.Size(15, 14);
             this.cbSuddenDeath.TabIndex = 9;
             this.cbSuddenDeath.UseVisualStyleBackColor = false;
+            this.cbSuddenDeath.CheckedChanged += new System.EventHandler(this.cbSuddenDeath_CheckedChanged);
             // 
             // cbPlus
             // 
@@ -170,6 +175,7 @@ namespace TripleTriadOffline.Forms
             this.cbPlus.Size = new System.Drawing.Size(15, 14);
             this.cbPlus.TabIndex = 10;
             this.cbPlus.UseVisualStyleBackColor = false;
+            this.cbPlus.CheckedChanged += new System.EventHandler(this.cbPlus_CheckedChanged);
             // 
             // cbSameWall
             // 
@@ -182,6 +188,7 @@ namespace TripleTriadOffline.Forms
             this.cbSameWall.Size = new System.Drawing.Size(15, 14);
             this.cbSameWall.TabIndex = 11;
             this.cbSameWall.UseVisualStyleBackColor = false;
+            this.cbSameWall.CheckedChanged += new System.EventHandler(this.cbSameWall_CheckedChanged);
             // 
             // cbSwap
             // 
@@ -194,6 +201,7 @@ namespace TripleTriadOffline.Forms
             this.cbSwap.Size = new System.Drawing.Size(15, 14);
             this.cbSwap.TabIndex = 17;
             this.cbSwap.UseVisualStyleBackColor = false;
+            this.cbSwap.CheckedChanged += new System.EventHandler(this.cbSwap_CheckedChanged);
             // 
             // cbCombo
             // 
@@ -206,6 +214,7 @@ namespace TripleTriadOffline.Forms
             this.cbCombo.Size = new System.Drawing.Size(15, 14);
             this.cbCombo.TabIndex = 16;
             this.cbCombo.UseVisualStyleBackColor = false;
+            this.cbCombo.CheckedChanged += new System.EventHandler(this.cbCombo_CheckedChanged);
             // 
             // cbFallenAce
             // 
@@ -218,6 +227,7 @@ namespace TripleTriadOffline.Forms
             this.cbFallenAce.Size = new System.Drawing.Size(15, 14);
             this.cbFallenAce.TabIndex = 15;
             this.cbFallenAce.UseVisualStyleBackColor = false;
+            this.cbFallenAce.CheckedChanged += new System.EventHandler(this.cbFallenAce_CheckedChanged);
             // 
             // cbReverse
             // 
@@ -230,6 +240,7 @@ namespace TripleTriadOffline.Forms
             this.cbReverse.Size = new System.Drawing.Size(15, 14);
             this.cbReverse.TabIndex = 14;
             this.cbReverse.UseVisualStyleBackColor = false;
+            this.cbReverse.CheckedChanged += new System.EventHandler(this.cbReverse_CheckedChanged);
             // 
             // cbChaos
             // 
@@ -242,6 +253,7 @@ namespace TripleTriadOffline.Forms
             this.cbChaos.Size = new System.Drawing.Size(15, 14);
             this.cbChaos.TabIndex = 13;
             this.cbChaos.UseVisualStyleBackColor = false;
+            this.cbChaos.CheckedChanged += new System.EventHandler(this.cbChaos_CheckedChanged);
             // 
             // cbOrder
             // 
@@ -254,6 +266,7 @@ namespace TripleTriadOffline.Forms
             this.cbOrder.Size = new System.Drawing.Size(15, 14);
             this.cbOrder.TabIndex = 12;
             this.cbOrder.UseVisualStyleBackColor = false;
+            this.cbOrder.CheckedChanged += new System.EventHandler(this.cbOrder_CheckedChanged);
             // 
             // lblCustom
             // 

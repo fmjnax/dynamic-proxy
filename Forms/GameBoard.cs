@@ -1346,123 +1346,138 @@ namespace TripleTriadOffline
         {
             foreach (CardPictureBox card in candidateCards)
             {
-                switch (candidateSlot)
+                if (ruleSet.same == true)
                 {
-                    case 0:
-                        if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatRight = card.right > slot[1].pctBox.card.left ? true : false;
-                        }
-                        if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatBottom = card.bottom > slot[3].pctBox.card.top ? true : false;
-                        }
-                        break;
-                    case 1:
-                        if (slot[0].isOccupied == true && slot[0].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatLeft = card.left > slot[0].pctBox.card.right ? true : false;
-                        }
-                        if (slot[2].isOccupied == true && slot[2].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatRight = card.right > slot[2].pctBox.card.left ? true : false;
-                        }
-                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatBottom = card.bottom > slot[4].pctBox.card.top ? true : false;
-                        }
-                        break;
-                    case 2:
-                        if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatLeft = card.left > slot[1].pctBox.card.right ? true : false;
-                        }
-                        if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatBottom = card.bottom > slot[5].pctBox.card.top ? true : false;
-                        }
-                        break;
-                    case 3:
-                        if (slot[0].isOccupied == true && slot[0].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatTop = card.top > slot[0].pctBox.card.bottom ? true : false;
-                        }
-                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatRight = card.right > slot[4].pctBox.card.left ? true : false;
-                        }
-                        if (slot[6].isOccupied == true && slot[6].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatBottom = card.bottom > slot[6].pctBox.card.top ? true : false;
-                        }
-                        break;
-                    case 4:
-                        if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatTop = card.top > slot[1].pctBox.card.bottom ? true : false;
-                        }
-                        if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatLeft = card.left > slot[3].pctBox.card.right ? true : false;
-                        }
-                        if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatRight = card.right > slot[5].pctBox.card.left ? true : false;
-                        }
-                        if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatBottom = card.bottom > slot[7].pctBox.card.top ? true : false;
-                        }
-                        break;
-                    case 5:
-                        if (slot[2].isOccupied == true && slot[2].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatTop = card.top > slot[2].pctBox.card.bottom ? true : false;
-                        }
-                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatLeft = card.left > slot[4].pctBox.card.right ? true : false;
-                        }
-                        if (slot[8].isOccupied == true && slot[8].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatBottom = card.bottom > slot[8].pctBox.card.top ? true : false;
-                        }
-                        break;
-                    case 6:
-                        if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatRight = card.right > slot[7].pctBox.card.left ? true : false;
-                        }
-                        if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatTop = card.top > slot[3].pctBox.card.bottom ? true : false;
-                        }
-                        break;
-                    case 7:
-                        if (slot[6].isOccupied == true && slot[6].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatLeft = card.left > slot[6].pctBox.card.right ? true : false;
-                        }
-                        if (slot[8].isOccupied == true && slot[8].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatRight = card.right > slot[8].pctBox.card.left ? true : false;
-                        }
-                        if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatTop = card.top > slot[4].pctBox.card.bottom ? true : false;
-                        }
-                        break;
-                    case 8:
-                        if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatLeft = card.left > slot[7].pctBox.card.right ? true : false;
-                        }
-                        if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
-                        {
-                            card.canBeatTop = card.top > slot[5].pctBox.card.bottom ? true : false;
-                        }
-                        break;
+                    EvaluateSameRule(card, candidateSlot);
                 }
+
+                EvaluateDefaultRule(card, candidateSlot);
+            }
+        }
+
+        private void EvaluateSameRule(CardPictureBox card, int candidateSlot)
+        {
+            
+        }
+
+        private void EvaluateDefaultRule(CardPictureBox card, int candidateSlot)
+        {
+            switch (candidateSlot)
+            {
+                case 0:
+                    if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatRight = card.right > slot[1].pctBox.card.left ? true : false;
+                    }
+                    if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatBottom = card.bottom > slot[3].pctBox.card.top ? true : false;
+                    }
+                    break;
+                case 1:
+                    if (slot[0].isOccupied == true && slot[0].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatLeft = card.left > slot[0].pctBox.card.right ? true : false;
+                    }
+                    if (slot[2].isOccupied == true && slot[2].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatRight = card.right > slot[2].pctBox.card.left ? true : false;
+                    }
+                    if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatBottom = card.bottom > slot[4].pctBox.card.top ? true : false;
+                    }
+                    break;
+                case 2:
+                    if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatLeft = card.left > slot[1].pctBox.card.right ? true : false;
+                    }
+                    if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatBottom = card.bottom > slot[5].pctBox.card.top ? true : false;
+                    }
+                    break;
+                case 3:
+                    if (slot[0].isOccupied == true && slot[0].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatTop = card.top > slot[0].pctBox.card.bottom ? true : false;
+                    }
+                    if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatRight = card.right > slot[4].pctBox.card.left ? true : false;
+                    }
+                    if (slot[6].isOccupied == true && slot[6].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatBottom = card.bottom > slot[6].pctBox.card.top ? true : false;
+                    }
+                    break;
+                case 4:
+                    if (slot[1].isOccupied == true && slot[1].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatTop = card.top > slot[1].pctBox.card.bottom ? true : false;
+                    }
+                    if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatLeft = card.left > slot[3].pctBox.card.right ? true : false;
+                    }
+                    if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatRight = card.right > slot[5].pctBox.card.left ? true : false;
+                    }
+                    if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatBottom = card.bottom > slot[7].pctBox.card.top ? true : false;
+                    }
+                    break;
+                case 5:
+                    if (slot[2].isOccupied == true && slot[2].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatTop = card.top > slot[2].pctBox.card.bottom ? true : false;
+                    }
+                    if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatLeft = card.left > slot[4].pctBox.card.right ? true : false;
+                    }
+                    if (slot[8].isOccupied == true && slot[8].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatBottom = card.bottom > slot[8].pctBox.card.top ? true : false;
+                    }
+                    break;
+                case 6:
+                    if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatRight = card.right > slot[7].pctBox.card.left ? true : false;
+                    }
+                    if (slot[3].isOccupied == true && slot[3].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatTop = card.top > slot[3].pctBox.card.bottom ? true : false;
+                    }
+                    break;
+                case 7:
+                    if (slot[6].isOccupied == true && slot[6].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatLeft = card.left > slot[6].pctBox.card.right ? true : false;
+                    }
+                    if (slot[8].isOccupied == true && slot[8].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatRight = card.right > slot[8].pctBox.card.left ? true : false;
+                    }
+                    if (slot[4].isOccupied == true && slot[4].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatTop = card.top > slot[4].pctBox.card.bottom ? true : false;
+                    }
+                    break;
+                case 8:
+                    if (slot[7].isOccupied == true && slot[7].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatLeft = card.left > slot[7].pctBox.card.right ? true : false;
+                    }
+                    if (slot[5].isOccupied == true && slot[5].pctBox.currentColor == "blue")
+                    {
+                        card.canBeatTop = card.top > slot[5].pctBox.card.bottom ? true : false;
+                    }
+                    break;
             }
         }
 
