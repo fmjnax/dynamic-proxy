@@ -1,17 +1,68 @@
-<?xml version ="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <deck>
   <cards>
     <card>
       <id>1</id>
     </card>
-	
-	<card>
+    <card>
+      <id>1</id>
+    </card>
+    <card>
       <id>123</id>
     </card>
-	
-	<card>
+    <card>
       <id>625</id>
     </card>
-
+    <card>
+      <id>2</id>
+    </card>
+    <card>
+      <id>265</id>
+    </card>
+    <card>
+      <id>265</id>
+    </card>
+    <card>
+      <id>405</id>
+    </card>
+    <card>
+      <id>551</id>
+    </card>
+    <card>
+      <id>551</id>
+    </card>
+    <card>
+      <id>75</id>
+    </card>
+    <card>
+      <id>80</id>
+    </card>
+    <card>
+      <id>80</id>
+    </card>
+    <card>
+      <id>68</id>
+    </card>
+    <card>
+      <id>137</id>
+    </card>
+    <card>
+      <id>229</id>
+    </card>
+    <card>
+      <id>176</id>
+    </card>
+    <card>
+      <id>615</id>
+    </card>
+    <card>
+      <id>580</id>
+    </card>
+    <card>
+      <id>332</id>
+    </card>
+    <card>
+      <id>516</id>
+    </card>
   </cards>
 </deck>
