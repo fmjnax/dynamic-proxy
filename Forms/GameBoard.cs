@@ -130,6 +130,8 @@ namespace TripleTriadOffline
                 x++;
             }
 
+            UpdateSlotProperties();
+
             Random r = new Random();
             turn = r.Next(1, 3);
 
@@ -1044,11 +1046,11 @@ namespace TripleTriadOffline
                             case 0:
                                 if (slot[1].isOccupied == false)
                                 {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; }else { countCanBeat = countCanBeat + 1; }
+                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; }else { countCanBeat = countCanBeat + 1; }
                                 }
                                 if (slot[3].isOccupied == false)
                                 {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                                 }
                                 break;
                             case 1:
@@ -1182,7 +1184,7 @@ namespace TripleTriadOffline
         {
             foreach (CardPictureBox card in candidateCards)
             {
-                card.defenseScore = 0;
+                //card.defenseScore = 0;
                 double defenseCount = 0;
 
                 switch (candidateSlot)
@@ -1302,13 +1304,17 @@ namespace TripleTriadOffline
                         }
                         break;
                 }
-                if (slot[candidateSlot].openSlots != 0)
+
+                if (defenseCount / slot[candidateSlot].openSlots > card.defenseScore)
                 {
-                    card.defenseScore = defenseCount / slot[candidateSlot].openSlots;
-                }
-                else
-                {
-                    card.defenseScore = 0.1;
+                    if (slot[candidateSlot].openSlots != 0)
+                    {
+                        card.defenseScore = defenseCount / slot[candidateSlot].openSlots;
+                    }
+                    else
+                    {
+                        card.defenseScore = 0.1;
+                    }
                 }
 
                 //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
