@@ -51,7 +51,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\CardShop.cs" />
-    <Compile Include="Classes\SlotCard.cs">
+    <Compile Include="Classes\CardSlot.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Classes\CustomLabel.cs">

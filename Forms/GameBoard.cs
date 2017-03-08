@@ -924,8 +924,8 @@ namespace TripleTriadOffline
                 int x = 0;
 
                 List<CardPictureBox> candidateCards = new List<CardPictureBox>();
-                List<SlotCard> slotCards = new List<SlotCard>();
-                List<SlotCard> playableCardsBySlot = new List<SlotCard>();
+                List<CardSlot> cardSlots = new List<CardSlot>();
+                List<CardSlot> playableCardsBySlot = new List<CardSlot>();
 
                 Point point = new Point();
 
@@ -946,7 +946,7 @@ namespace TripleTriadOffline
                 //Evaluate every slot
                 for (x = 0; x < 9; x++)
                 {
-                    SlotCard playCard = new SlotCard();
+                    CardSlot playCard = new CardSlot();
 
                     if (slot[x].isOccupied == false)
                     {
@@ -975,24 +975,24 @@ namespace TripleTriadOffline
                             playScore = CalculatePlayScore(attackScore, defenseScore, defenseMultiplier, x);
 
                             //create a slotcard to hold the score for the card in each slot
-                            SlotCard slotCard = new SlotCard(card);
+                            CardSlot slotCard = new CardSlot(card);
                             slotCard.playSlot = x;
                             slotCard.playScore = playScore;
 
                             //add the slotcard to a list
-                            slotCards.Add(slotCard);
+                            cardSlots.Add(slotCard);
                             
                         }
 
                         //find the card with the highest playScore for the slot and add it to the list of playable cards
                         playCard = null;
-                        playCard = slotCards.OrderByDescending(i => i.playScore).FirstOrDefault();
+                        playCard = cardSlots.OrderByDescending(i => i.playScore).FirstOrDefault();
                         playableCardsBySlot.Add(playCard);
                     }
                 }
 
                 //the best card is the card with the highest playScore in the playable card list
-                SlotCard bestCard = new SlotCard();
+                CardSlot bestCard = new CardSlot();
                 bestCard = playableCardsBySlot.OrderByDescending(i => i.playScore).FirstOrDefault();
                 
                 //simulate the click

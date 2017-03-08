@@ -4,9 +4,6 @@ namespace TripleTriadOffline
 {
     public class Card
     {
-        //public Texture2D texture;
-        public Rectangle rect;
-
         public Card()
         {
             isUsed = false;
@@ -33,17 +30,5 @@ namespace TripleTriadOffline
         public string fileName { get; set; }
         public string currentColor { get; set; }
         public int native { get; set; }
-
-        //public Texture2D Texture
-        //{
-        //    get { return texture; }
-        //    set { texture = value; }
-        //}
-
-        public Rectangle Rect
-        {
-            get { return rect; }
-            set { rect = value; }
-        }
     }
 }

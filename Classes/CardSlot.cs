@@ -6,27 +6,16 @@ using System.Threading.Tasks;
 
 namespace TripleTriadOffline.Classes
 {
-    public class SlotCard : CardPictureBox
+    public class CardSlot : CardPictureBox
     {
-        public SlotCard():base()
+        public CardSlot():base()
         {
 
         }
 
-        public SlotCard(Card card)
-        {
-            this.card = card;
-        }
-
-        public SlotCard(CardPictureBox cardPictureBox)
+        public CardSlot(CardPictureBox cardPictureBox)
         {
             this.cardPictureBox = cardPictureBox;
-        }
-
-        public SlotCard(CardPictureBox cardPictureBox, Card card)
-        {
-            this.cardPictureBox = cardPictureBox;
-            this.card = card;
         }
 
         public CardPictureBox cardPictureBox { get; set; }

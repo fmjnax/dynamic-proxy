@@ -154,7 +154,6 @@ namespace TripleTriadOffline
             this.pctOC5.Name = "pctOC5";
             this.pctOC5.native = 0;
             this.pctOC5.playableSlot = 0;
-            //this.pctOC5.playScore = 0D;
             this.pctOC5.right = 0;
             this.pctOC5.Size = new System.Drawing.Size(66, 66);
             this.pctOC5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -191,7 +190,6 @@ namespace TripleTriadOffline
             this.pctOC4.Name = "pctOC4";
             this.pctOC4.native = 0;
             this.pctOC4.playableSlot = 0;
-            //this.pctOC4.playScore = 0D;
             this.pctOC4.right = 0;
             this.pctOC4.Size = new System.Drawing.Size(66, 66);
             this.pctOC4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -228,7 +226,6 @@ namespace TripleTriadOffline
             this.pctOC3.Name = "pctOC3";
             this.pctOC3.native = 0;
             this.pctOC3.playableSlot = 0;
-            //this.pctOC3.playScore = 0D;
             this.pctOC3.right = 0;
             this.pctOC3.Size = new System.Drawing.Size(66, 66);
             this.pctOC3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -265,7 +262,6 @@ namespace TripleTriadOffline
             this.pctOC2.Name = "pctOC2";
             this.pctOC2.native = 0;
             this.pctOC2.playableSlot = 0;
-            //this.pctOC2.playScore = 0D;
             this.pctOC2.right = 0;
             this.pctOC2.Size = new System.Drawing.Size(66, 66);
             this.pctOC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -302,7 +298,6 @@ namespace TripleTriadOffline
             this.pctOC1.Name = "pctOC1";
             this.pctOC1.native = 0;
             this.pctOC1.playableSlot = 0;
-            //this.pctOC1.playScore = 0D;
             this.pctOC1.right = 0;
             this.pctOC1.Size = new System.Drawing.Size(66, 66);
             this.pctOC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -339,7 +334,6 @@ namespace TripleTriadOffline
             this.pctPC5.Name = "pctPC5";
             this.pctPC5.native = 0;
             this.pctPC5.playableSlot = 0;
-            //this.pctPC5.playScore = 0D;
             this.pctPC5.right = 0;
             this.pctPC5.Size = new System.Drawing.Size(66, 66);
             this.pctPC5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -377,7 +371,6 @@ namespace TripleTriadOffline
             this.pctPC4.Name = "pctPC4";
             this.pctPC4.native = 0;
             this.pctPC4.playableSlot = 0;
-            //this.pctPC4.playScore = 0D;
             this.pctPC4.right = 0;
             this.pctPC4.Size = new System.Drawing.Size(66, 66);
             this.pctPC4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -415,7 +408,6 @@ namespace TripleTriadOffline
             this.pctPC3.Name = "pctPC3";
             this.pctPC3.native = 0;
             this.pctPC3.playableSlot = 0;
-            //this.pctPC3.playScore = 0D;
             this.pctPC3.right = 0;
             this.pctPC3.Size = new System.Drawing.Size(66, 66);
             this.pctPC3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -453,7 +445,6 @@ namespace TripleTriadOffline
             this.pctPC2.Name = "pctPC2";
             this.pctPC2.native = 0;
             this.pctPC2.playableSlot = 0;
-            //this.pctPC2.playScore = 0D;
             this.pctPC2.right = 0;
             this.pctPC2.Size = new System.Drawing.Size(66, 66);
             this.pctPC2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -491,7 +482,6 @@ namespace TripleTriadOffline
             this.pctPC1.Name = "pctPC1";
             this.pctPC1.native = 0;
             this.pctPC1.playableSlot = 0;
-            //this.pctPC1.playScore = 0D;
             this.pctPC1.right = 0;
             this.pctPC1.Size = new System.Drawing.Size(66, 66);
             this.pctPC1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

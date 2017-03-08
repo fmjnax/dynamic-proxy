@@ -9,7 +9,7 @@ namespace TripleTriadOffline
     public class Slot
     {
         public Card cardSlotted;
-        public Slot(){}
+        //public Slot(){}
         public Slot(string Name, Rectangle Rect)
         {
             name = Name;
@@ -24,11 +24,11 @@ namespace TripleTriadOffline
         public Rectangle rect { get; set; }
         public bool isOccupied { get; set; }
         public CardPictureBox pctBox { get; set; }
-        public Card CardSlotted 
-        {
-            get {return cardSlotted;}
-            set {cardSlotted = value;}
-        }
+        //public Card CardSlotted 
+        //{
+        //    get {return cardSlotted;}
+        //    set {cardSlotted = value;}
+        //}
         public double neighbors { get; set; }
         public double openSlots { get; set; }
     }
