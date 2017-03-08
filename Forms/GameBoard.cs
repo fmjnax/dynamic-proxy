@@ -924,9 +924,16 @@ namespace TripleTriadOffline
                 int x = 0;
 
                 List<CardPictureBox> candidateCards = new List<CardPictureBox>();
-                List<CardPictureBox> playableCardsBySlot = new List<CardPictureBox>();
+                List<SlotCard> slotCards = new List<SlotCard>();
+                List<SlotCard> playableCardsBySlot = new List<SlotCard>();
 
                 Point point = new Point();
+
+                double attackScore = 0;
+                double defenseScore = 0;
+                double defenseMultiplier = 0;
+                double tmpDefenseMultiplier = 0;
+                double playScore = 0;
 
                 foreach (CardPictureBox card in opponentHand)
                 {
@@ -939,43 +946,60 @@ namespace TripleTriadOffline
                 //Evaluate every slot
                 for (x = 0; x < 9; x++)
                 {
-                    CardPictureBox playCard = new CardPictureBox();
+                    SlotCard playCard = new SlotCard();
 
                     if (slot[x].isOccupied == false)
                     {
-                        EvaluatePlay(candidateCards, x);
+                        foreach (CardPictureBox card in candidateCards)
+                        {
 
-                        //attackScore = ratio of occupied neighbor slots and how many of them can be beaten
-                        CalculateAttack(candidateCards, x);
+                            EvaluatePlay(card, x);
 
-                        //defenseScore = average face values of unoccupied neighbor slots
-                        CalculateDefense(candidateCards, x);
+                            //attackScore = ratio of occupied neighbor slots and how many of them can be beaten
+                            attackScore = CalculateAttack(card, x);
 
-                        //defenseMultiplier = average of open sides that opponent can beat
-                        //unbeatable = 1, beatable = .5. If "closed" rule, assume beatable
-                        CalculateMultiplier(candidateCards, playerHand, x);
+                            //defenseScore = average face values of unoccupied neighbor slots
+                            defenseScore = CalculateDefense(card, x);
 
-                        //playScore = attackScore x defenseScore x defenseMultiplier
-                        CalculatePlayScore(candidateCards, x);
+                            //defenseMultiplier = average of open sides that opponent can beat
+                            //unbeatable = 1, beatable = .5. If "closed" rule, assume beatable
+                            //do we pick the highest defense possible or the lowest? hmm...
+                            //perhaps "easier" ai would be pick the lowest. Harder ai could be highest
+                            foreach (CardPictureBox playerCard in playerHand)
+                            {
+                                tmpDefenseMultiplier = CalculateMultiplier(card, playerCard, x);
+                                if (tmpDefenseMultiplier > defenseMultiplier) { defenseMultiplier = tmpDefenseMultiplier; }
+                            }
 
+                            //playScore = attackScore x defenseScore x defenseMultiplier
+                            playScore = CalculatePlayScore(attackScore, defenseScore, defenseMultiplier, x);
+
+                            //create a slotcard to hold the score for the card in each slot
+                            SlotCard slotCard = new SlotCard(card);
+                            slotCard.playSlot = x;
+                            slotCard.playScore = playScore;
+
+                            //add the slotcard to a list
+                            slotCards.Add(slotCard);
+                            
+                        }
+
+                        //find the card with the highest playScore for the slot and add it to the list of playable cards
                         playCard = null;
-
-                        //find card for the slot with the highest play score
-                        playCard = candidateCards.OrderByDescending(i => i.playScore).FirstOrDefault();
-                        playCard.playableSlot = x;
-
-                        //add playCard to the list of cards by slot so that we can determine best play
+                        playCard = slotCards.OrderByDescending(i => i.playScore).FirstOrDefault();
                         playableCardsBySlot.Add(playCard);
-
                     }
                 }
-                CardPictureBox bestCard = new CardPictureBox();
 
+                //the best card is the card with the highest playScore in the playable card list
+                SlotCard bestCard = new SlotCard();
                 bestCard = playableCardsBySlot.OrderByDescending(i => i.playScore).FirstOrDefault();
                 
-                CardClick(bestCard, opponentHand);
+                //simulate the click
+                CardClick(bestCard.cardPictureBox, opponentHand);
 
-                point = new Point(slot[bestCard.playableSlot].rect.X, slot[bestCard.playableSlot].rect.Y);
+                //and place the card in its slot
+                point = new Point(slot[bestCard.playSlot].rect.X, slot[bestCard.playSlot].rect.Y);
                 PlaceCard(point);
             }
 
@@ -1018,347 +1042,334 @@ namespace TripleTriadOffline
             }
         }
 
-        private void CalculatePlayScore(List<CardPictureBox> candidateCards, int candidateSlot)
+        private double CalculatePlayScore(double attackScore, double defenseScore, double defenseMultiplier, int candidateSlot)
         {
-            foreach (CardPictureBox card in candidateCards)
-            {
-                card.playScore = card.attackScore * card.defenseScore * card.defenseMultiplier;
-            }
+            double playScore = 0;
+            playScore = attackScore * defenseScore * defenseMultiplier;
+            return playScore;
         }
 
-        private void CalculateMultiplier(List<CardPictureBox> candidateCards, List<CardPictureBox> playerCards, int candidateSlot)
+        private double CalculateMultiplier(CardPictureBox card, CardPictureBox playerCard, int candidateSlot)
         {
-            foreach (CardPictureBox card in candidateCards)
+            double defenseMultiplier = 0;
+            double countCanBeat = 0;
+
+            if (playerCard.isUsed == false)
             {
-                foreach (CardPictureBox playerCard in playerCards)
-                {
-                    double countCanBeat = 0;
-
-                    if (playerCard.isUsed == false)
-                    {
-                        card.canLoseBottom = false;
-                        card.canLoseLeft = false;
-                        card.canLoseRight = false;
-                        card.canLoseTop = false;
-
-                        switch (candidateSlot)
-                        {
-                            case 0:
-                                if (slot[1].isOccupied == false)
-                                {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; }else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[3].isOccupied == false)
-                                {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 1:
-                                if (slot[0].isOccupied == false)
-                                {
-                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[2].isOccupied == false)
-                                {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[4].isOccupied == false)
-                                {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 2:
-                                if (slot[1].isOccupied == false)
-                                {
-                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[5].isOccupied == false)
-                                {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 3:
-                                if (slot[0].isOccupied == false)
-                                {
-                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[4].isOccupied == false)
-                                {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[6].isOccupied == false)
-                                {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 4:
-                                if (slot[1].isOccupied == false)
-                                {
-                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[3].isOccupied == false)
-                                {
-                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[5].isOccupied == false)
-                                {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[7].isOccupied == false)
-                                {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 5:
-                                if (slot[2].isOccupied == false)
-                                {
-                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[4].isOccupied == false)
-                                {
-                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[8].isOccupied == false)
-                                {
-                                    if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 6:
-                                if (slot[3].isOccupied == false)
-                                {
-                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[7].isOccupied == false)
-                                {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 7:
-                                if (slot[4].isOccupied == false)
-                                {
-                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[6].isOccupied == false)
-                                {
-                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[8].isOccupied == false)
-                                {
-                                    if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                            case 8:
-                                if (slot[5].isOccupied == false)
-                                {
-                                    if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                if (slot[7].isOccupied == false)
-                                {
-                                    if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
-                                }
-                                break;
-                        }
-                        
-                        if (slot[candidateSlot].openSlots != 0)
-                        {
-                            if (countCanBeat / slot[candidateSlot].openSlots > card.defenseMultiplier)
-                            {
-                                card.defenseMultiplier = countCanBeat / slot[candidateSlot].openSlots;
-                            }
-                        }
-                        else
-                        {
-                            card.defenseMultiplier = 1;
-                        }
-
-                        //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
-                        if (card.defenseMultiplier == 0) { card.defenseMultiplier = 0.1; }
-
-                        if (ruleSet.open == false) { card.defenseMultiplier = 0.1; }
-                    }
-                }
-            }
-        }
-
-        private void CalculateDefense(List<CardPictureBox> candidateCards, int candidateSlot)
-        {
-            foreach (CardPictureBox card in candidateCards)
-            {
-                //card.defenseScore = 0;
-                double defenseCount = 0;
+                card.canLoseBottom = false;
+                card.canLoseLeft = false;
+                card.canLoseRight = false;
+                card.canLoseTop = false;
 
                 switch (candidateSlot)
                 {
                     case 0:
                         if (slot[1].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.right;
+                            if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; }else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[3].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.bottom;
+                            if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 1:
                         if (slot[0].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.left;
+                            if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[2].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.right;
+                            if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[4].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.bottom;
+                            if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 2:
                         if (slot[1].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.left;
+                            if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[5].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.bottom;
+                            if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 3:
                         if (slot[0].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.top;
+                            if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[4].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.right;
+                            if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[6].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.bottom;
+                            if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 4:
                         if (slot[1].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.top;
+                            if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[3].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.left;
+                            if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[5].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.right;
+                            if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[7].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.bottom;
+                            if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 5:
                         if (slot[2].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.top;
+                            if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[4].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.left;
+                            if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[8].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.bottom;
+                            if (playerCard.top > card.bottom) { card.canLoseBottom = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 6:
-                        if (slot[7].isOccupied == false)
-                        {
-                            defenseCount = defenseCount + card.right;
-                        }
                         if (slot[3].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.top;
+                            if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                        }
+                        if (slot[7].isOccupied == false)
+                        {
+                            if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 7:
+                        if (slot[4].isOccupied == false)
+                        {
+                            if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                        }
                         if (slot[6].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.left;
+                            if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         if (slot[8].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.right;
-                        }
-                        if (slot[4].isOccupied == false)
-                        {
-                            defenseCount = defenseCount + card.top;
+                            if (playerCard.left > card.right) { card.canLoseRight = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                     case 8:
-                        if (slot[7].isOccupied == false)
-                        {
-                            defenseCount = defenseCount + card.left;
-                        }
                         if (slot[5].isOccupied == false)
                         {
-                            defenseCount = defenseCount + card.top;
+                            if (playerCard.bottom > card.top) { card.canLoseTop = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
+                        }
+                        if (slot[7].isOccupied == false)
+                        {
+                            if (playerCard.right > card.left) { card.canLoseLeft = true; countCanBeat = countCanBeat + 0.5; } else { countCanBeat = countCanBeat + 1; }
                         }
                         break;
                 }
-
-                if (defenseCount / slot[candidateSlot].openSlots > card.defenseScore)
+                        
+                if (slot[candidateSlot].openSlots != 0)
                 {
-                    if (slot[candidateSlot].openSlots != 0)
-                    {
-                        card.defenseScore = defenseCount / slot[candidateSlot].openSlots;
-                    }
-                    else
-                    {
-                        card.defenseScore = 0.1;
-                    }
-                }
-
-                //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
-                if (card.defenseScore == 0) { card.defenseScore = 0.1; }
-            }
-        }
-
-        private void CalculateAttack(List<CardPictureBox> candidateCards, int candidateSlot)
-        {
-            foreach (CardPictureBox card in candidateCards)
-            {
-                card.attackScore = 0;
-                double beatCount = 0;
-
-                if (card.canBeatLeft == true) { beatCount++; }
-                if (card.canBeatTop == true) { beatCount++; }
-                if (card.canBeatRight == true) { beatCount++; }
-                if (card.canBeatBottom == true) { beatCount++; }
-
-                if (slot[candidateSlot].neighbors != 0)
-                {
-                    card.attackScore = beatCount / slot[candidateSlot].neighbors;
+                    defenseMultiplier = countCanBeat / slot[candidateSlot].openSlots;
                 }
                 else
                 {
-                    card.attackScore = 1;
+                    defenseMultiplier = 1;
                 }
 
                 //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
-                if (card.attackScore == 0) { card.attackScore = 0.1; }
+                if (defenseMultiplier == 0) { defenseMultiplier = 0.1; }
+
+                if (ruleSet.open == false) { defenseMultiplier = 0.1; }
             }
+
+            return defenseMultiplier;
         }
 
-        private void EvaluatePlay(List<CardPictureBox> candidateCards, int candidateSlot)
+        private double CalculateDefense(CardPictureBox card, int candidateSlot)
         {
-            foreach (CardPictureBox card in candidateCards)
+            double defenseScore = 0;
+            double defenseCount = 0;
+
+            switch (candidateSlot)
             {
+                case 0:
+                    if (slot[1].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.right;
+                    }
+                    if (slot[3].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.bottom;
+                    }
+                    break;
+                case 1:
+                    if (slot[0].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.left;
+                    }
+                    if (slot[2].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.right;
+                    }
+                    if (slot[4].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.bottom;
+                    }
+                    break;
+                case 2:
+                    if (slot[1].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.left;
+                    }
+                    if (slot[5].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.bottom;
+                    }
+                    break;
+                case 3:
+                    if (slot[0].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.top;
+                    }
+                    if (slot[4].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.right;
+                    }
+                    if (slot[6].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.bottom;
+                    }
+                    break;
+                case 4:
+                    if (slot[1].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.top;
+                    }
+                    if (slot[3].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.left;
+                    }
+                    if (slot[5].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.right;
+                    }
+                    if (slot[7].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.bottom;
+                    }
+                    break;
+                case 5:
+                    if (slot[2].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.top;
+                    }
+                    if (slot[4].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.left;
+                    }
+                    if (slot[8].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.bottom;
+                    }
+                    break;
+                case 6:
+                    if (slot[7].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.right;
+                    }
+                    if (slot[3].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.top;
+                    }
+                    break;
+                case 7:
+                    if (slot[6].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.left;
+                    }
+                    if (slot[8].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.right;
+                    }
+                    if (slot[4].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.top;
+                    }
+                    break;
+                case 8:
+                    if (slot[7].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.left;
+                    }
+                    if (slot[5].isOccupied == false)
+                    {
+                        defenseCount = defenseCount + card.top;
+                    }
+                    break;
+            }
+
+            if (slot[candidateSlot].openSlots != 0)
+            {
+                defenseScore = defenseCount / slot[candidateSlot].openSlots;
+            }
+            else
+            {
+                defenseScore = 0.1;
+            }
+
+            //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
+            if (defenseScore == 0) {defenseScore = 0.1; }
+
+            return defenseScore;
+        }
+
+        private double CalculateAttack(CardPictureBox card, int candidateSlot)
+        {
+            double attackScore = 0;
+            double beatCount = 0;
+
+            if (card.canBeatLeft == true) { beatCount++; }
+            if (card.canBeatTop == true) { beatCount++; }
+            if (card.canBeatRight == true) { beatCount++; }
+            if (card.canBeatBottom == true) { beatCount++; }
+
+            if (slot[candidateSlot].neighbors != 0 && beatCount != 0)
+            { 
+                //ai is too defensive. need more emphasis on an attack attempt, so lower the score
+                //make this configurable as the higher the value, the less aggressive the ai will be
+                attackScore = beatCount / slot[candidateSlot].neighbors / .1;
+            }
+            else
+            {
+                attackScore = 1;
+            }
+
+            //Multiply by 0 results in skew to playScore. Set to an extremely low value instead
+            if (attackScore == 0) { attackScore = 0.1; }
+
+            return attackScore;
+        }
+
+        private void EvaluatePlay(CardPictureBox card, int candidateSlot)
+        {
                 if (ruleSet.same == true)
                 {
                     EvaluateSameRule(card, candidateSlot);
                 }
 
                 EvaluateDefaultRule(card, candidateSlot);
-            }
         }
 
         private void EvaluateSameRule(CardPictureBox card, int candidateSlot)
@@ -1368,6 +1379,11 @@ namespace TripleTriadOffline
 
         private void EvaluateDefaultRule(CardPictureBox card, int candidateSlot)
         {
+            card.canBeatBottom = false;
+            card.canBeatLeft = false;
+            card.canBeatRight = false;
+            card.canBeatTop = false;
+
             switch (candidateSlot)
             {
                 case 0:
