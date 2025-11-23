@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deck>
+  <cards>
+    <card id="1">
+      <id>1</id>
+      <displayName>1st Ray</displayName>
+      <fileName>1st Ray</fileName>
+      <left>1</left>
+      <top>6</top>
+      <right>2</right>
+      <bottom>2</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="2">
+      <id>2</id>
+      <displayName>Abadon</displayName>
+      <fileName>Abadon</fileName>
+      <left>5</left>
+      <top>6</top>
+      <right>8</right>
+      <bottom>4</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="3">
+      <id>2</id>
+      <displayName>Abyss Worm</displayName>
+      <fileName>Abyss Worm</fileName>
+      <left>5</left>
+      <top>7</top>
+      <right>2</right>
+      <bottom>3</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="4">
+      <id>2</id>
+      <displayName>Adamantoise</displayName>
+      <fileName>Adamantoise</fileName>
+      <left>6</left>
+      <top>4</top>
+      <right>5</right>
+      <bottom>5</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="5">
+      <id>2</id>
+      <displayName>Adel</displayName>
+      <fileName>Adel</fileName>
+      <left>9</left>
+      <top>3</top>
+      <right>9</right>
+      <bottom>5</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="6">
+      <id>2</id>
+      <displayName>Adramelk</displayName>
+      <fileName>Adramelk</fileName>
+      <left>9</left>
+      <top>3</top>
+      <right>2</right>
+      <bottom>9</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="7">
+      <id>2</id>
+      <displayName>Aeris the FlowerGirl</displayName>
+      <fileName>Aeris the FlowerGirl</fileName>
+      <left>1</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>5</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="8">
+      <id>2</id>
+      <displayName>Aeris</displayName>
+      <fileName>Aeris</fileName>
+      <left>9</left>
+      <top>5</top>
+      <right>5</right>
+      <bottom>10</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="9">
+      <id>2</id>
+      <displayName>Aero</displayName>
+      <fileName>Aero</fileName>
+      <left>5</left>
+      <top>5</top>
+      <right>3</right>
+      <bottom>7</bottom>
+      <level>1</level>
+    </card>
+
+    <card id="10">
+      <id>2</id>
+      <displayName>Agrias</displayName>
+      <fileName>Agrias</fileName>
+      <left>2</left>
+      <top>6</top>
+      <right>9</right>
+      <bottom>10</bottom>
+      <level>1</level>
+    </card>
+  </cards>
+</deck>
